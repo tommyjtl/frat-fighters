@@ -8,36 +8,21 @@ This repository contains the Unity project for the game "Frat Fighters" (GSD 405
 
 ## Systems
 
-1. Traversal system
-    - Camera
-    - Player controls
-    - Player location detector
-2. Combat system
-    - Melee combat
-    - Ranged combat
-3. Item system
-    - Main weapons
-    - Environmental weapons
-    - Consumables
-    - Inventory
-4. Health system
-    - Character health
-    - Enemy health
-    - Boss health
-    - Recruited member health
-5. Enemy wave system
-    - NPC combat system
-    - Enemy spawning
-6. Boss system
-    - Boss combat system
-    - Phase system
-7. Point system
-8. Attribute/skill tree system
-    - Attribute / Skill Tree
-9. Recuitment system
-    - Unlocking 
-    - Ally / Recruitment Combat System 
-10. Sound/music system
+- [Frat Fighter - Vision Canvas, Feature List, SDD, and Asset List](https://docs.google.com/spreadsheets/d/1vP7UvNa-TaXNR7LTbYSSawWWFz5AQQky/edit?gid=656803779#gid=656803779)
+- [Osarion's 2D Beat Em Up Game Template Documentation](https://www.osarion.com/BeatEmUpTemplate2D/documentation.html)
+
+|    | Our System Design           | Implemented by the Template? | Relevant Template's Feature (Docs)     | Remark |
+|----|-----------------------------|------------------------------|----------------------------------------|--------|
+| 1  | Traversal system            | ✅ Fully implemented         | Input Manager, Camera Follow Component |        |
+| 2  | Combat system               | ✅ Fully implemented         | Attack, Combo Attack, Knockdown, Throw, Defend, Grab, Weapon | Including melee and ranged combats |
+| 3  | Item system                 | ⏳ Partially implemented     | (Can (when grab) pick up item only, no item saving feature) |        |
+| 4  | Health system               | ✅ Fully implemented         | Health System                          |        |
+| 5  | Enemy wave system           | ⏳ Maybe fully implemented   | Wave Manager                           |        |
+| 6  | Boss system                 | ❌ Not implemented           |                                        |        |
+| 7  | Point system                | ❌ Not implemented           |                                        |        |
+| 8  | Attribute/skill tree system | ❌ Not implemented           |                                        |        |
+| 9  | Recuitment system           | ❌ Not implemented           |                                        |        |
+| 10 | Sound/music system          | ✅ Fully implemented         | Audio Controller                       |        |
 
 
 ## Template Information

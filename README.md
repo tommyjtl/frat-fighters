@@ -39,6 +39,12 @@ Make sure you've watched all of these videos to understand the details of the te
 - [Beat 'Em Up Template 2D - Defense Settings](https://www.youtube.com/watch?v=2nmBlzTgMQE)
 - [Beat 'Em Up Template 2D - Attack Data & Combos](https://www.youtube.com/watch?v=IvKG18xGC44)
 
+### Other Documentataions
+
+- [Downloadable Demo](https://www.osarion.com/BeatEmUpTemplate2D/demo.html)
+- [Documentation](https://www.osarion.com/BeatEmUpTemplate2D/documentation.html)
+- [FAQ](https://www.osarion.com/BeatEmUpTemplate2D/faq.html)
+
 ## Contributors
 
 - **Project Managers**: Gabe Wozniak, Alex O'Connell, Jamison Maloney

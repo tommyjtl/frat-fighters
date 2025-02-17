@@ -1,0 +1,2460 @@
+fileFormatVersion: 2
+guid: f60d6a887f9283a42ab1385b4ff77afe
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 50
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerIdle1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 450
+        width: 44
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa4d270bfe896d4888a4525f4f08094
+      internalID: -2026213997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 450
+        width: 42
+        height: 60
+      alignment: 9
+      pivot: {x: 0.45038787, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebe9384f32185045be904d1d96639de
+      internalID: 2101305045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 450
+        width: 64
+        height: 58
+      alignment: 9
+      pivot: {x: 0.19438958, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1b5dbd87d9d8948a333aeb3f936825
+      internalID: -1874859001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 450
+        width: 64
+        height: 58
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b4471b1c4cba04b80aac4a6faff072
+      internalID: -509058184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch4
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 450
+        width: 64
+        height: 58
+      alignment: 9
+      pivot: {x: 0.16, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5bc639c9db8d2a4dbde2481c9813bb3
+      internalID: 794671808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPickup1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 450
+        width: 46
+        height: 51
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17db9593cb90544b959c6ed1e9f14b7
+      internalID: 769555252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPickup2
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 447
+        width: 46
+        height: 49
+      alignment: 9
+      pivot: {x: 0.4, y: 0.07259758}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e863b61d51cf004c95e3d6800e069d7
+      internalID: 149958337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump1
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 443
+        width: 56
+        height: 68
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839e52140a4f6a54591e7bfb779283d8
+      internalID: -1873674274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJump2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 385
+        width: 51
+        height: 58
+      alignment: 9
+      pivot: {x: 0.4999999, y: -0.118008316}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c6594377103c724dbe45e87b8397432
+      internalID: 757464271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerIdle2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 385
+        width: 46
+        height: 58
+      alignment: 9
+      pivot: {x: 0.47575477, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a951c7774fd409f448caac4e45671c95
+      internalID: 2044500534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerIdle3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 385
+        width: 48
+        height: 57
+      alignment: 9
+      pivot: {x: 0.45603386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 629331f41f433454ca7209386c1d763e
+      internalID: -770993675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpAttack1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 380
+        width: 35
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343df8a4432f5a74f9f7dae1ae6532f4
+      internalID: 1840367202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpAttack3
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 391
+        width: 65
+        height: 53
+      alignment: 9
+      pivot: {x: 0.29404202, y: -0.21187088}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02623b8403a9280429f2a05a97bbbf9f
+      internalID: 59954339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 313
+        width: 44
+        height: 65
+      alignment: 9
+      pivot: {x: 0.34972736, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fa66f617daf6b8438673f02a63370d6
+      internalID: -1049331980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 316
+        width: 47
+        height: 62
+      alignment: 9
+      pivot: {x: 0.38208526, y: -0.049990255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf0a02f9941c2943bd8dd693781c394
+      internalID: 733325308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun3
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 314
+        width: 35
+        height: 63
+      alignment: 9
+      pivot: {x: 0.22469547, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f9924712b2e1841a22bbeffdbcf426
+      internalID: 817907177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 313
+        width: 39
+        height: 63
+      alignment: 9
+      pivot: {x: 0.27218276, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536673e4cc467774db52daea7c40fb74
+      internalID: 2079507027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun5
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 312
+        width: 44
+        height: 66
+      alignment: 9
+      pivot: {x: 0.3069399, y: -0.0034249045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c1cd9b759b14f44a392187a9b8f0ca
+      internalID: -729161124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 316
+        width: 50
+        height: 59
+      alignment: 9
+      pivot: {x: 0.35998535, y: -0.14331469}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 255af5a45e2198e4a98adacd24e26c71
+      internalID: 370448903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 311
+        width: 43
+        height: 63
+      alignment: 9
+      pivot: {x: 0.2939453, y: -0.028406052}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f18fd83345e39474da6b1b68f50e865e
+      internalID: -1612690335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun8
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 311
+        width: 38
+        height: 61
+      alignment: 9
+      pivot: {x: 0.26192114, y: -0.0026245117}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41b5e8898767f024392febbbe9c9f455
+      internalID: 200652621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerRun9
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 311
+        width: 38
+        height: 64
+      alignment: 9
+      pivot: {x: 0.31808552, y: -0.001765728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfbdbad6c4c7c54478048a7c43ae2e35
+      internalID: -891793756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch2-1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 251
+        width: 42
+        height: 58
+      alignment: 9
+      pivot: {x: 0.57199925, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f725221bfe02fa4291adf6629240845
+      internalID: -301769916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch2-2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 251
+        width: 66
+        height: 55
+      alignment: 9
+      pivot: {x: 0.3191836, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35eec55822cb33c4bbb6a9c72dd70d8c
+      internalID: 1197702256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick1-1
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 180
+        width: 30
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f755cef652bfd249b1ab795d948f1ec
+      internalID: -1359179197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick1-2
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 181
+        width: 54
+        height: 60
+      alignment: 9
+      pivot: {x: 0.4025188, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a0868ec85c8b9546af468da8d491888
+      internalID: 466114430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick1-3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 180
+        width: 57
+        height: 59
+      alignment: 9
+      pivot: {x: 0.37050882, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec7b886486fbb645b555ae607f14b5b
+      internalID: -1462280145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3-1
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 249
+        width: 49
+        height: 60
+      alignment: 9
+      pivot: {x: 0.53145987, y: 0.00084609987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd5f3c5ec128f74cbed278df5353532
+      internalID: 897041795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3-2
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 249
+        width: 48
+        height: 62
+      alignment: 9
+      pivot: {x: 0.39087868, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6a9d63666ff0948910487c041d8717
+      internalID: -1057998413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3-3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 249
+        width: 63
+        height: 61
+      alignment: 9
+      pivot: {x: 0.245, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95b541a2e4e35a44da00c3214bdee758
+      internalID: -1870717746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3-4
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 249
+        width: 63
+        height: 61
+      alignment: 9
+      pivot: {x: 0.245, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d6dbafc9a40834a8c3593e65e96e09
+      internalID: -1013728905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3-5
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 249
+        width: 63
+        height: 61
+      alignment: 9
+      pivot: {x: 0.245, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2085f8c2376ec6c459a45aa0ab3ed9d3
+      internalID: 727573498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch3-6
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 249
+        width: 63
+        height: 61
+      alignment: 9
+      pivot: {x: 0.245, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f426a08e8cf2abe449c283093990e35a
+      internalID: -1828417780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerHit1
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 315
+        width: 50
+        height: 59
+      alignment: 9
+      pivot: {x: 0.68048584, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2e36356a3758b408b59d06ab758715
+      internalID: 1982420351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnockDown1
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 186
+        width: 60
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efebd0f314403a74a99f033920c0848a
+      internalID: -1832832401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnockDown2
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 189
+        width: 62
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52592dbb5650dad44a8f89553c79c42c
+      internalID: -1116042349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnockDownGrounded
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 190
+        width: 72
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3eb0b989e099e4a8ea51d79e676f13
+      internalID: 1423376803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend1
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 450
+        width: 42
+        height: 57
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36caf51bbbc9afd479d27b38cae7b7e8
+      internalID: -308617741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGrab1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 120
+        width: 47
+        height: 56
+      alignment: 9
+      pivot: {x: 0.42606065, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f0080a9a49fff4aa1a02402c0c05f9
+      internalID: -416887617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGrab2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 121
+        width: 59
+        height: 56
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb3aa1012277a645a23724e63651fd7
+      internalID: 1744493575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerStandUp
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 315
+        width: 45
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5432007, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c3e55e99915b04d9315073ee899ea1
+      internalID: 1958650204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch4-1
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 175
+        width: 43
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4a90f885c6ad84e87f54db3985f29b
+      internalID: -2014354532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch4-2
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 175
+        width: 52
+        height: 50
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8891900f8f746c4458e51c9e924f0aee
+      internalID: -1976568328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerPunch4-3
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 174
+        width: 36
+        height: 74
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ef3704204dbf646910494870d459a9
+      internalID: -153434613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnee1
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 381
+        width: 50
+        height: 59
+      alignment: 9
+      pivot: {x: 0.32887146, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf7f972dbb503e489d07bd0d795a413
+      internalID: 28681340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGrab3
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 118
+        width: 46
+        height: 56
+      alignment: 9
+      pivot: {x: 0.44, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b542083d66167714597a4f620d3f62e3
+      internalID: -804239968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerThrow1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 118
+        width: 42
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4198b88476f5ac4b8a5ccf0d1aadb63
+      internalID: -1859759188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerThrow2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 118
+        width: 60
+        height: 50
+      alignment: 9
+      pivot: {x: 0.28993735, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd499a10559d2144b0548b71f5cfdff
+      internalID: -1650860961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGrabPunch2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 118
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3c189868f42c64caa7e05fbf19c8e8
+      internalID: 1377302605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBaseballAttack1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 55
+        width: 41
+        height: 60
+      alignment: 9
+      pivot: {x: 0.61037725, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b598aad9b89222408cc62d896f2c0ed
+      internalID: 1027495863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBaseballAttack2
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 54
+        width: 43
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5588125, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31fa7ea6cd5def54f9aa2a21269e936c
+      internalID: -83285614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBaseballAttack3
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 53
+        width: 41
+        height: 61
+      alignment: 9
+      pivot: {x: 0.4496808, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effe36c02985047429560c144987934d
+      internalID: -302614422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBaseballAttack4
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 54
+        width: 43
+        height: 60
+      alignment: 9
+      pivot: {x: 0.3146167, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2378e247fab1d45bc3baf892424bec
+      internalID: -1682178639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpAttack2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 385
+        width: 35
+        height: 59
+      alignment: 9
+      pivot: {x: 0.38939208, y: -0.08799925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe54d4bb04170940939162f2fdcee05
+      internalID: -117679966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpAttack4
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 384
+        width: 46
+        height: 57
+      alignment: 9
+      pivot: {x: 0.36898938, y: -0.11294288}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceaca995ceea11246b63b56f419ef61b
+      internalID: 922647610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpAttack5
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 378
+        width: 31
+        height: 62
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1af0524720160dc4481c81e23ae547a8
+      internalID: 1510966680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpPunch1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 50
+        width: 37
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe186dc4be5b75489d0e85c6f505c1c
+      internalID: -893923623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpPunch2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 46
+        width: 64
+        height: 70
+      alignment: 9
+      pivot: {x: 0.18947816, y: -0.0009783064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4f6babd15002844a168be72bf6c67d
+      internalID: 1524989429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpPunch3
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 46
+        width: 62
+        height: 54
+      alignment: 9
+      pivot: {x: 0.19597995, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ddb3146a693e94e894f5cc2d498568
+      internalID: -774383112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerJumpPunch4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 46
+        width: 50
+        height: 46
+      alignment: 9
+      pivot: {x: 0.22236206, y: 0.0010352756}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1355e39a680e0f04fa6b3eb4d16f845f
+      internalID: -2142776627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick2-1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 108
+        width: 40
+        height: 62
+      alignment: 9
+      pivot: {x: 0.44, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2997ebda6903f4448e9b4f3abad41a3
+      internalID: 902912605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick2-2
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 109
+        width: 61
+        height: 58
+      alignment: 9
+      pivot: {x: 0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54020aea5592984aa68498b4938639c
+      internalID: -1890705989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick2-3
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 110
+        width: 47
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46a2c160ee07904188006808db06449
+      internalID: -604827998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick2-4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 38
+        width: 37
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f614e078b0f254790db9d1704e81df
+      internalID: 1085140343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick2-5
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 39
+        width: 42
+        height: 60
+      alignment: 9
+      pivot: {x: 0.45, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83123927b059f4408368d45fc7ea364
+      internalID: -1263097637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend2
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 450
+        width: 42
+        height: 56
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73d27d461609c743aea3bc308432ae1
+      internalID: 367483296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDefend3
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 450
+        width: 42
+        height: 55
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33cd0c8fb7258b04e93551dc5dfc9b3a
+      internalID: 2065714863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath1
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 443
+        width: 39
+        height: 62
+      alignment: 9
+      pivot: {x: 0.51142764, y: 0.010118054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 376830aba86c92747b43a14c8cee7157
+      internalID: 1002457982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath2
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 443
+        width: 34
+        height: 67
+      alignment: 9
+      pivot: {x: 0.35873592, y: 0.008883804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ef85b4a3cd17a49973882e5d817f7f
+      internalID: 572016893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath3
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 443
+        width: 36
+        height: 59
+      alignment: 9
+      pivot: {x: 0.34028625, y: 0.03594143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ef33f25bb0f2cc4589a88245bbe2c60
+      internalID: -657793216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 443
+        width: 43
+        height: 60
+      alignment: 9
+      pivot: {x: 0.2782465, y: 0.03888804}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabf331a5e30dca4583058e2b9f18713
+      internalID: -587210511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath5
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 443
+        width: 45
+        height: 57
+      alignment: 9
+      pivot: {x: 0.20876735, y: 0.043027643}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c1c5b3e02f992d449860e2903075963
+      internalID: 1627948832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath6
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 442
+        width: 47
+        height: 51
+      alignment: 9
+      pivot: {x: 0.17572151, y: 0.065359674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4241a1120716e704db2a045235aeaf36
+      internalID: -454354682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath7
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 439
+        width: 65
+        height: 46
+      alignment: 9
+      pivot: {x: 0.13782208, y: 0.16703199}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5818187278993444facf56c689a48b02
+      internalID: 1026063413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath8
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 395
+        width: 72
+        height: 34
+      alignment: 9
+      pivot: {x: 0.12686157, y: 0.17067853}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c444e2da3c6f1ba49adbb6e2b126f0cf
+      internalID: 758867049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath9
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 394
+        width: 72
+        height: 40
+      alignment: 9
+      pivot: {x: 0.12836456, y: 0.17122802}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4c02daf46acfbc4387eec3b118bb759
+      internalID: 699064728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath10
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 395
+        width: 74
+        height: 33
+      alignment: 9
+      pivot: {x: 0.15626237, y: 0.20477664}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9306bfc298ed1ae47ac4767900d03545
+      internalID: 1931769119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerDeath11
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 394
+        width: 73
+        height: 34
+      alignment: 9
+      pivot: {x: 0.14351372, y: 0.25279504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4ab3c9ab6ca3e4b8b1d6c142094a6e
+      internalID: 1311356576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick3-1
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 316
+        width: 43
+        height: 61
+      alignment: 9
+      pivot: {x: 0.3530912, y: 0.00079195615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256a64f4ed53b9e4c931603c4f2de743
+      internalID: 1958690668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick3-2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 316
+        width: 34
+        height: 58
+      alignment: 9
+      pivot: {x: 0.13078757, y: -0.0029391586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2930eb6656ac64b9489ad0a27db5ed
+      internalID: 1284804636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick3-3
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 316
+        width: 47
+        height: 53
+      alignment: 9
+      pivot: {x: 0.094091535, y: -0.0045436644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2459e172c51fbe49ba3e4f8cc9901b1
+      internalID: -620710839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick3-4
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 316
+        width: 45
+        height: 58
+      alignment: 9
+      pivot: {x: 0.12975667, y: -0.0029391586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d794d05153856644788ace64f7a3489b
+      internalID: 1497110464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick3-5
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 316
+        width: 32
+        height: 61
+      alignment: 9
+      pivot: {x: 0.15463448, y: -0.004996878}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd510c9d6309ca478d380cb761d7470
+      internalID: -662247704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKick3-6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 316
+        width: 42
+        height: 61
+      alignment: 9
+      pivot: {x: 0.34879413, y: 0.004691202}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0494d88ca01d698419af42d84d66e7a0
+      internalID: -304357533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch1
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 250
+        width: 44
+        height: 60
+      alignment: 9
+      pivot: {x: 0.44128627, y: -0.00017217001}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf899624fc6dfbb45a2b3d7d5bcc6434
+      internalID: -2114148945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch2
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 250
+        width: 45
+        height: 63
+      alignment: 9
+      pivot: {x: 0.4578342, y: 0.016418941}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f5bacf77f2af5458327cd7461906a0
+      internalID: 1349193057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch3
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 250
+        width: 42
+        height: 64
+      alignment: 9
+      pivot: {x: 0.49063838, y: 0.015134335}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc1b5ed3c4300b541be421a4301c5fa7
+      internalID: -875196145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch4
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 250
+        width: 46
+        height: 57
+      alignment: 9
+      pivot: {x: 0.3186128, y: 0.017656293}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ceb19cea26488644982b43176708eb7
+      internalID: 27780284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch5
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 248
+        width: 47
+        height: 61
+      alignment: 9
+      pivot: {x: 0.34933928, y: 0.050272707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5868bc5cc849b894fbad8fcbd36ff6de
+      internalID: -881488285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch6
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 248
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.35, y: 0.062}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deeffb461f751ab40a38c5e5447ff85f
+      internalID: -691667172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch7
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 248
+        width: 47
+        height: 50
+      alignment: 9
+      pivot: {x: 0.35, y: 0.062}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a2d7ceeb2f08640808892937eca6fe
+      internalID: 695787722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch8
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 249
+        width: 49
+        height: 49
+      alignment: 9
+      pivot: {x: 0.37772915, y: 0.042290512}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd5434a70cc3dc469951dd0624f59f3
+      internalID: -1221728425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch9
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 251
+        width: 44
+        height: 51
+      alignment: 9
+      pivot: {x: 0.34035838, y: 0.0044373157}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc53ff99c571154ca925dd8616fb74e
+      internalID: 2068364124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundPunch10
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 250
+        width: 44
+        height: 61
+      alignment: 9
+      pivot: {x: 0.41382807, y: 0.0004782755}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f717c5d72c488de449698cace2be4151
+      internalID: -1157750789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick1
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 168
+        width: 55
+        height: 69
+      alignment: 9
+      pivot: {x: 0.6887085, y: 0.0023701985}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205da54ff0494b841a3764785f64e31d
+      internalID: -32438395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick2
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 167
+        width: 54
+        height: 71
+      alignment: 9
+      pivot: {x: 0.69173515, y: -0.0044802814}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c7364ed3b626040816db875a41577b
+      internalID: -1822349696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick3
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 166
+        width: 45
+        height: 67
+      alignment: 9
+      pivot: {x: 0.6316745, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac8d2826ad49db479152e2af221f78d
+      internalID: 1481233749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick4
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 171
+        width: 49
+        height: 59
+      alignment: 9
+      pivot: {x: 0.46584025, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e3e97f51bce6b46b1483e12e2f3a7d
+      internalID: 1041829237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick5
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 173
+        width: 49
+        height: 61
+      alignment: 9
+      pivot: {x: 0.5051369, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae5f80a3c38edf46b28dbcab85e17d0
+      internalID: 336016630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick6
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 173
+        width: 49
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5055978, y: 0.022068696}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387db42298d773f4bbb539d8234fecb1
+      internalID: 1987145787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick7
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 173
+        width: 49
+        height: 51
+      alignment: 9
+      pivot: {x: 0.50275034, y: 0.01936789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eede98f51d8215f40af2380983906836
+      internalID: 843911495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick8
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 174
+        width: 49
+        height: 50
+      alignment: 9
+      pivot: {x: 0.5102714, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16edfbb11aabfa744bd6be6a4921a193
+      internalID: -572632996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerGroundKick9
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 174
+        width: 40
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5188751, y: 0.00000055486504}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c1b1b7cb70349459adb51a72fa006c
+      internalID: 1111555603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnee2
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 381
+        width: 37
+        height: 59
+      alignment: 9
+      pivot: {x: -0.007550214, y: 0.002771927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55283749c0972904dacdb88a7e63f916
+      internalID: 509418142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnee3
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 376
+        width: 34
+        height: 63
+      alignment: 9
+      pivot: {x: 0.016975649, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ad0dcd87965cb94381be8fab3618ba2
+      internalID: 403719260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerKnee4
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 370
+        width: 42
+        height: 71
+      alignment: 9
+      pivot: {x: 0.1352292, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d05df60ce50cd054490f5a1bdc0b92d1
+      internalID: -1165117986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      PlayerBaseballAttack1: 1027495863
+      PlayerBaseballAttack2: -83285614
+      PlayerBaseballAttack3: -302614422
+      PlayerBaseballAttack4: -1682178639
+      PlayerDeath1: 1002457982
+      PlayerDeath10: 1931769119
+      PlayerDeath11: 1311356576
+      PlayerDeath2: 572016893
+      PlayerDeath3: -657793216
+      PlayerDeath4: -587210511
+      PlayerDeath5: 1627948832
+      PlayerDeath6: -454354682
+      PlayerDeath7: 1026063413
+      PlayerDeath8: 758867049
+      PlayerDeath9: 699064728
+      PlayerDefend1: -308617741
+      PlayerDefend2: 367483296
+      PlayerDefend3: 2065714863
+      PlayerGrab1: -416887617
+      PlayerGrab2: 1744493575
+      PlayerGrab3: -804239968
+      PlayerGrabPunch2: 1377302605
+      PlayerGroundKick1: -32438395
+      PlayerGroundKick2: -1822349696
+      PlayerGroundKick3: 1481233749
+      PlayerGroundKick4: 1041829237
+      PlayerGroundKick5: 336016630
+      PlayerGroundKick6: 1987145787
+      PlayerGroundKick7: 843911495
+      PlayerGroundKick8: -572632996
+      PlayerGroundKick9: 1111555603
+      PlayerGroundPunch1: -2114148945
+      PlayerGroundPunch10: -1157750789
+      PlayerGroundPunch2: 1349193057
+      PlayerGroundPunch3: -875196145
+      PlayerGroundPunch4: 27780284
+      PlayerGroundPunch5: -881488285
+      PlayerGroundPunch6: -691667172
+      PlayerGroundPunch7: 695787722
+      PlayerGroundPunch8: -1221728425
+      PlayerGroundPunch9: 2068364124
+      PlayerHit1: 1982420351
+      PlayerIdle1: -2026213997
+      PlayerIdle2: 2044500534
+      PlayerIdle3: -770993675
+      PlayerJump1: -1873674274
+      PlayerJump2: 757464271
+      PlayerJumpAttack1: 1840367202
+      PlayerJumpAttack2: -117679966
+      PlayerJumpAttack3: 59954339
+      PlayerJumpAttack4: 922647610
+      PlayerJumpAttack5: 1510966680
+      PlayerJumpAttack6: -82402222
+      PlayerJumpPunch1: -893923623
+      PlayerJumpPunch2: 1524989429
+      PlayerJumpPunch3: -774383112
+      PlayerJumpPunch4: -2142776627
+      PlayerKick1-1: -1359179197
+      PlayerKick1-2: 466114430
+      PlayerKick1-3: -1462280145
+      PlayerKick2-1: 902912605
+      PlayerKick2-2: -1890705989
+      PlayerKick2-3: -604827998
+      PlayerKick2-4: 1085140343
+      PlayerKick2-5: -1263097637
+      PlayerKick3-1: 1958690668
+      PlayerKick3-2: 1284804636
+      PlayerKick3-3: -620710839
+      PlayerKick3-4: 1497110464
+      PlayerKick3-5: -662247704
+      PlayerKick3-6: -304357533
+      PlayerKnee1: 28681340
+      PlayerKnee2: 509418142
+      PlayerKnee3: 403719260
+      PlayerKnee4: -1165117986
+      PlayerKnockDown1: -1832832401
+      PlayerKnockDown2: -1116042349
+      PlayerKnockDownGrounded: 1423376803
+      PlayerPickup1: 769555252
+      PlayerPickup2: 149958337
+      PlayerPunch1: 2101305045
+      PlayerPunch2: -1874859001
+      PlayerPunch2-1: -301769916
+      PlayerPunch2-2: 1197702256
+      PlayerPunch3: -509058184
+      PlayerPunch3-1: 897041795
+      PlayerPunch3-2: -1057998413
+      PlayerPunch3-3: -1870717746
+      PlayerPunch3-4: -1013728905
+      PlayerPunch3-5: 727573498
+      PlayerPunch3-6: -1828417780
+      PlayerPunch4: 794671808
+      PlayerPunch4-1: -2014354532
+      PlayerPunch4-2: -1976568328
+      PlayerPunch4-3: -153434613
+      PlayerRun1: -1049331980
+      PlayerRun2: 733325308
+      PlayerRun3: 817907177
+      PlayerRun4: 2079507027
+      PlayerRun5: -729161124
+      PlayerRun6: 370448903
+      PlayerRun7: -1612690335
+      PlayerRun8: 200652621
+      PlayerRun9: -891793756
+      PlayerStandUp: 1958650204
+      PlayerThrow1: -1859759188
+      PlayerThrow2: -1650860961
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

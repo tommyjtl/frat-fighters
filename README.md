@@ -9,9 +9,8 @@ This repository contains the Unity project for the game "Frat Fighters" (GSD 405
 ## Systems
 
 - [Frat Fighter - Vision Canvas, Feature List, SDD, and Asset List](https://docs.google.com/spreadsheets/d/1vP7UvNa-TaXNR7LTbYSSawWWFz5AQQky/edit?gid=656803779#gid=656803779)
-- [Osarion's 2D Beat Em Up Game Template Documentation](https://www.osarion.com/BeatEmUpTemplate2D/documentation.html)
 
-|    | Our System Design           | Implemented by the Template? | Relevant Template's Feature (Docs)     | Remark |
+|    | Our System Design           | Implemented by the Template? | Relevant Template's Feature ([Docs](https://www.osarion.com/BeatEmUpTemplate2D/documentation.html))     | Remark |
 |----|-----------------------------|------------------------------|----------------------------------------|--------|
 | 1  | Traversal system            | ✅ Fully implemented         | Input Manager, Camera Follow Component |        |
 | 2  | Combat system               | ✅ Fully implemented         | Attack, Combo Attack, Knockdown, Throw, Defend, Grab, Weapon | Including melee and ranged combats |

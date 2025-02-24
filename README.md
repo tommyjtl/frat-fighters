@@ -22,11 +22,15 @@ This repository contains the Unity project for the game "Frat Fighters" (GSD 405
 | 8  | Attribute/skill tree system | ❌ Not implemented           |                                        |        |
 | 9  | Recuitment system           | ❌ Not implemented           |                                        |        |
 | 10 | Sound/music system          | ✅ Fully implemented         | Audio Controller                       |        |
+| 11 | Revenge system              | ❌ Not implemented   |  |        |
+
+- [Frat Fighter - Vision Canvas, Feature List, TDD, and Asset List](https://docs.google.com/spreadsheets/d/1vP7UvNa-TaXNR7LTbYSSawWWFz5AQQky/edit?gid=656803779#gid=656803779)
+- [Frat Fighter - System List](https://docs.google.com/document/d/1UK__Y1sp5XtaBEaRnzLHOcIoUs-rmC9q/edit) (Brief, Spec, & Beat-by-Beat [including Asset List])
 
 
 ## Template Information
 
-Read details [here](./TEMPLATE_README.md)
+Read details [here](./Docs/TEMPLATE_README.md)
 
 ## Contributors
 

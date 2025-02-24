@@ -1,5 +1,7 @@
 # Unity Template Information
 
+There's also a [template walkthrough](https://docs.google.com/presentation/d/1e9QVaEOByreEfDmpGOsMniIQrLefvRqvOKK5gN2HREQ/) presentation made by Tommy for every one's reference.
+
 ## Getting Started with Example Scenes
 
 Once this repository is cloned, follow these steps: 

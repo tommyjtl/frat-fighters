@@ -17,7 +17,7 @@ This repository contains the Unity project for the game "Frat Fighters" (GSD 405
 | 3  | Item system                 | ⏳ Partially implemented     | (Can (when grab) pick up item only, no item saving feature) |        |
 | 4  | Health system               | ✅ Fully implemented         | Health System                          |        |
 | 5  | Enemy wave system           | ⏳ Maybe fully implemented   | Wave Manager                           |        |
-| 6  | Boss system                 | ❌ Not implemented           |                                        |        |
+| 6  | Boss system                 | ❌ Not implemented           | The template has a health bar UI for boss, but nothing was implemented yet |        |
 | 7  | Point system                | ❌ Not implemented           |                                        |        |
 | 8  | Attribute/skill tree system | ❌ Not implemented           |                                        |        |
 | 9  | Recuitment system           | ❌ Not implemented           |                                        |        |

@@ -7367,7 +7367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: shakeIntensity
-      value: 0.08
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: showShakeEffect
@@ -7773,11 +7773,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3363588277752824106, guid: d5257c2e662fef443b80e57d7d1b7221, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.767
+      value: 1.87
       objectReference: {fileID: 0}
     - target: {fileID: 3363588277752824106, guid: d5257c2e662fef443b80e57d7d1b7221, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.302
+      value: -1.52
       objectReference: {fileID: 0}
     - target: {fileID: 3363588277752824106, guid: d5257c2e662fef443b80e57d7d1b7221, type: 3}
       propertyPath: m_LocalPosition.z

@@ -1,36 +1,55 @@
 ﻿using UnityEngine;
 
-namespace BeatEmUpTemplate2D {
+namespace BeatEmUpTemplate2D
+{
 
-    public class UnitDeath : State {
+    public class UnitDeath : State
+    {
 
         private string animationName = "Death";
         private bool showDeathAnimation;
+        private XPSystem playerXPSystem;
 
-        public UnitDeath(bool showDeathAnim){
+        public UnitDeath(bool showDeathAnim)
+        {
             this.showDeathAnimation = showDeathAnim;
         }
 
-        public override void Enter(){
+        public override void Enter()
+        {
+            // Find the player object in the scene and get its XPSystem component
+            GameObject player = GameObject.FindWithTag("Player");
+            if (player != null) playerXPSystem = player.GetComponent<XPSystem>();
 
             //play death animation
-            if(showDeathAnimation) unit.animator.Play(animationName);
+            if (showDeathAnimation) unit.animator.Play(animationName);
 
             //set this unit on the floor
             unit.GetComponent<Collider2D>().offset = Vector2.zero;
             unit.transform.position = unit.currentPosition;
             unit.isGrounded = true;
-            
+
             //stop moving
             unit.StopMoving(true);
 
             //disable all enemy AI if a player has died
-            if(unit.isPlayer) EnemyManager.DisableAllEnemyAI();
+            if (unit.isPlayer) EnemyManager.DisableAllEnemyAI();
 
             //flicker and remove enemy units from the field
-            if(unit.isEnemy){
+            if (unit.isEnemy)
+            {
                 SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
                 flicker.startDelay = 1f;
+
+                Debug.Log("Enemy " + unit.gameObject.name + " has been defeated!");
+
+                // Add XP points to the player
+                if (playerXPSystem != null)
+                {
+                    playerXPSystem.AddXP(50); // Example: Add 50 XP points
+                    // @TODO: depending on which enemy is defeated, add different XP points
+                    Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
+                }
             }
         }
     }

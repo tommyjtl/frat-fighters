@@ -62,14 +62,13 @@ namespace BeatEmUpTemplate2D {
             int i = Random.Range(1,3);
 
             //move closer to player
-            if(i == 1) statemachine?.SetState(new EnemyKeepDistance(2f, 2f, -.5f, .5f)); 
+            if(i == 1) statemachine?.SetState(new EnemyKeepDistance(1f, 1f, -.5f, .5f)); 
 
             //move away from player
             if(i == 2) statemachine?.SetState(new EnemyKeepDistance(4f, 4f, -1f, 1f));
         }
 
         private AttackData GetRandomAttack(){
-
             //check available data
             if(settings == null || settings.enemyAttackList.Count == 0) { 
                 Debug.Log("No enemy attacks available to choose from"); 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BeatEmUpTemplate2D {
 
-    public enum UNITTYPE { PLAYER = 0, ENEMY = 10, NPC = 20 }
+    public enum UNITTYPE { PLAYER = 0, ENEMY = 10, NPC = 20, ALLY = 30 }
 
     [System.Serializable]
     public class UnitSettings : MonoBehaviour {

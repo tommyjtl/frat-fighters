@@ -9156,11 +9156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: maxHp
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: currentHp
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: showShakeEffect

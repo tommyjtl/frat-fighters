@@ -13,10 +13,12 @@ namespace BeatEmUpTemplate2D
         public Image xpBar;
 
         private bool initialized; // is the xpbar initialized?
+        private XPSystem xpSystem;
 
         void OnEnable()
         {
             XPSystem.onXPChange += UpdateXP; //subscribe to xp update events
+            InitializeXpBar(); //initialize xp bar with global values
         }
 
         void OnDisable()
@@ -24,23 +26,40 @@ namespace BeatEmUpTemplate2D
             XPSystem.onXPChange -= UpdateXP; //unsubscribe to xp update events
         }
 
+        void Start()
+        {
+            // Find the player object and get the XPSystem component
+            GameObject player = GameObject.FindWithTag("Player");
+            if (player != null)
+            {
+                xpSystem = player.GetComponent<XPSystem>();
+                if (xpSystem != null)
+                {
+                    InitializeXpBar(); //initialize xp bar with global values
+                }
+            }
+        }
+
         void UpdateXP(XPSystem xs)
         {
             if (xpBar == null) return;
 
-            if (!initialized) InitializeXpBar(xs); //this is only done once at the start of the level
+            if (!initialized) InitializeXpBar(); //this is only done once at the start of the level
 
             xpBar.fillAmount = xs.stageXpPercentage;
-
-            // xs.currentSP is of int type, need to convert to unity text
             spValue.text = xs.currentSP.ToString();
         }
 
         //load player data on initialize
-        void InitializeXpBar(XPSystem xs)
+        void InitializeXpBar()
         {
-            // nameField.text = hs.GetComponent<UnitSettings>().unitName; //get name
-            // if(hs.GetComponent<UnitSettings>().showNameInAllCaps) nameField.text = nameField.text.ToUpper(); //show in capital letters
+            if (GlobalVariables.Instance != null && xpSystem != null)
+            {
+                xpBar.fillAmount = (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
+                spValue.text = GlobalVariables.Instance.globalSP.ToString();
+            }
+
+            // Set the initialized flag to true
             initialized = true;
         }
 

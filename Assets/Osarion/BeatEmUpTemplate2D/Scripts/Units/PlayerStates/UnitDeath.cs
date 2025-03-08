@@ -46,7 +46,7 @@ namespace BeatEmUpTemplate2D
                 // Add XP points to the player
                 if (playerXPSystem != null)
                 {
-                    playerXPSystem.AddXP(50); // Example: Add 50 XP points
+                    playerXPSystem.AddXP(25); // Example: Add 50 XP points
                     // @TODO: depending on which enemy is defeated, add different XP points
                     Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
                 }

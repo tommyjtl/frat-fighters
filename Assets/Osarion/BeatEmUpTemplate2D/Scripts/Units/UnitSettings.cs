@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-namespace BeatEmUpTemplate2D {
+namespace BeatEmUpTemplate2D
+{
 
-    public enum UNITTYPE { PLAYER = 0, ENEMY = 10, NPC = 20, ALLY = 30 }
+    public enum UNITTYPE { PLAYER = 0, ENEMY = 10, NPC = 20, BOSS = 30 }
 
     [System.Serializable]
-    public class UnitSettings : MonoBehaviour {
+    public class UnitSettings : MonoBehaviour
+    {
 
         public UNITTYPE unitType = UNITTYPE.PLAYER;
 
@@ -71,7 +73,7 @@ namespace BeatEmUpTemplate2D {
         public float defendDuration; //how long an enemy stays in defend state
         public bool canChangeDirWhileDefending; //enable/disable changing direction while defending
         public bool rearDefenseEnabled; //can defend attacks coming from behind while defending
-    
+
         //GRAB SETTINGS
         public bool canBeGrabbed = true;
         public string grabAnimation = "Grab";
@@ -101,67 +103,74 @@ namespace BeatEmUpTemplate2D {
         [ReadOnlyProperty] public bool targetInSight; //true if the target is in the field of view of this enemy
         private UnitActions unitActions => GetComponent<UnitActions>();
 
-        void Start() {
+        void Start()
+        {
 
             //create shadow
-            if(!shadow && shadowPrefab) shadow = GameObject.Instantiate(shadowPrefab, transform.parent) as GameObject;
+            if (!shadow && shadowPrefab) shadow = GameObject.Instantiate(shadowPrefab, transform.parent) as GameObject;
 
             //hide hitbox at start
-            if(hitBox) hitBox.color = Color.clear;
-            else Debug.LogError("Please assign a HitBox to GameObject "+ gameObject.name + " in UnitSettings/Linked Components");
-            
+            if (hitBox) hitBox.color = Color.clear;
+            else Debug.LogError("Please assign a HitBox to GameObject " + gameObject.name + " in UnitSettings/Linked Components");
+
             //check sprite renderer
-            if(spriteRenderer == null) Debug.Log("Please assign a SpriteRenderer to GameObject "+ gameObject.name + " in UnitSettings/Linked Components");
+            if (spriteRenderer == null) Debug.Log("Please assign a SpriteRenderer to GameObject " + gameObject.name + " in UnitSettings/Linked Components");
 
             //load name
-            if(loadRandomNameFromList) unitName = GetRandomName();
+            if (loadRandomNameFromList) unitName = GetRandomName();
         }
 
-        void Update() {
+        void Update()
+        {
 
             //Show hitbox debug info in Unity Editor
-            if(hitBox && hitBox.gameObject.activeSelf) MathUtilities.DrawRectGizmo(hitBox.bounds.center, hitBox.bounds.size, Color.red, Time.deltaTime);
-        
+            if (hitBox && hitBox.gameObject.activeSelf) MathUtilities.DrawRectGizmo(hitBox.bounds.center, hitBox.bounds.size, Color.red, Time.deltaTime);
+
             //let blobshadow follow this unit
-            if(shadow){
+            if (shadow)
+            {
                 shadow.transform.position = new Vector3(transform.position.x, unitActions.groundPos, 0);
-                if(spriteRenderer) shadow.GetComponent<SpriteRenderer>().sortingOrder = spriteRenderer.sortingOrder-1;//put shadow behind unit
+                if (spriteRenderer) shadow.GetComponent<SpriteRenderer>().sortingOrder = spriteRenderer.sortingOrder - 1;//put shadow behind unit
             }
-        
+
             //set unit sorting order
-            ObjectSorting.Sort(spriteRenderer, new Vector2(transform.position.x, unitActions? unitActions.groundPos : transform.position.y));
+            ObjectSorting.Sort(spriteRenderer, new Vector2(transform.position.x, unitActions ? unitActions.groundPos : transform.position.y));
 
             //target in FOV
-            targetInSight = unitActions != null? unitActions.targetInSight() : false;
+            targetInSight = unitActions != null ? unitActions.targetInSight() : false;
         }
 
         //returns a random name
-	    string GetRandomName(){
+        string GetRandomName()
+        {
 
-		    if(unitNamesList == null) {
-			    Debug.Log("no list of unit names was found, please create a .txt file with names on each line, and link it in the unitSettings component.");
-			    return "";
-		    }
+            if (unitNamesList == null)
+            {
+                Debug.Log("no list of unit names was found, please create a .txt file with names on each line, and link it in the unitSettings component.");
+                return "";
+            }
 
-		    //convert the lines of the txt file to an array
-		    string data = unitNamesList.ToString();
-		    string cReturns = System.Environment.NewLine + "\n" + "\r"; 
-		    string[] lines = data.Split(cReturns.ToCharArray());
+            //convert the lines of the txt file to an array
+            string data = unitNamesList.ToString();
+            string cReturns = System.Environment.NewLine + "\n" + "\r";
+            string[] lines = data.Split(cReturns.ToCharArray());
 
-		    //pick a random name from the list
-		    string name = "";
-		    int cnt = 0;
-		    while(name.Length == 0 && cnt < 100){
-			    int rand = Random.Range(0, lines.Length);
-			    name = lines[rand];
-			    cnt += 1;
-		    }
-		    return name;
-	    }
+            //pick a random name from the list
+            string name = "";
+            int cnt = 0;
+            while (name.Length == 0 && cnt < 100)
+            {
+                int rand = Random.Range(0, lines.Length);
+                name = lines[rand];
+                cnt += 1;
+            }
+            return name;
+        }
 
         //show start direction in Unity Editor
-        private void OnValidate() {
-             transform.localRotation = (startDirection == DIRECTION.LEFT)? Quaternion.Euler(0,180,0) : Quaternion.identity;
+        private void OnValidate()
+        {
+            transform.localRotation = (startDirection == DIRECTION.LEFT) ? Quaternion.Euler(0, 180, 0) : Quaternion.identity;
         }
     }
 }

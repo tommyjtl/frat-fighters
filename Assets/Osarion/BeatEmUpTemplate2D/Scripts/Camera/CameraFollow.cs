@@ -39,12 +39,19 @@ namespace BeatEmUpTemplate2D {
         private float camY;
         private PixelPerfectCamera pixelPerfectCamera;
 
+        [Header ("Lock Vertical")]
+        [SerializeField] private bool lockVertical; //locks camera so it can't move vertically
+
 	    void Start(){
 		    GetPlayerTargets();
             prevPos = transform.position;
             centerPos = GetCenterPosOfAllTargets();
             camX = centerPos.x;
-            camY = centerPos.y - yOffset;
+            if (lockVertical) {
+                camY = centerPos.y;
+            } else {
+                camY = centerPos.y - yOffset;
+            }
 	    }
 
 	    void Update () {
@@ -53,7 +60,7 @@ namespace BeatEmUpTemplate2D {
             //calculate x,y position
             centerPos = GetCenterPosOfAllTargets(); //get center position of all current targets
             camX = Mathf.Lerp(prevPos.x, centerPos.x, DampX * Time.deltaTime);
-            camY = Mathf.Lerp(prevPos.y, centerPos.y - yOffset, DampY * Time.deltaTime);
+            if (!lockVertical) camY = Mathf.Lerp(prevPos.y, centerPos.y - yOffset, DampY * Time.deltaTime);
 
             //restrict camera position to View Area
             if(float.IsNaN(camX) || float.IsNaN(camY)) return;

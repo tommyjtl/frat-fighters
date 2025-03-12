@@ -372,7 +372,6 @@ MonoBehaviour:
   groundPos: 0
   lastAttackTime: 0
   lastAttackType: 0
-  attackNum: 1
   yForce: 0
   isGrounded: 1
   weapon: {fileID: 0}
@@ -398,6 +397,7 @@ MonoBehaviour:
   invulnerable: 0
   showSmallHealthBar: 0
   smallHealthBarOffset: {x: 0, y: 0}
+  showLargeHealthBar: 0
   playSFXOnHit: 
   playSFXOnDestroy: 
   showHitFlash: 1
@@ -575,6 +575,7 @@ MonoBehaviour:
     knockdown: 1
     foldout: 0
     inflictor: {fileID: 0}
+  enemyAttackList: []
   canBeKnockedDown: 1
   knockDownHeight: 3
   knockDownDistance: 3
@@ -594,9 +595,9 @@ MonoBehaviour:
   grabDuration: 3
   loseWeaponWhenHit: 1
   loseWeaponWhenKnockedDown: 1
-  unitPortrait: {fileID: 21300000, guid: ba5676b27e62f3e44976e97c96d16417, type: 3}
   unitName: Nathan
   showNameInAllCaps: 1
+  unitPortrait: {fileID: 21300000, guid: ba5676b27e62f3e44976e97c96d16417, type: 3}
   loadRandomNameFromList: 0
   unitNamesList: {fileID: 0}
   enemyPauseBeforeAttack: 0.55

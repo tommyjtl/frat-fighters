@@ -26,6 +26,8 @@ namespace BeatEmUpTemplate2D {
             state = _state;
             state.unit = this;
 
+            Debug.Log($"{gameObject.name}: Entering {state.GetType().Name}");
+
             //set data
             currentState = GetCurrentStateShortName(); //debug info
             state.stateStartTime = Time.time;

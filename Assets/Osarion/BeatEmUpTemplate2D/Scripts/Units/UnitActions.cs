@@ -84,6 +84,25 @@ namespace BeatEmUpTemplate2D
             else if (x < 0) TurnToDir(DIRECTION.LEFT);
         }
 
+        // Handle revenge behaviour execution
+        private void HandleRevengeBehavior(UnitActions targetUnit, AttackData attackData)
+        {
+            RevengeSystem revengeSystem = targetUnit?.GetComponent<RevengeSystem>();
+            if (revengeSystem == null) return;
+
+            // If attack is from the player and is a melee attack, increase revenge
+            if (attackData.attackType == ATTACKTYPE.PUNCH || attackData.attackType == ATTACKTYPE.KICK)
+            {
+                revengeSystem.IncreaseRevengeMeter(1);
+            }
+
+            // If target is already in revenge mode, let the revenge system handle response
+            //if (revengeSystem.IsInRevengeMode())
+            //{
+            //    targetUnit.stateMachine.SetState(new EnemyRevengeMoveToTargetAndAttack(revengeSystem));
+            //}
+        }
+
         //check if a enemy was hit by this unit's hitbox
         public bool CheckForHit(AttackData attackData)
         {
@@ -105,7 +124,10 @@ namespace BeatEmUpTemplate2D
                     if (unitKnockdownInProgress) continue;
 
                     //show hit effect
-                    ShowHitEffectAtPosition(settings.hitBox.transform.position + (Vector3.right * Random.Range(0, .5f)));
+                    ShowHitEffectAtPosition(settings.hitBox.transform.position + (Vector3.right * Random.Range(0,.5f)));
+
+                    // Handle Revenge System behavior (separate from health)
+                    HandleRevengeBehavior(targetUnit, attackData);
 
                     //substract health
                     HealthSystem targetHealthSystem = obj.GetComponent<HealthSystem>();

@@ -17,12 +17,30 @@ namespace BeatEmUpTemplate2D
         private bool inRevengeState = false;
         private float revengeDuration = 5f;
 
+        [SerializeField] private bool enableRevengeMode = false; // Toggle for revenge mode
+        public bool EnableRevengeMode => enableRevengeMode;
+
         void Start()
         {
             startTime = Time.time;
             statemachine = GetComponent<StateMachine>();
             settings = GetComponent<UnitSettings>();
             revengeSystem = GetComponent<RevengeSystem>();
+
+            if (revengeSystem == null)
+            {
+                enableRevengeMode = false;
+            }
+        }
+
+        void OnValidate()
+        {
+            // This ensures that revenge mode can only be toggled if RevengeSystem is present
+            revengeSystem = GetComponent<RevengeSystem>();
+            if (revengeSystem == null)
+            {
+                enableRevengeMode = false;
+            }
         }
 
         void Update()
@@ -69,7 +87,7 @@ namespace BeatEmUpTemplate2D
             if (!isIdle) return; // Do nothing
 
             // If revenge system exists and revenge meter is maxed out, enter revenge mode
-            if (revengeSystem != null && revengeSystem.IsMaxedOut && !inRevengeState)
+            if (enableRevengeMode && revengeSystem != null && revengeSystem.IsMaxedOut && !inRevengeState)
             {
                 inRevengeState = true;
                 revengeDuration = 5f;
@@ -79,7 +97,7 @@ namespace BeatEmUpTemplate2D
             }
 
             // 100% chance to attack if revenge mode is active
-            if (revengeSystem != null && revengeSystem.inRevengeMode)
+            if (enableRevengeMode && revengeSystem != null && revengeSystem.inRevengeMode)
             {
                 statemachine?.SetState(new EnemyRevengeMoveToTargetAndAttack(attack));
                 return;

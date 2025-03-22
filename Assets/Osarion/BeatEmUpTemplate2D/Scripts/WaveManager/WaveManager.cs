@@ -182,11 +182,21 @@ namespace BeatEmUpTemplate2D
             //if this is the last level, show all levels completed screen
             if (LevelProgress.isLastLevel)
             {
+                var pauseMenu = FindObjectOfType<UIPauseMenu>();
+                if (pauseMenu != null)
+                {
+                    pauseMenu.CanBePaused = false;
+                }
                 uiManager.ShowMenu(menuToOpenOnAllLevelCompleted);
 
             }
             else
             {
+                var pauseMenu = FindObjectOfType<UIPauseMenu>();
+                if (pauseMenu != null)
+                {
+                    pauseMenu.CanBePaused = false;
+                }
 
                 //show level finished screen
                 uiManager.ShowMenu(menuToOpenOnLevelFinish);

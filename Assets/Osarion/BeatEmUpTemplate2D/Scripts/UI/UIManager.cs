@@ -9,6 +9,13 @@ namespace BeatEmUpTemplate2D {
 
         public void ShowMenu(string menuName){
 
+            //Disable all menu's if input is "None"
+            if (menuName == "None")
+            {
+                foreach (UIMenu menu in menuList) menu.menuGameObject.SetActive(false);
+                return;
+            }
+
             //find menu to open
             UIMenu menuToOpen = null;
             foreach(UIMenu menu in menuList) if(menu.menuName == menuName) menuToOpen = menu;

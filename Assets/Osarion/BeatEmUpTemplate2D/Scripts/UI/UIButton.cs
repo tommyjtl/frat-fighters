@@ -129,13 +129,34 @@ namespace BeatEmUpTemplate2D {
 	    }
 
         public void LoadScene(string sceneName){
+            Time.timeScale = 1f;
             float sfxDuration = BeatEmUpTemplate2D.AudioController.GetSFXDuration(sfxOnClick);
             StartCoroutine(LoadSceneRoutine(sceneName, sfxDuration));
+            var pauseMenu = FindObjectOfType<UIPauseMenu>();
+            if (pauseMenu != null)
+            {
+                pauseMenu.CanBePaused = true;
+            }
+
         }
 
         public void ReloadCurrentScene(){
+            Time.timeScale = 1f;
             float sfxDuration = BeatEmUpTemplate2D.AudioController.GetSFXDuration(sfxOnClick);
             StartCoroutine(LoadSceneRoutine(SceneManager.GetActiveScene().name, sfxDuration));
+            var pauseMenu = FindObjectOfType<UIPauseMenu>();
+            if (pauseMenu != null)
+            {
+                pauseMenu.CanBePaused = true;
+            };
+        }
+        public void ResumeGame()
+        {
+            UIPauseMenu pauseMenu = FindObjectOfType<UIPauseMenu>(); // Find PauseMenu in scene
+            if (pauseMenu != null)
+            {
+                pauseMenu.ResumeGame(); // Call ResumeGame()
+            }
         }
 
         //loads the next scene with a small delay

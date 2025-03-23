@@ -7,17 +7,20 @@ namespace BeatEmUpTemplate2D
     public class XPSystem : MonoBehaviour
     {
         // XP
-
-        public int minStageXP = 0;   // experience points
-                                     // 200 XP = 1 SP
+        [HideInInspector]
         public int maxStageXP = 200;
+
+        [HideInInspector]
         public int currentStageXP = 0; //current stage XP
-        public float stageXpPercentage => (float)currentStageXP / (float)maxStageXP;
+
+        [HideInInspector]
         public int currentOverallXP = 0; // current overall XP
+
+
 
         // SP
 
-        public int minSP = 0; // skill points
+        [HideInInspector]
         public int currentSP = 0; // current skill points
 
         private GameObject xpBar; // XPbar gameobject to be added
@@ -43,19 +46,6 @@ namespace BeatEmUpTemplate2D
         {
             //initialize player healthbar
             if (onXPChange != null) onXPChange(this);
-
-            // Load global XP and SP
-            if (GlobalVariables.Instance != null)
-            {
-                Debug.Log("[XPSystem]\t" + "Loading global XP and SP");
-                Debug.Log("[XPSystem]\t" + "Current Overall XP: " + GlobalVariables.Instance.globalXP);
-                Debug.Log("[XPSystem]\t" + "Current Stage XP: " + GlobalVariables.Instance.globalStageXP);
-                Debug.Log("[XPSystem]\t" + "Current SP: " + GlobalVariables.Instance.globalSP);
-
-                currentOverallXP = GlobalVariables.Instance.globalXP;
-                currentStageXP = GlobalVariables.Instance.globalStageXP;
-                currentSP = GlobalVariables.Instance.globalSP;
-            }
         }
 
         //subtract xp
@@ -65,12 +55,21 @@ namespace BeatEmUpTemplate2D
             SendXPEvent();
         }
 
+        public float stageXpPercentage
+        {
+            // check if current is equal to 1, 
+            // if yes, return 0
+            // else, return the currentStageXP divided by maxStageXP
+            get
+            {
+                if (currentStageXP == 1) return 0;
+                else return (float)currentStageXP / (float)maxStageXP;
+            }
+        }
+
         //add xp
         public void AddXP(int amount)
         {
-            // print added Xp in the console
-            // Debug.Log("[XPSystem]\t" + "Added XP: " + amount);
-
             // add overall xp
             currentOverallXP += amount;
 
@@ -88,14 +87,6 @@ namespace BeatEmUpTemplate2D
             // print the current overall xp in the console
             // Debug.Log("[XPSystem]\t" + "Current Overall XP: " + currentOverallXP);
 
-            // Save global XP and SP
-            if (GlobalVariables.Instance != null)
-            {
-                GlobalVariables.Instance.globalXP = currentOverallXP;
-                GlobalVariables.Instance.globalSP = currentSP;
-                GlobalVariables.Instance.globalStageXP = currentStageXP;
-            }
-
             SendXPEvent();
         }
 
@@ -103,16 +94,7 @@ namespace BeatEmUpTemplate2D
         private void SendXPEvent()
         {
             // float CurrentXpPercentage = 1f / maxStageXP * currentStageXP;
-
             if (onXPChange != null) onXPChange(this);
-        }
-
-        //adjust xpbar position
-        private void OnValidate()
-        {
-            if (Application.isPlaying)
-            {
-            }
         }
     }
 }

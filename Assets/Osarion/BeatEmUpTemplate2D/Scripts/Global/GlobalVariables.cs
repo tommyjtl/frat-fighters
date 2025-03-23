@@ -7,52 +7,85 @@ public class GlobalVariables : MonoBehaviour
 {
     public static GlobalVariables Instance { get; private set; }
 
-    // Global XP and SP
+    [HideInInspector]
+    public int regularEnemyXPAdd = 60;
 
+    [HideInInspector]
+    public int bossEnemyXPAdd = 120;
+
+    // Global XP and SP
+    [HideInInspector]
     public int globalStageXP;
+
+    [HideInInspector]
     public int globalXP;
+
+    [HideInInspector]
     public int globalSP;
 
-    // Perks and ultimates
-    // - We have a fixed amount of perk items
-    // - We have a fixed amount of ultimate trees, each tree contains a fixed amount of ultimate nodes
-    // We need to keep track of player's unlock progress for each of these items
+    // initial player stats for reference
+    // maxHP = 200
+    [HideInInspector]
+    public int globalMaxHP;
 
-    // Perks, list type: a list containing the unlock status and the name of the perk
-    public List<Tuple<bool, string>> perks;
-    // An example perk list:
-    // perks = new List<Tuple<bool, string>>()
-    // {
-    //     new Tuple<bool, string>(false, "PerkName"),
-    //     new Tuple<bool, string>(false, "PerkName"),
-    // }
-    // false means the perk is locked (hasn't been unlocked), true means the perk is unlocked
+    // // movement settings
+    // moveSpeed = 4 
+    // moveSpeedAir = 4
+    [HideInInspector]
+    public float globalMoveSpeed;
 
-    // Ultimates, dict type: key is the name of each ultimate tree, value is a list containing the unlock status and the name of the ultimate node
-    public Dictionary<string, List<Tuple<bool, string>>> ultimates;
-    // An example ultimate dict:    
-    // ultimates = new Dictionary<string, List<Tuple<bool, string>>>()
-    // {
-    //     {
-    //         "UltimateTreeName",
-    //         new List<Tuple<bool, string>>()
-    //         {
-    //             new Tuple<bool, string>(false, "UltimateNodeName"),
-    //             new Tuple<bool, string>(false, "UltimateNodeName"),
-    //         }
-    //     }
-    // }
+    [HideInInspector]
+    public float globalMoveSpeedAir;
+
+    // // jump settings
+    // jumpHeight = 3.5
+    // jumpSpeed = 3.5
+    // jumpGravity = 3.8
+    [HideInInspector]
+    public float globalJumpHeight;
+
+    [HideInInspector]
+    public float globalJumpSpeed;
+
+    [HideInInspector]
+    public float globalJumpGravity;
+
+    // attack data settings
+    // - jumpPunch
+    // - jumpKick
+    // - grabPunch
+    // - grabKick
+    // - grabThrow
+    // - groundPunch
+    // - groundKick
+    // damage = 1  // each of above attack data settings has this variable
+
+    // // defense settings
+    // canChangeDirWhileDefending = false
+    // rearDefenseEnabled = false
+    [HideInInspector]
+    public bool globalCanChangeDirWhileDefending;
+
+    [HideInInspector]
+    public bool globalRearDefenseEnabled;
+
+    [HideInInspector]
+    public List<(bool, string, string, int, string, string, int)> perks;
+
+    [HideInInspector]
+    public string perkIdxSelected;
+
+    // Ultimates (UltimateTrees)
 
     void Awake()
     {
-        if (Instance == null)
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject); // Destroy duplicate instances
+            return;
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // Make this object persistent across scenes
     }
 }

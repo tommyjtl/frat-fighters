@@ -1508,11 +1508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6be278226ae461ca8f565cf9a0e5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minStageXP: 0
   maxStageXP: 200
   currentStageXP: 0
   currentOverallXP: 0
-  minSP: 0
   currentSP: 0
 --- !u!1001 &327251020
 PrefabInstance:
@@ -4244,7 +4242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983510442}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d19cd2ed548a184da76616451bfe09e, type: 3}
   m_Name: 
@@ -4721,6 +4719,15 @@ MonoBehaviour:
   globalStageXP: 0
   globalXP: 0
   globalSP: 0
+  globalMaxHP: 0
+  globalMoveSpeed: 0
+  globalMoveSpeedAir: 0
+  globalJumpHeight: 0
+  globalJumpSpeed: 0
+  globalJumpGravity: 0
+  globalCanChangeDirWhileDefending: 0
+  globalRearDefenseEnabled: 0
+  perkIdxSelected: 
 --- !u!4 &1309534156
 Transform:
   m_ObjectHideFlags: 0

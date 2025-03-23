@@ -40,34 +40,45 @@ namespace BeatEmUpTemplate2D
             }
         }
 
-        void UpdateXP(XPSystem xs)
-        {
-            if (xpBar == null) return;
-
-            if (!initialized) InitializeXpBar(); //this is only done once at the start of the level
-
-            xpBar.fillAmount = xs.stageXpPercentage;
-            spValue.text = xs.currentSP.ToString();
-        }
-
         //load player data on initialize
         void InitializeXpBar()
         {
             if (GlobalVariables.Instance != null && xpSystem != null)
             {
-                xpBar.fillAmount = (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
-                spValue.text = GlobalVariables.Instance.globalSP.ToString();
+                // xpSystem.currentSP = GlobalVariables.Instance.globalSP;
+                // xpSystem.currentStageXP = GlobalVariables.Instance.globalStageXP;
+                // xpSystem.currentOverallXP = GlobalVariables.Instance.globalXP;
+
+                // Debug.Log("[UIHUDXPBar.cs] " + "Initialize XP Bar with global values");
+                // Debug.Log("[UIHUDXPBar.cs] " + "Global SP: " + xpSystem.currentSP);
+                // Debug.Log("[UIHUDXPBar.cs] " + "Global Stage XP: " + xpSystem.currentStageXP);
+                // Debug.Log("[UIHUDXPBar.cs] " + "Global XP: " + xpSystem.currentOverallXP);
+
+                xpBar.fillAmount = xpSystem.stageXpPercentage; // (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
+                spValue.text = xpSystem.currentSP.ToString();
             }
 
             // Set the initialized flag to true
             initialized = true;
         }
 
-        //show or hide this xpbar
-        void ShowXpBar(bool state)
+        void UpdateXP(XPSystem xs)
         {
-            CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-            if (canvasGroup != null) canvasGroup.alpha = state ? 1f : 0f;
+            if (xpBar == null) return;
+            if (!initialized) InitializeXpBar(); //this is only done once at the start of the level
+
+            xpBar.fillAmount = xs.stageXpPercentage;
+            spValue.text = xs.currentSP.ToString();
+
+            // GlobalVariables.Instance.globalSP = xs.currentSP;
+            // GlobalVariables.Instance.globalStageXP = xs.currentStageXP;
+            // GlobalVariables.Instance.globalXP = xs.currentOverallXP;
+
+            // Debug.Log("[UIHUDXPBar.cs] " + "Update XP Bar with global values");
+            // Debug.Log("[UIHUDXPBar.cs] " + "Global SP: " + GlobalVariables.Instance.globalSP);
+            // Debug.Log("[UIHUDXPBar.cs] " + "Global Stage XP: " + GlobalVariables.Instance.globalStageXP);
+            // Debug.Log("[UIHUDXPBar.cs] " + "Global XP: " + GlobalVariables.Instance.globalXP);
         }
+
     }
 }

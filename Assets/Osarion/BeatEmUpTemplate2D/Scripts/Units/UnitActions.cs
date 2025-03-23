@@ -30,7 +30,8 @@ namespace BeatEmUpTemplate2D
         public UnitSettings settings => GetComponent<UnitSettings>();
         public Rigidbody2D rb => GetComponent<Rigidbody2D>();
         public bool isPlayer => settings?.unitType == UNITTYPE.PLAYER;
-        public bool isEnemy => settings?.unitType == UNITTYPE.ENEMY;
+        public bool isEnemy => settings?.unitType == UNITTYPE.ENEMY || settings?.unitType == UNITTYPE.BOSS; // if this unit is an enemy, include bosses
+        public bool isBoss => settings?.unitType == UNITTYPE.BOSS; // if this unit is a boss
         private bool onApplicationQuit;
         private float currentSpeed = 0f;
         private float animDuration;
@@ -124,7 +125,7 @@ namespace BeatEmUpTemplate2D
                     if (unitKnockdownInProgress) continue;
 
                     //show hit effect
-                    ShowHitEffectAtPosition(settings.hitBox.transform.position + (Vector3.right * Random.Range(0,.5f)));
+                    ShowHitEffectAtPosition(settings.hitBox.transform.position + (Vector3.right * Random.Range(0, .5f)));
 
                     // Handle Revenge System behavior (separate from health)
                     HandleRevengeBehavior(targetUnit, attackData);

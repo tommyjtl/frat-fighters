@@ -10,6 +10,7 @@ namespace BeatEmUpTemplate2D
 
         public Text xpValue;
         public Text spValue;
+        public Text maxXpValue;
         public Image xpBar;
 
         private bool initialized; // is the xpbar initialized?
@@ -56,6 +57,8 @@ namespace BeatEmUpTemplate2D
 
                 xpBar.fillAmount = xpSystem.stageXpPercentage; // (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
                 spValue.text = xpSystem.currentSP.ToString();
+                xpValue.text = xpSystem.currentStageXP.ToString();
+                maxXpValue.text = xpSystem.maxStageXP.ToString();
             }
 
             // Set the initialized flag to true
@@ -69,6 +72,8 @@ namespace BeatEmUpTemplate2D
 
             xpBar.fillAmount = xs.stageXpPercentage;
             spValue.text = xs.currentSP.ToString();
+            xpValue.text = xs.currentStageXP.ToString();
+            maxXpValue.text = xs.maxStageXP.ToString();
 
             // GlobalVariables.Instance.globalSP = xs.currentSP;
             // GlobalVariables.Instance.globalStageXP = xs.currentStageXP;

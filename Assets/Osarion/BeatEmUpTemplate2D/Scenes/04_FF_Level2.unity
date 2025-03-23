@@ -3183,6 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpValue: {fileID: 0}
   spValue: {fileID: 1567019017}
+  maxXpValue: {fileID: 0}
   xpBar: {fileID: 1921330371}
 --- !u!225 &695247554
 CanvasGroup:
@@ -4242,7 +4243,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 983510442}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d19cd2ed548a184da76616451bfe09e, type: 3}
   m_Name: 
@@ -4716,6 +4717,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c73062861a44f20a4641f74d06d787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  regularEnemyXPAdd: 60
+  bossEnemyXPAdd: 120
   globalStageXP: 0
   globalXP: 0
   globalSP: 0

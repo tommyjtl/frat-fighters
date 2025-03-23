@@ -11,6 +11,8 @@ namespace BeatEmUpTemplate2D
         private enum HEALTHBARTYPE { PlayerHealthBar, EnemyHealthBar, BossHealthBar }
         [SerializeField] private HEALTHBARTYPE healthBarType = HEALTHBARTYPE.PlayerHealthBar;
         public Text nameField;
+        public Text currentHp;
+        public Text maxHp;
         public Image portrait;
         public Image healthBar;
         private bool initialized;
@@ -37,7 +39,11 @@ namespace BeatEmUpTemplate2D
             if (healthBarType == HEALTHBARTYPE.PlayerHealthBar && hs.isPlayer)
             {
                 if (!initialized) InitializePlayerBar(hs); //this is only done once at the start of the level
+
                 healthBar.fillAmount = hs.healthPercentage;
+
+                currentHp.text = hs.currentHp.ToString();
+                maxHp.text = hs.maxHp.ToString();
             }
 
             //update enemy healthbar
@@ -78,6 +84,9 @@ namespace BeatEmUpTemplate2D
             SetUnitPortrait(hs); //get portrait
             nameField.text = hs.GetComponent<UnitSettings>().unitName; //get name
             if (hs.GetComponent<UnitSettings>().showNameInAllCaps) nameField.text = nameField.text.ToUpper(); //show in capital letters
+            maxHp.text = hs.maxHp.ToString();
+            currentHp.text = hs.currentHp.ToString();
+
             initialized = true;
         }
 

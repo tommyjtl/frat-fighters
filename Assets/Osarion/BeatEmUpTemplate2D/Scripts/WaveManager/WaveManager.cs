@@ -62,13 +62,15 @@ namespace BeatEmUpTemplate2D
         void ActivateWave(int wave)
         {
             // print enemyWaves.Count
-            // Debug.Log("enemyWaves.Count: " + enemyWaves.Count);
+            Debug.Log("enemyWaves.Count: " + enemyWaves.Count);
+
+            // print the wave count:L 
+            Debug.Log("Wave " + wave + " of " + totalNumberOfWaves + " has been activated");
+            Debug.Log("EnemyManager.GetTotalEnemyCount()\t" + EnemyManager.GetTotalEnemyCount());
+
 
             //do nothing if there are no waves
             if (enemyWaves.Count == 0 && wave == 0) return;
-
-            // print the wave count:L 
-            // Debug.Log("Wave " + wave + " of " + totalNumberOfWaves + " has been activated");
 
             //finish if there are no more waves left, or if all enemies are dead
             if (wave >= enemyWaves.Count || EnemyManager.GetTotalEnemyCount() == 0)
@@ -105,7 +107,9 @@ namespace BeatEmUpTemplate2D
             }
 
             //if an enemy is dead...
-            if (unit.GetComponent<UnitSettings>()?.unitType == UNITTYPE.ENEMY)
+            if (
+                unit.GetComponent<UnitSettings>()?.unitType == UNITTYPE.ENEMY || // if an enemy is dead
+                unit.GetComponent<UnitSettings>()?.unitType == UNITTYPE.BOSS) // or if a boss is dead
             {
                 // Debug.Log("[WaveManager] " + "An enemy has been defeated");
 

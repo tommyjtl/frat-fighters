@@ -1508,11 +1508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6be278226ae461ca8f565cf9a0e5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minStageXP: 0
   maxStageXP: 200
   currentStageXP: 0
   currentOverallXP: 0
-  minSP: 0
   currentSP: 0
 --- !u!1001 &327251020
 PrefabInstance:
@@ -3185,6 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpValue: {fileID: 0}
   spValue: {fileID: 1567019017}
+  maxXpValue: {fileID: 0}
   xpBar: {fileID: 1921330371}
 --- !u!225 &695247554
 CanvasGroup:
@@ -4775,9 +4774,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c73062861a44f20a4641f74d06d787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  regularEnemyXPAdd: 60
+  bossEnemyXPAdd: 120
   globalStageXP: 0
   globalXP: 0
   globalSP: 0
+  globalMaxHP: 0
+  globalMoveSpeed: 0
+  globalMoveSpeedAir: 0
+  globalJumpHeight: 0
+  globalJumpSpeed: 0
+  globalJumpGravity: 0
+  globalCanChangeDirWhileDefending: 0
+  globalRearDefenseEnabled: 0
+  perkIdxSelected: 
 --- !u!4 &1309534156
 Transform:
   m_ObjectHideFlags: 0

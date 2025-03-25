@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections; 
 
 namespace BeatEmUpTemplate2D
 {
@@ -7,6 +8,7 @@ namespace BeatEmUpTemplate2D
         public bool CanBePaused = true;
         private bool isPaused = false;
         private UIManager uiManager;
+        [SerializeField] private string pauseMenuSFX = "UIButtonClick"; 
 
         void Start()
         {
@@ -33,7 +35,11 @@ namespace BeatEmUpTemplate2D
         public void PauseGame()
         {
             Time.timeScale = 0f; // Pause game physics & movement
-            AudioListener.pause = true; // Pause audio
+            PlayPauseMenuSFX();
+            // float delay = Mathf.Max(0.1f, BeatEmUpTemplate2D.AudioController.GetSFXDuration(pauseMenuSFX));
+
+            StartCoroutine(DelayAudioPause(0f));
+            
             isPaused = true;
 
             if (uiManager != null)
@@ -53,11 +59,23 @@ namespace BeatEmUpTemplate2D
                 {
                     if (menu.menuName == "PauseMenu")
                     {
+                        PlayPauseMenuSFX();
                         menu.menuGameObject.SetActive(false);
                         break; // Exit loop once found
                     }
                 }
             }
+        }
+
+        private void PlayPauseMenuSFX()
+        {
+            BeatEmUpTemplate2D.AudioController.PlaySFX(pauseMenuSFX, Camera.main.transform.position);
+        }
+
+        private IEnumerator DelayAudioPause(float delay)
+        {
+            yield return new WaitForSecondsRealtime(delay); 
+            AudioListener.pause = true; 
         }
     }
 }

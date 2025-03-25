@@ -7,7 +7,8 @@ using System.Collections;
 namespace BeatEmUpTemplate2D {
 
     //class for navigating UI buttons via the InputManager (joypad and keyboard)
-    public class UIButton : MonoBehaviour, ISelectHandler, IPointerDownHandler, ISubmitHandler {
+    public class UIButton : MonoBehaviour, ISelectHandler, IPointerDownHandler, ISubmitHandler, IPointerEnterHandler, IPointerExitHandler
+    {
 
         public bool SelectOnStart;
 
@@ -31,6 +32,8 @@ namespace BeatEmUpTemplate2D {
    
         private Button thisButton;
         private float timeAlive;
+
+        private bool isHovered = false;
 
         void OnEnable(){
              timeAlive = Time.time;
@@ -59,7 +62,7 @@ namespace BeatEmUpTemplate2D {
 
             //set text button color
             bool selected = (eventSystem.currentSelectedGameObject == gameObject && thisButton.interactable);
-            if(buttonText != null) buttonText.color = selected? buttonTextSelectedColor : buttonTextDefaultColor;
+            UpdateTextColor();
 
             //show / hide image
             if(imageTarget != null) imageTarget.enabled = selected;
@@ -75,6 +78,14 @@ namespace BeatEmUpTemplate2D {
             //get keyboard / joypad input direction and navigate accordingly
             Vector2 dir = InputManager.GetInputVector();
             if(dir != Vector2.zero) NavigateToNextSelectable(dir);
+        }
+
+        private void UpdateTextColor()
+        {
+            if (buttonText != null)
+                buttonText.color = (isHovered || eventSystem.currentSelectedGameObject == gameObject && thisButton.interactable)
+                    ? buttonTextSelectedColor
+                    : buttonTextDefaultColor;
         }
 
         //find next button in a navigation direction (vector2) and select it
@@ -109,6 +120,20 @@ namespace BeatEmUpTemplate2D {
         //this button is pressed via keyboard
         public void OnSubmit(BaseEventData eventData){
             if(sfxOnClick.Length > 0) BeatEmUpTemplate2D.AudioController.PlaySFX(sfxOnClick, Camera.main.transform.position); //play sfx
+        }
+
+        // Cursor enters to hover over the button
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            isHovered = true;
+            UpdateTextColor();
+        }
+
+        // Cursor exits from hovering over the button
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            isHovered = false;
+            UpdateTextColor();
         }
 
         //disables all button interaction

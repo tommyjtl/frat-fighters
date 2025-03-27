@@ -18,6 +18,9 @@ namespace BeatEmUpTemplate2D {
         private InputAction grab;
         private InputAction jump;
 
+        private InputAction pause; 
+        private UIPauseMenu pauseMenu;
+
         void Awake(){
 
             playerInput = new PlayerControls();
@@ -44,6 +47,7 @@ namespace BeatEmUpTemplate2D {
             defend = playerInput.Player.Defend;
             grab = playerInput.Player.Grab;
             jump = playerInput.Player.Jump;
+            pause = playerInput.Player.Pause;
 
             move.Enable();
             punch.Enable();
@@ -51,6 +55,7 @@ namespace BeatEmUpTemplate2D {
             defend.Enable();
             grab.Enable();
             jump.Enable();
+            pause.Enable();
         }
 
         void OnDisable(){
@@ -64,6 +69,7 @@ namespace BeatEmUpTemplate2D {
             defend.Disable();
             grab.Disable();
             jump.Disable();
+            pause.Disable();
         }
 
         //get Punch button state
@@ -89,6 +95,12 @@ namespace BeatEmUpTemplate2D {
         //get Jump button state
         public static bool JumpKeyDown(){
             return Instance.jump.WasPressedThisFrame();
+        }
+
+        //get Pause button state
+        public static bool PauseMenuDown()
+        {
+            return Instance.pause.WasPressedThisFrame();
         }
 
         //returns the directional input as a vector2

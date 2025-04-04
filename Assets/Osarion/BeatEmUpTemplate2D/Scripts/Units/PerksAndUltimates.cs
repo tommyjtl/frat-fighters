@@ -93,11 +93,11 @@ namespace BeatEmUpTemplate2D
                 string perk_name = (string)getPerkValue(index, "name");
                 int value_added = (int)getPerkValue(index, "value");
 
+                // See more in `Scripts/Global/GlobalVariables.cs`
                 switch (perk_name)
                 {
                     case "Fortitude":
-                        GlobalVariables.Instance.globalMaxHP += 200;
-                        // (false, "Ironclad", "Increase max HP by 200", 3, "Health", "max", 200),
+                        GlobalVariables.Instance.globalMaxHP += value_added;
                         break;
                     case "Universal Power I":
                         // GlobalVariables.Instance.globalMoveSpeed += value_added;

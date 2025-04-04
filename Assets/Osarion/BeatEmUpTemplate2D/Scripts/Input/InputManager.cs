@@ -23,6 +23,7 @@ namespace BeatEmUpTemplate2D
         private InputAction pause;
 
         private UIPauseMenu pauseMenu;
+        private InputAction perkMenu;
         // private UIPerksAndUltimates perksAndUltimatesMenu;
 
         void Awake()
@@ -57,6 +58,7 @@ namespace BeatEmUpTemplate2D
             grab = playerInput.Player.Grab;
             jump = playerInput.Player.Jump;
             pause = playerInput.Player.Pause;
+            perkMenu = playerInput.Player.PerkMenu;
             // perkAndUltimates = playerInput.Player.PerkAndUltimates;
 
             move.Enable();
@@ -66,6 +68,7 @@ namespace BeatEmUpTemplate2D
             grab.Enable();
             jump.Enable();
             pause.Enable();
+            perkMenu.Enable();
             // perkAndUltimates.Enable();
         }
 
@@ -82,6 +85,7 @@ namespace BeatEmUpTemplate2D
             grab.Disable();
             jump.Disable();
             pause.Disable();
+            perkMenu.Disable();
             // perkAndUltimates.Disable();
         }
 
@@ -121,11 +125,11 @@ namespace BeatEmUpTemplate2D
             return Instance.pause.WasPressedThisFrame();
         }
 
-        //get PerkAndUltimates button state
-        // public static bool PerkAndUltimatesMenuDown()
-        // {
-        //     return Instance.perkAndUltimates.WasPressedThisFrame();
-        // }
+        //get PerkMenu button state
+        public static bool PerkMenuDown()
+        {
+            return Instance.perkMenu.WasPressedThisFrame();
+        }
 
         //returns the directional input as a vector2
         public static Vector2 GetInputVector()

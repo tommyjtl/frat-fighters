@@ -171,6 +171,11 @@ public class GlobalVariables : MonoBehaviour
     }
     public static event System.Action<bool> OnRearDefenseEnabledChanged;
 
+    /*
+    @TODO: properties to be added in the future
+    - Can be knocked down (Knockdown Settings)
+    - ...
+    */
 
     /*
   ___         _       
@@ -179,7 +184,15 @@ public class GlobalVariables : MonoBehaviour
  |_| \___|_| |_\_\/__/
                       
     */
-    public List<(bool, string, string, int, string, string, int)> perks = new List<(bool, string, string, int, string, string, int)> {
+    public List<(
+                bool,       // whether the perk is unlocked
+                string,     // perk name
+                string,     // perk description
+                int,        // perk cost
+                string,     // perk type
+                string,     // perk sub-type (we don't need this anymore, but I'll keep it for now)
+                int         // perk value to be added
+            )> perks = new List<(bool, string, string, int, string, string, int)> {
             // Health Perks
             (false, "Fortitude", "Increase max HP by 200", 3, "Health", "max", 200),
 

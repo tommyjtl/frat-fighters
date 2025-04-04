@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 namespace BeatEmUpTemplate2D
 {
@@ -29,6 +30,8 @@ namespace BeatEmUpTemplate2D
         // [SerializeField] private GameObject pauPanel;
         public GameObject pauPanel;
 
+        private bool isPaused = false;
+        [SerializeField] private string menuToggleSFX = "UIButtonClick";
 
         //
         void OnEnable()
@@ -209,24 +212,51 @@ namespace BeatEmUpTemplate2D
 
         public void OnMenuToggleButtonClick()
         {
-            // // Handle the button click, maybe update a variable or perform an action
-            // if (message != null)
-            // {
-            //     Debug.Log("Menu Toggle Button Clicked");
-            //     message.text = "Menu Toggle Button Clicked";
-            // }
-            // Debug.Log("Menu Toggle Button Clicked");
+            // Don't allow toggling if another menu has paused the game
+            if (Time.timeScale == 0f && !isPaused)
+                return;
 
             if (pauPanel != null)
             {
                 bool isActive = pauPanel.activeSelf;
                 pauPanel.SetActive(!isActive); // Toggle visibility
-                // Debug.Log("Menu Toggle Button Clicked. PAUPanel active: " + !isActive);
+
+                if (!isActive)
+                {
+                    PauseGame();
+                }
+                else
+                {
+                    ResumeGame();
+                }
             }
-            else
-            {
-                // Debug.LogWarning("PAUPanel reference is not assigned in the Inspector.");
-            }
+        }
+
+        private void PauseGame()
+        {
+            Time.timeScale = 0f; // Pause game physics & movement
+            PlayMenuToggleSFX();
+            StartCoroutine(DelayAudioPause(0f));
+            isPaused = true;
+        }
+
+        private void ResumeGame()
+        {
+            Time.timeScale = 1f; // Resume game
+            AudioListener.pause = false; // Resume audio
+            PlayMenuToggleSFX();
+            isPaused = false;
+        }
+
+        private void PlayMenuToggleSFX()
+        {
+            BeatEmUpTemplate2D.AudioController.PlaySFX(menuToggleSFX, Camera.main.transform.position);
+        }
+
+        private IEnumerator DelayAudioPause(float delay)
+        {
+            yield return new WaitForSecondsRealtime(delay);
+            AudioListener.pause = true;
         }
 
         void UpdateCurrentSPText(int sp)
@@ -271,11 +301,13 @@ namespace BeatEmUpTemplate2D
                 else
                 {
                     if (selectedPerkName != null)
-                        selectedPerkName.text = "-";
+                        selectedPerkName.text = "Select a perk";
+
                     if (selectedPerkDescription != null)
-                        selectedPerkDescription.text = "-";
+                        selectedPerkDescription.text = "Select a perk to see its description";
+
                     if (selectedPerkCost != null)
-                        selectedPerkCost.text = "";
+                        selectedPerkCost.text = "?";
                 }
 
                 // if (GlobalVariables.Instance != null)
@@ -318,20 +350,33 @@ namespace BeatEmUpTemplate2D
                 bool unlocked = (bool)pauSystem.getPerkValue(perkIdxSelectedInt, "unlocked");
                 int cost = (int)pauSystem.getPerkValue(perkIdxSelectedInt, "cost");
                 int currentSPInt = int.Parse(currentSP.text);
+
                 if (unlocked)
                 {
                     unlockButton.interactable = false; // disable the button
-                    selectedPerkCost.text = "Already Unlocked";
+                    selectedPerkCost.text = cost.ToString();
 
                 }
                 else
                 {
                     unlockButton.interactable = true; // enable the button
+
                     if (cost > currentSPInt)
                         unlockButton.interactable = false; // disable the button
+
+                    selectedPerkCost.text = cost.ToString();
+
                 }
             }
         }
 
+        void Update()
+        {
+            // Only allow keyboard toggle if game isn't paused by another menu
+            if (InputManager.PerkMenuDown() && (Time.timeScale != 0f || isPaused))
+            {
+                OnMenuToggleButtonClick();
+            }
+        }
     }
 }

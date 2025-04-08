@@ -5629,7 +5629,7 @@ SpriteRenderer:
   m_Size: {x: 0.8, y: 1.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
 --- !u!4 &1395211741
@@ -5787,11 +5787,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8596164551239553964, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.05
+      value: 10.67
       objectReference: {fileID: 0}
     - target: {fileID: 8596164551239553964, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.69
+      value: -0.77
       objectReference: {fileID: 0}
     - target: {fileID: 8596164551239553964, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7449,24 +7449,80 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: jumpPunch.foldout
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].foldout
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].comboName
+      value: KickCombo
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[0].attackSequence.Array.data[1].sfx
+      value: HitSfx
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[2].sfx
-      value: 
+      value: HitSfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[0].sfx
+      value: HitSfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].sfx
+      value: HitSfx
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[0].attackSequence.Array.data[1].name
+      value: Punch2
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[2].name
-      value: '[New Attack]'
+      value: Punch3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[0].name
+      value: Kick1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].name
+      value: Kick3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[0].attackSequence.Array.data[1].damage
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[2].damage
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[0].damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].damage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[0].attackSequence.Array.data[0].foldout
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[1].foldout
@@ -7477,16 +7533,52 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[0].foldout
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].foldout
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[2].knockdown
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].knockdown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[0].attackSequence.Array.data[1].attackType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[2].attackType
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[0].attackType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].attackType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[0].attackSequence.Array.data[1].animationState
+      value: Punch2
       objectReference: {fileID: 0}
     - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: comboData.Array.data[0].attackSequence.Array.data[2].animationState
-      value: 
+      value: Punch3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[0].animationState
+      value: Kick1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6650958779204035057, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].animationState
+      value: Kick3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8482,7 +8574,7 @@ Transform:
   m_GameObject: {fileID: 2110486408}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.65, y: 0.9, z: 0}
+  m_LocalPosition: {x: 22, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8874,11 +8966,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8596164551239553964, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.67
+      value: 12.61
       objectReference: {fileID: 0}
     - target: {fileID: 8596164551239553964, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.43
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8596164551239553964, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: m_LocalPosition.z

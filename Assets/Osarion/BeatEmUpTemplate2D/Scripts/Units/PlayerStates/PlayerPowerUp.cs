@@ -67,6 +67,7 @@ namespace BeatEmUpTemplate2D
             unit.CamShake();
 
             // Fallback: Start coroutine in case animation event doesn't fire
+            // float fallbackDuration = unit.GetAnimDuration("PowerUp") + animationEndBuffer;
             float fallbackDuration = unit.GetAnimDuration("PowerUp") + animationEndBuffer;
             unit.StartCoroutine(FallbackExitRoutine(fallbackDuration));
         }

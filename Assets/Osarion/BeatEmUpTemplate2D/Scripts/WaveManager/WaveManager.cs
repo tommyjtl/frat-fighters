@@ -62,11 +62,11 @@ namespace BeatEmUpTemplate2D
         void ActivateWave(int wave)
         {
             // print enemyWaves.Count
-            Debug.Log("enemyWaves.Count: " + enemyWaves.Count);
+            // Debug.Log("enemyWaves.Count: " + enemyWaves.Count);
 
             // print the wave count:L 
-            Debug.Log("Wave " + wave + " of " + totalNumberOfWaves + " has been activated");
-            Debug.Log("EnemyManager.GetTotalEnemyCount()\t" + EnemyManager.GetTotalEnemyCount());
+            // Debug.Log("Wave " + wave + " of " + totalNumberOfWaves + " has been activated");
+            // Debug.Log("EnemyManager.GetTotalEnemyCount()\t" + EnemyManager.GetTotalEnemyCount());
 
 
             //do nothing if there are no waves

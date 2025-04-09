@@ -9,36 +9,10 @@ namespace BeatEmUpTemplate2D
     {
         // XP
         [HideInInspector]
-        public List<(bool, string, string, int, string, string, int)> perks = new List<(bool, string, string, int, string, string, int)> {
-            // currently all perks only require 1 SP to unlock, for development purposes
-            // total of 13 perks at the moment
-
-            // Health Perks
-            (false, "Fortitude", "Increase max HP by 50", 2, "Health", "max", 50),
-            (false, "Ironclad", "Increase max HP by 200", 3, "Health", "max", 200),
-
-            // Damage Perks
-            (false, "Universal Power", "Increase all attack damage by 2", 1, "Attack", "all", 2),
-            (false, "Ground Pounder", "Increase ground attack damage by 2", 1, "Attack", "ground", 2), // ground attack damage: groundPunch, groundKick
-            (false, "Sky Striker", "Increase air attack damage by 2", 1, "Attack", "jump", 2), // air attack damage: jumpPunch, jumpKick
-            (false, "Grapple Master", "Increase grab attack damage by 2", 1, "Attack", "grab", 2), // grab attack damage: grabPunch, grabKick, grabThrow
-
-            // Speed Perks
-            (false, "Swift Foot", "Increase ground move speed by 1", 1, "Movement", "ground speed", 1),
-            (false, "Air Agility", "Increase air move speed by 1", 1, "Movement", "air speed", 1),
-
-            // Jump Perks
-            (false, "High Jumper", "Increase jump height by 1", 9, "Jump", "height", 1),
-            (false, "Jump Speed", "Increase jump speed by 1", 1, "Jump", "speed", 1),
-            (false, "Gravity Defier", "Decrease jump gravity by 0.5", 1, "Jump", "gravity", -2),
-
-            // Defense Perks
-            (false, "Quick Guard", "Enable changing direction while defending", 1, "Defense", "change dir", 1),
-            (false, "Rear Guard", "Enable rear defenses", 1, "Defense", "rear", 1)
-        };
+        public List<(bool, string, string, int, string, string, int)> perks;
 
         [HideInInspector]
-        public string perkIdxSelected = "0";
+        public string perkIdxSelected;
 
         // Event
 
@@ -109,19 +83,62 @@ namespace BeatEmUpTemplate2D
             }
         }
 
-        // setter for unlocking a perk, return the cost of the perk
+        // setter for unlocking a perk
         public void unlockPerk(int index)
         {
             // if the perk is not unlocked
             if (!perks[index].Item1)
             {
                 // unlock the perk
+                string perk_name = (string)getPerkValue(index, "name");
+                int value_added = (int)getPerkValue(index, "value");
+
+                // See more in `Scripts/Global/GlobalVariables.cs`
+                switch (perk_name)
+                {
+                    case "Fortitude":
+                        GlobalVariables.Instance.globalMaxHP += value_added;
+                        break;
+                    case "Universal Power I":
+                        // GlobalVariables.Instance.globalMoveSpeed += value_added;
+                        GlobalVariables.Instance.globalAttackDamageAddUp = value_added;
+                        // (false, "Universal Power I",
+                        break;
+                    case "Universal Power II":
+                        GlobalVariables.Instance.globalAttackDamageAddUp = value_added;
+                        // (false, "Universal Power II",
+                        break;
+                    case "Swift Foot":
+                        GlobalVariables.Instance.globalMoveSpeed += 2;
+                        // (false, "Swift Foot", "Increase ground move speed", 1, "Movement", "ground speed", 2),
+                        break;
+                    case "Air Agility":
+                        GlobalVariables.Instance.globalMoveSpeedAir += 4;
+                        // (false, "Air Agility", "Increase air move speed", 1, "Movement", "air speed", 2),
+                        break;
+                    case "High Jumper":
+                        GlobalVariables.Instance.globalJumpHeight += 2;
+                        // (false, "High Jumper", "Increase jump height", 1, "Jump", "height", 2),
+                        break;
+                    case "Gravity Defier":
+                        GlobalVariables.Instance.globalJumpGravity += -2;
+                        // (false, "Gravity Defier", "Decrease jump gravity", 1, "Jump", "gravity", -2),
+                        break;
+                    case "Safe Guard":
+                        GlobalVariables.Instance.globalRearDefenseEnabled = true;
+                        // (false, "Safe Guard", "Enable rear defense", 1, "Defense", "rear", 0),
+                        break;
+                    default:
+                        break;
+                }
+
                 perks[index] = (true, perks[index].Item2, perks[index].Item3, perks[index].Item4, perks[index].Item5, perks[index].Item6, perks[index].Item7);
-                // Debug.Log("Perk unlocked: " + index);
+
             }
+            // Debug.Log("Perk unlocked: " + index);
         }
 
-        public void lockPerk(int index) // return the cost of the perk
+        public void lockPerk(int index)
         {
             // if the perk is unlocked
             if (perks[index].Item1)
@@ -139,8 +156,12 @@ namespace BeatEmUpTemplate2D
                 return "No perks available";
 
             string currentPerks = "";
+            int idx = 0;
             foreach (var perk in perks)
-                currentPerks += $"({perk.Item1}, Cost: {perk.Item4},\t\"{perk.Item5}\",\t\"{perk.Item6}\",\t{perk.Item7})\n";
+            {
+                currentPerks += $"{idx}\t{perk.Item1}, {perk.Item2}, {perk.Item4},\t\"{perk.Item5}\",\t\"{perk.Item6}\",\t{perk.Item7})\n";
+                idx++;
+            }
 
             return currentPerks;
         }
@@ -149,15 +170,9 @@ namespace BeatEmUpTemplate2D
         {
             // if perkIdxSelected is null
             if (perkIdxSelected == null)
-                return "-";
+                return "-1";
             else
-            {
-                // if the length exceeds 1, return the first character
-                if (perkIdxSelected.Length > 1)
-                    return perkIdxSelected.Substring(0, 1);
-                else
-                    return perkIdxSelected;
-            }
+                return perkIdxSelected;
         }
 
 

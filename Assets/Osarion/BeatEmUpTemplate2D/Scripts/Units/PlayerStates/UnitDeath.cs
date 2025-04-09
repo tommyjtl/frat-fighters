@@ -41,14 +41,14 @@ namespace BeatEmUpTemplate2D
                 SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
                 flicker.startDelay = 1f;
 
-                Debug.Log("Enemy " + unit.gameObject.name + " has been defeated!");
+                // Debug.Log("Enemy " + unit.gameObject.name + " has been defeated!");
 
                 // Add XP points to the player
                 if (playerXPSystem != null)
                 {
-                    playerXPSystem.AddXP(80);
+                    playerXPSystem.AddXP(120);
                     // @TODO: depending on which enemy is defeated, add different XP points
-                    Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
+                    // Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
                 }
             }
 
@@ -57,13 +57,13 @@ namespace BeatEmUpTemplate2D
                 SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
                 flicker.startDelay = 1f;
 
-                Debug.Log("Boss " + unit.gameObject.name + " has been defeated!");
+                // Debug.Log("Boss " + unit.gameObject.name + " has been defeated!");
 
                 // Add XP points to the player
                 if (playerXPSystem != null)
                 {
-                    playerXPSystem.AddXP(160);
-                    Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
+                    playerXPSystem.AddXP(220);
+                    // Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
                 }
             }
 

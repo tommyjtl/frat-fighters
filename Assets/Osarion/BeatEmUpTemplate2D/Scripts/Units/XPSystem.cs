@@ -3,30 +3,19 @@ using System.Collections;
 
 namespace BeatEmUpTemplate2D
 {
-    //xpsystem class for player, enemy and objects
+    // xpsystem class for player, enemy and objects
     public class XPSystem : MonoBehaviour
     {
         // XP
-        [HideInInspector]
         public int maxStageXP = 200;
-
-        [HideInInspector]
         public int currentStageXP = 0; //current stage XP
-
-        [HideInInspector]
         public int currentOverallXP = 0; // current overall XP
 
-
-
         // SP
-
-        [HideInInspector]
         public int currentSP = 0; // current skill points
-
         private GameObject xpBar; // XPbar gameobject to be added
 
         // Event
-
         public delegate void OnXPChange(XPSystem xs); // Renamed the delegate
         public static event OnXPChange onXPChange;
 

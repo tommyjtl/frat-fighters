@@ -18,12 +18,16 @@ namespace BeatEmUpTemplate2D
 
         void OnEnable()
         {
+            GlobalVariables.OnSPChanged += UpdateCurrentSPText;
+
             XPSystem.onXPChange += UpdateXP; //subscribe to xp update events
             InitializeXpBar(); //initialize xp bar with global values
         }
 
         void OnDisable()
         {
+            GlobalVariables.OnSPChanged -= UpdateCurrentSPText;
+
             XPSystem.onXPChange -= UpdateXP; //unsubscribe to xp update events
         }
 
@@ -46,19 +50,15 @@ namespace BeatEmUpTemplate2D
         {
             if (GlobalVariables.Instance != null && xpSystem != null)
             {
-                // xpSystem.currentSP = GlobalVariables.Instance.globalSP;
-                // xpSystem.currentStageXP = GlobalVariables.Instance.globalStageXP;
-                // xpSystem.currentOverallXP = GlobalVariables.Instance.globalXP;
-
-                // Debug.Log("[UIHUDXPBar.cs] " + "Initialize XP Bar with global values");
-                // Debug.Log("[UIHUDXPBar.cs] " + "Global SP: " + xpSystem.currentSP);
-                // Debug.Log("[UIHUDXPBar.cs] " + "Global Stage XP: " + xpSystem.currentStageXP);
-                // Debug.Log("[UIHUDXPBar.cs] " + "Global XP: " + xpSystem.currentOverallXP);
 
                 xpBar.fillAmount = xpSystem.stageXpPercentage; // (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
                 spValue.text = xpSystem.currentSP.ToString();
                 xpValue.text = xpSystem.currentStageXP.ToString();
                 maxXpValue.text = xpSystem.maxStageXP.ToString();
+
+                GlobalVariables.Instance.globalSP = xpSystem.currentSP;
+                GlobalVariables.Instance.globalStageXP = xpSystem.currentStageXP;
+                GlobalVariables.Instance.globalXP = xpSystem.currentOverallXP;
             }
 
             // Set the initialized flag to true
@@ -75,14 +75,19 @@ namespace BeatEmUpTemplate2D
             xpValue.text = xs.currentStageXP.ToString();
             maxXpValue.text = xs.maxStageXP.ToString();
 
-            // GlobalVariables.Instance.globalSP = xs.currentSP;
-            // GlobalVariables.Instance.globalStageXP = xs.currentStageXP;
-            // GlobalVariables.Instance.globalXP = xs.currentOverallXP;
+            GlobalVariables.Instance.globalSP = xs.currentSP;
+            GlobalVariables.Instance.globalStageXP = xs.currentStageXP;
+            GlobalVariables.Instance.globalXP = xs.currentOverallXP;
 
-            // Debug.Log("[UIHUDXPBar.cs] " + "Update XP Bar with global values");
-            // Debug.Log("[UIHUDXPBar.cs] " + "Global SP: " + GlobalVariables.Instance.globalSP);
-            // Debug.Log("[UIHUDXPBar.cs] " + "Global Stage XP: " + GlobalVariables.Instance.globalStageXP);
-            // Debug.Log("[UIHUDXPBar.cs] " + "Global XP: " + GlobalVariables.Instance.globalXP);
+            // Debug.Log($"[UIHUDXPBar.cs] Update XP Bar with global values");
+            // Debug.Log($"[UIHUDXPBar.cs] SP: {GlobalVariables.Instance.globalSP}, sXP: {GlobalVariables.Instance.globalStageXP}, XP: {GlobalVariables.Instance.globalXP}");
+        }
+
+        void UpdateCurrentSPText(int sp)
+        {
+            // currentSP.text = sp.ToString();
+            spValue.text = sp.ToString(); // update SP value in the UI
+            xpSystem.currentSP = sp; // update local SP value
         }
 
     }

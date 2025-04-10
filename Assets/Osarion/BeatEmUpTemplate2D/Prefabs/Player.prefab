@@ -472,7 +472,7 @@ MonoBehaviour:
       sfx: HitSfx
       attackType: 1
       knockdown: 0
-      foldout: 0
+      foldout: 1
       inflictor: {fileID: 0}
     - name: Kick3
       damage: 2
@@ -480,7 +480,7 @@ MonoBehaviour:
       sfx: HitSfx
       attackType: 2
       knockdown: 0
-      foldout: 0
+      foldout: 1
       inflictor: {fileID: 0}
     - name: Punch3
       damage: 2
@@ -488,7 +488,7 @@ MonoBehaviour:
       sfx: HitSfx
       attackType: 1
       knockdown: 1
-      foldout: 0
+      foldout: 1
       inflictor: {fileID: 0}
     foldout: 1
   - comboName: KickCombo
@@ -499,7 +499,7 @@ MonoBehaviour:
       sfx: HitSfx
       attackType: 2
       knockdown: 0
-      foldout: 0
+      foldout: 1
       inflictor: {fileID: 0}
     - name: Kick2
       damage: 2
@@ -507,7 +507,7 @@ MonoBehaviour:
       sfx: HitSfx
       attackType: 2
       knockdown: 1
-      foldout: 0
+      foldout: 1
       inflictor: {fileID: 0}
     foldout: 1
   comboResetTime: 0.55

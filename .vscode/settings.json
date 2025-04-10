@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "frat-fighters.sln"
+    "dotnet.defaultSolution": "ff-git.sln"
 }

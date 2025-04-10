@@ -237,15 +237,22 @@ namespace BeatEmUpTemplate2D
             Time.timeScale = 0f; // Pause game physics & movement
             PlayMenuToggleSFX();
             StartCoroutine(DelayAudioPause(0f));
+
             isPaused = true;
+            if (GlobalVariables.Instance != null)
+                GlobalVariables.Instance.isPerkMenuActive = true; // Set global variable
         }
 
         private void ResumeGame()
         {
+
             Time.timeScale = 1f; // Resume game
             AudioListener.pause = false; // Resume audio
             PlayMenuToggleSFX();
+
             isPaused = false;
+            if (GlobalVariables.Instance != null)
+                GlobalVariables.Instance.isPerkMenuActive = false; // Reset global variable
         }
 
         private void PlayMenuToggleSFX()

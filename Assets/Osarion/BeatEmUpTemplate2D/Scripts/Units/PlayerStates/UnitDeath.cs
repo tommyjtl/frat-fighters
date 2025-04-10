@@ -36,21 +36,37 @@ namespace BeatEmUpTemplate2D
             if (unit.isPlayer) EnemyManager.DisableAllEnemyAI();
 
             //flicker and remove enemy units from the field
-            if (unit.isEnemy)
+            if (unit.isEnemy && !unit.isBoss)
             {
                 SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
                 flicker.startDelay = 1f;
 
-                Debug.Log("Enemy " + unit.gameObject.name + " has been defeated!");
+                // Debug.Log("Enemy " + unit.gameObject.name + " has been defeated!");
 
                 // Add XP points to the player
                 if (playerXPSystem != null)
                 {
-                    playerXPSystem.AddXP(25); // Example: Add 50 XP points
+                    playerXPSystem.AddXP(120);
                     // @TODO: depending on which enemy is defeated, add different XP points
-                    Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
+                    // Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
                 }
             }
+
+            if (unit.isEnemy && unit.isBoss)
+            {
+                SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
+                flicker.startDelay = 1f;
+
+                // Debug.Log("Boss " + unit.gameObject.name + " has been defeated!");
+
+                // Add XP points to the player
+                if (playerXPSystem != null)
+                {
+                    playerXPSystem.AddXP(220);
+                    // Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
+                }
+            }
+
         }
     }
 }

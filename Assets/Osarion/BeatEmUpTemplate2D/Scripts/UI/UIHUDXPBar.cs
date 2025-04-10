@@ -10,6 +10,7 @@ namespace BeatEmUpTemplate2D
 
         public Text xpValue;
         public Text spValue;
+        public Text maxXpValue;
         public Image xpBar;
 
         private bool initialized; // is the xpbar initialized?
@@ -17,12 +18,16 @@ namespace BeatEmUpTemplate2D
 
         void OnEnable()
         {
+            GlobalVariables.OnSPChanged += UpdateCurrentSPText;
+
             XPSystem.onXPChange += UpdateXP; //subscribe to xp update events
             InitializeXpBar(); //initialize xp bar with global values
         }
 
         void OnDisable()
         {
+            GlobalVariables.OnSPChanged -= UpdateCurrentSPText;
+
             XPSystem.onXPChange -= UpdateXP; //unsubscribe to xp update events
         }
 
@@ -40,34 +45,50 @@ namespace BeatEmUpTemplate2D
             }
         }
 
-        void UpdateXP(XPSystem xs)
-        {
-            if (xpBar == null) return;
-
-            if (!initialized) InitializeXpBar(); //this is only done once at the start of the level
-
-            xpBar.fillAmount = xs.stageXpPercentage;
-            spValue.text = xs.currentSP.ToString();
-        }
-
         //load player data on initialize
         void InitializeXpBar()
         {
             if (GlobalVariables.Instance != null && xpSystem != null)
             {
-                xpBar.fillAmount = (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
-                spValue.text = GlobalVariables.Instance.globalSP.ToString();
+
+                xpBar.fillAmount = xpSystem.stageXpPercentage; // (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
+                spValue.text = xpSystem.currentSP.ToString();
+                xpValue.text = xpSystem.currentStageXP.ToString();
+                maxXpValue.text = xpSystem.maxStageXP.ToString();
+
+                GlobalVariables.Instance.globalSP = xpSystem.currentSP;
+                GlobalVariables.Instance.globalStageXP = xpSystem.currentStageXP;
+                GlobalVariables.Instance.globalXP = xpSystem.currentOverallXP;
             }
 
             // Set the initialized flag to true
             initialized = true;
         }
 
-        //show or hide this xpbar
-        void ShowXpBar(bool state)
+        void UpdateXP(XPSystem xs)
         {
-            CanvasGroup canvasGroup = GetComponent<CanvasGroup>();
-            if (canvasGroup != null) canvasGroup.alpha = state ? 1f : 0f;
+            if (xpBar == null) return;
+            if (!initialized) InitializeXpBar(); //this is only done once at the start of the level
+
+            xpBar.fillAmount = xs.stageXpPercentage;
+            spValue.text = xs.currentSP.ToString();
+            xpValue.text = xs.currentStageXP.ToString();
+            maxXpValue.text = xs.maxStageXP.ToString();
+
+            GlobalVariables.Instance.globalSP = xs.currentSP;
+            GlobalVariables.Instance.globalStageXP = xs.currentStageXP;
+            GlobalVariables.Instance.globalXP = xs.currentOverallXP;
+
+            // Debug.Log($"[UIHUDXPBar.cs] Update XP Bar with global values");
+            // Debug.Log($"[UIHUDXPBar.cs] SP: {GlobalVariables.Instance.globalSP}, sXP: {GlobalVariables.Instance.globalStageXP}, XP: {GlobalVariables.Instance.globalXP}");
         }
+
+        void UpdateCurrentSPText(int sp)
+        {
+            // currentSP.text = sp.ToString();
+            spValue.text = sp.ToString(); // update SP value in the UI
+            xpSystem.currentSP = sp; // update local SP value
+        }
+
     }
 }

@@ -275,7 +275,6 @@ MonoBehaviour:
   groundPos: 0
   lastAttackTime: 0
   lastAttackType: 0
-  attackNum: 1
   yForce: 0
   isGrounded: 1
   weapon: {fileID: 0}
@@ -301,6 +300,7 @@ MonoBehaviour:
   invulnerable: 0
   showSmallHealthBar: 0
   smallHealthBarOffset: {x: 0, y: 0}
+  showLargeHealthBar: 0
   playSFXOnHit: 
   playSFXOnDestroy: 
   showHitFlash: 1
@@ -324,15 +324,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AI_Active: 1
-  attackList:
-  - name: Attack1
-    damage: 1
-    animationState: Punch1
-    sfx: 
-    attackType: 1
-    knockdown: 0
-    foldout: 0
-    inflictor: {fileID: 0}
   delayBeforeStart: 1
   decisionInterval: 1
   randomizeAmount: 1
@@ -483,9 +474,9 @@ MonoBehaviour:
   grabDuration: 3
   loseWeaponWhenHit: 1
   loseWeaponWhenKnockedDown: 1
-  unitPortrait: {fileID: 21300000, guid: 5d96b704716877b47b2b16dc37e5f2f4, type: 3}
   unitName: 
   showNameInAllCaps: 0
+  unitPortrait: {fileID: 21300000, guid: 5d96b704716877b47b2b16dc37e5f2f4, type: 3}
   loadRandomNameFromList: 0
   unitNamesList: {fileID: 0}
   enemyPauseBeforeAttack: 0.3

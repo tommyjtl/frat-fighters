@@ -64,11 +64,13 @@ namespace BeatEmUpTemplate2D
             // print enemyWaves.Count
             // Debug.Log("enemyWaves.Count: " + enemyWaves.Count);
 
-            //do nothing if there are no waves
-            if (enemyWaves.Count == 0 && wave == 0) return;
-
             // print the wave count:L 
             // Debug.Log("Wave " + wave + " of " + totalNumberOfWaves + " has been activated");
+            // Debug.Log("EnemyManager.GetTotalEnemyCount()\t" + EnemyManager.GetTotalEnemyCount());
+
+
+            //do nothing if there are no waves
+            if (enemyWaves.Count == 0 && wave == 0) return;
 
             //finish if there are no more waves left, or if all enemies are dead
             if (wave >= enemyWaves.Count || EnemyManager.GetTotalEnemyCount() == 0)
@@ -105,7 +107,9 @@ namespace BeatEmUpTemplate2D
             }
 
             //if an enemy is dead...
-            if (unit.GetComponent<UnitSettings>()?.unitType == UNITTYPE.ENEMY)
+            if (
+                unit.GetComponent<UnitSettings>()?.unitType == UNITTYPE.ENEMY || // if an enemy is dead
+                unit.GetComponent<UnitSettings>()?.unitType == UNITTYPE.BOSS) // or if a boss is dead
             {
                 // Debug.Log("[WaveManager] " + "An enemy has been defeated");
 
@@ -182,11 +186,21 @@ namespace BeatEmUpTemplate2D
             //if this is the last level, show all levels completed screen
             if (LevelProgress.isLastLevel)
             {
+                var pauseMenu = FindObjectOfType<UIPauseMenu>();
+                if (pauseMenu != null)
+                {
+                    pauseMenu.CanBePaused = false;
+                }
                 uiManager.ShowMenu(menuToOpenOnAllLevelCompleted);
 
             }
             else
             {
+                var pauseMenu = FindObjectOfType<UIPauseMenu>();
+                if (pauseMenu != null)
+                {
+                    pauseMenu.CanBePaused = false;
+                }
 
                 //show level finished screen
                 uiManager.ShowMenu(menuToOpenOnLevelFinish);

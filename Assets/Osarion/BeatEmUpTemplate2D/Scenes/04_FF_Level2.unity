@@ -1508,11 +1508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6be278226ae461ca8f565cf9a0e5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minStageXP: 0
   maxStageXP: 200
   currentStageXP: 0
   currentOverallXP: 0
-  minSP: 0
   currentSP: 0
 --- !u!1001 &327251020
 PrefabInstance:
@@ -3185,6 +3183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpValue: {fileID: 0}
   spValue: {fileID: 1567019017}
+  maxXpValue: {fileID: 0}
   xpBar: {fileID: 1921330371}
 --- !u!225 &695247554
 CanvasGroup:
@@ -4266,6 +4265,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1013258048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2502898759857149020, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_Name
+      value: PauseMenuManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.387871
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7296587
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.11606761
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5099744085229901322, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3561fb16e6a82f4697f7a320a8e6667, type: 3}
 --- !u!1 &1017063402
 GameObject:
   m_ObjectHideFlags: 0
@@ -4718,9 +4774,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c73062861a44f20a4641f74d06d787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  regularEnemyXPAdd: 60
+  bossEnemyXPAdd: 120
   globalStageXP: 0
   globalXP: 0
   globalSP: 0
+  globalMaxHP: 0
+  globalMoveSpeed: 0
+  globalMoveSpeedAir: 0
+  globalJumpHeight: 0
+  globalJumpSpeed: 0
+  globalJumpGravity: 0
+  globalCanChangeDirWhileDefending: 0
+  globalRearDefenseEnabled: 0
+  perkIdxSelected: 
 --- !u!4 &1309534156
 Transform:
   m_ObjectHideFlags: 0
@@ -8150,3 +8217,4 @@ SceneRoots:
   - {fileID: 983510444}
   - {fileID: 1857879568}
   - {fileID: 1309534156}
+  - {fileID: 1013258048}

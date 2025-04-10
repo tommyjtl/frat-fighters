@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2286,6 +2287,94 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1882800797}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1138912686
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 617941127369981626, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_Name
+      value: Enemy_Revenge_Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 949261583700071662, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: defendChance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 949261583700071662, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: defendDuration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 949261583700071662, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: rearDefenseEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339944163280667813, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: maxHp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1339944163280667813, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: currentHp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4259596537524163174, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4471922932749279579, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: maxRevengeMeter
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7581942355925196118, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      propertyPath: showStateInGame
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 617941127369981626, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1365349206}
+  m_SourcePrefab: {fileID: 100100000, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
 --- !u!1 &1211892849
 GameObject:
   m_ObjectHideFlags: 0
@@ -2454,6 +2543,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1365349195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 617941127369981626, guid: a651f2543d48f3f48b203aa501b590b0, type: 3}
+  m_PrefabInstance: {fileID: 1138912686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1365349206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365349195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7adb99f079a6364ba0d343fee3fa13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  revengeMeter: 0
+  maxRevengeMeter: 5
+  inRevengeMode: 0
 --- !u!1 &1393496425
 GameObject:
   m_ObjectHideFlags: 0
@@ -3251,7 +3360,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 37
   m_Sprite: {fileID: 21300000, guid: 7511a670f346f914f9fda431eac036bf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4497,3 +4606,4 @@ SceneRoots:
   - {fileID: 2091030762}
   - {fileID: 238519843}
   - {fileID: 292515084}
+  - {fileID: 1138912686}

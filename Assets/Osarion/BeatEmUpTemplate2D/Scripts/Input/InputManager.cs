@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
-namespace BeatEmUpTemplate2D {
+namespace BeatEmUpTemplate2D
+{
 
     //Input Manager for the Modern Unity Input System
-    public class InputManager : MonoBehaviour {
+    public class InputManager : MonoBehaviour
+    {
 
         public static InputManager Instance { get; private set; }
         [Header("MODERN INPUTMANAGER. v1.0")]
@@ -18,22 +20,33 @@ namespace BeatEmUpTemplate2D {
         private InputAction grab;
         private InputAction jump;
 
-        void Awake(){
+        private InputAction pause;
+
+        private UIPauseMenu pauseMenu;
+        private InputAction perkMenu;
+        // private UIPerksAndUltimates perksAndUltimatesMenu;
+
+        void Awake()
+        {
 
             playerInput = new PlayerControls();
             controlsScheme = playerInput.ToString();
 
             //singleton pattern (only one InputManager allowed in a scene)
-            if (Instance == null) {
+            if (Instance == null)
+            {
                 Instance = this;
 
-            } else {
+            }
+            else
+            {
                 Debug.Log("Multiple InputManagers found in this scene, there can be only one.");
                 Destroy(gameObject);
             }
-	    }
+        }
 
-        void OnEnable(){
+        void OnEnable()
+        {
 
             //subscribe to event
             InputSystem.onDeviceChange += OnDeviceChange;
@@ -44,6 +57,9 @@ namespace BeatEmUpTemplate2D {
             defend = playerInput.Player.Defend;
             grab = playerInput.Player.Grab;
             jump = playerInput.Player.Jump;
+            pause = playerInput.Player.Pause;
+            perkMenu = playerInput.Player.PerkMenu;
+            // perkAndUltimates = playerInput.Player.PerkAndUltimates;
 
             move.Enable();
             punch.Enable();
@@ -51,9 +67,13 @@ namespace BeatEmUpTemplate2D {
             defend.Enable();
             grab.Enable();
             jump.Enable();
+            pause.Enable();
+            perkMenu.Enable();
+            // perkAndUltimates.Enable();
         }
 
-        void OnDisable(){
+        void OnDisable()
+        {
 
             //unsubscribe from event
             InputSystem.onDeviceChange -= OnDeviceChange;
@@ -64,48 +84,74 @@ namespace BeatEmUpTemplate2D {
             defend.Disable();
             grab.Disable();
             jump.Disable();
+            pause.Disable();
+            perkMenu.Disable();
+            // perkAndUltimates.Disable();
         }
 
         //get Punch button state
-        public static bool PunchKeyDown(){
+        public static bool PunchKeyDown()
+        {
             return Instance.punch.WasPressedThisFrame();
         }
 
         //get Kick button state
-        public static bool KickKeyDown(){
+        public static bool KickKeyDown()
+        {
             return Instance.kick.WasPressedThisFrame();
         }
 
         //get Jump button state
-        public static bool DefendKeyDown(){
+        public static bool DefendKeyDown()
+        {
             return Instance.defend.IsPressed();
         }
 
         //get Grab button state
-        public static bool GrabKeyDown(){
+        public static bool GrabKeyDown()
+        {
             return Instance.grab.WasPressedThisFrame();
         }
 
         //get Jump button state
-        public static bool JumpKeyDown(){
+        public static bool JumpKeyDown()
+        {
             return Instance.jump.WasPressedThisFrame();
         }
 
+        //get Pause button state
+        public static bool PauseMenuDown()
+        {
+            return Instance.pause.WasPressedThisFrame();
+        }
+
+        //get PerkMenu button state
+        public static bool PerkMenuDown()
+        {
+            return Instance.perkMenu.WasPressedThisFrame();
+        }
+
         //returns the directional input as a vector2
-        public static Vector2 GetInputVector(){
+        public static Vector2 GetInputVector()
+        {
             return Instance.move.ReadValue<Vector2>();
         }
 
         //detect joypad direction input
-        public static bool JoypadDirInputDetected(){
+        public static bool JoypadDirInputDetected()
+        {
             return (Instance.move.ReadValue<Vector2>().x != 0 || Instance.move.ReadValue<Vector2>().y != 0);
         }
 
         //detect device input change
-        void OnDeviceChange(InputDevice device, InputDeviceChange change) {
-            if (change == InputDeviceChange.Added) {
+        void OnDeviceChange(InputDevice device, InputDeviceChange change)
+        {
+            if (change == InputDeviceChange.Added)
+            {
                 InputUser.PerformPairingWithDevice(device, InputUser.all[0], InputUserPairingOptions.ForceNoPlatformUserAccountSelection);
-            } else if (change == InputDeviceChange.Removed) {
+            }
+            else if (change == InputDeviceChange.Removed)
+            {
             }
         }
     }

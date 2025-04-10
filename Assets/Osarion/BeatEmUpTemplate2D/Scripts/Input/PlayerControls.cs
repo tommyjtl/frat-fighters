@@ -80,6 +80,24 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""f67d2486-d4e0-4f67-8507-2cf1fcdf6209"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PerkMenu"",
+                    ""type"": ""Button"",
+                    ""id"": ""62c3f403-a7e6-4696-b13d-5c40d2891d93"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -322,6 +340,28 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""XR"",
                     ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c6147d6-215c-4bd3-8941-e8ba5a67b9da"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4183eb5d-294c-482d-937e-8a23d015539d"",
+                    ""path"": ""<Keyboard>/i"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""PerkMenu"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -915,6 +955,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Player_Defend = m_Player.FindAction("Defend", throwIfNotFound: true);
         m_Player_Grab = m_Player.FindAction("Grab", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
+        m_Player_PerkMenu = m_Player.FindAction("PerkMenu", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -994,6 +1036,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Defend;
     private readonly InputAction m_Player_Grab;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Pause;
+    private readonly InputAction m_Player_PerkMenu;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -1004,6 +1048,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         public InputAction @Defend => m_Wrapper.m_Player_Defend;
         public InputAction @Grab => m_Wrapper.m_Player_Grab;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Pause => m_Wrapper.m_Player_Pause;
+        public InputAction @PerkMenu => m_Wrapper.m_Player_PerkMenu;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1031,6 +1077,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @PerkMenu.started += instance.OnPerkMenu;
+            @PerkMenu.performed += instance.OnPerkMenu;
+            @PerkMenu.canceled += instance.OnPerkMenu;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -1053,6 +1105,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @PerkMenu.started -= instance.OnPerkMenu;
+            @PerkMenu.performed -= instance.OnPerkMenu;
+            @PerkMenu.canceled -= instance.OnPerkMenu;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1241,6 +1299,8 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         void OnDefend(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnPerkMenu(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

@@ -182,12 +182,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4124624533739615779}
   - {fileID: 564963974206438172}
   - {fileID: 6912438942591117491}
   - {fileID: 8305008256743350117}
   - {fileID: 1220377892963279984}
   - {fileID: 8817066248567326455}
+  - {fileID: 4124624533739615779}
   - {fileID: 3339611114187674126}
   - {fileID: 1832731987006156774}
   - {fileID: 2106892548644667814}
@@ -698,6 +698,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarType: 1
   nameField: {fileID: 5175661255231418687}
+  currentHp: {fileID: 0}
+  maxHp: {fileID: 0}
   portrait: {fileID: 1141406225139654906}
   healthBar: {fileID: 3708859959020621869}
 --- !u!225 &5933024635844669064
@@ -1132,6 +1134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarType: 2
   nameField: {fileID: 208036148861996545}
+  currentHp: {fileID: 0}
+  maxHp: {fileID: 0}
   portrait: {fileID: 4682499132659489651}
   healthBar: {fileID: 1125799404323910396}
 --- !u!225 &3537882868348316368
@@ -1309,6 +1313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3213eb2df661bca418606c94ab05ac1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CanBePaused: 1
+  pauseMenuSFX: UIButtonClick
 --- !u!1 &4754810345975206364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1510,7 +1516,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -0.000030517578, y: 60}
+  m_AnchoredPosition: {x: 0, y: 60}
   m_SizeDelta: {x: 0, y: 360}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2116765571371171692
@@ -1664,6 +1670,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarType: 0
   nameField: {fileID: 1433829718380261182}
+  currentHp: {fileID: 0}
+  maxHp: {fileID: 0}
   portrait: {fileID: 1439506425475097566}
   healthBar: {fileID: 5657491426090701082}
 --- !u!225 &4243724984611650047

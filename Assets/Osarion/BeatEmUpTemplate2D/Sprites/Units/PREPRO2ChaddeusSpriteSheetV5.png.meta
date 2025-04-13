@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a46acf8594de3c54bac4c43ffe6096f7
+guid: d378128f48f9b3e41afd65135039d4c7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f171df04978448544ac9b2fd01e916c1
-      internalID: 1805029406
+      spriteID: fcc185d776f13c44298ef1daf6b67c8b
+      internalID: 1204769697
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ae343234892a94785f774672915fba
-      internalID: 1365617054
+      spriteID: a5035379353fa2f40ab9885c8315ce09
+      internalID: -1641314639
       vertices: []
       indices: 
       edges: []
@@ -153,92 +153,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d9e58f65c5d14e45b872c944c13360e
-      internalID: -1654567472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadPunch1-1
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 225
-        width: 18
-        height: 30
-      alignment: 9
-      pivot: {x: 0.4444444, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3bcaa6388c2359947acba9a8a913388d
-      internalID: -1732945410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadPunch1-2
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 224
-        width: 24
-        height: 29
-      alignment: 9
-      pivot: {x: 0.3333333, y: 0.001548504}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 49723d3bf2ee27f41b03e42e432b4359
-      internalID: -930248142
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadPunch1-3
-      rect:
-        serializedVersion: 2
-        x: 89
-        y: 224
-        width: 23
-        height: 29
-      alignment: 9
-      pivot: {x: 0.3478261, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9aea17274b60a8647ac606ff32eefa5d
-      internalID: 284173473
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadPunch1-4
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 224
-        width: 23
-        height: 29
-      alignment: 9
-      pivot: {x: 0.3478261, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3155ae6be100fbb4fbfd338a6680fd32
-      internalID: -1857071356
+      spriteID: 9bc928a63517f5a4391a11e715310491
+      internalID: 630404888
       vertices: []
       indices: 
       edges: []
@@ -258,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a017193a54ddf824c88160f3cbe1ee55
-      internalID: -2143353321
+      spriteID: 90b294c75869ae24fa1aedc7c22f7191
+      internalID: -190237633
       vertices: []
       indices: 
       edges: []
@@ -273,14 +189,14 @@ TextureImporter:
         width: 23
         height: 29
       alignment: 9
-      pivot: {x: 0.35, y: 0}
+      pivot: {x: 0.37, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64225fc0ae0b38c47a21d3bbac8df098
-      internalID: 2067864669
+      spriteID: f893cdce8c104404db561d62a69a3f28
+      internalID: -244964256
       vertices: []
       indices: 
       edges: []
@@ -294,14 +210,14 @@ TextureImporter:
         width: 19
         height: 29
       alignment: 9
-      pivot: {x: 0.2, y: 0}
+      pivot: {x: 0.23, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69aed5d1c827d2042b96ee7e47bb902e
-      internalID: 310206732
+      spriteID: 4313460afdb564d4e807ff786182076b
+      internalID: 803090411
       vertices: []
       indices: 
       edges: []
@@ -315,14 +231,14 @@ TextureImporter:
         width: 18
         height: 31
       alignment: 9
-      pivot: {x: 0.22, y: 0}
+      pivot: {x: 0.185, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 063564c2be6f8864d8c538c4d104eff4
-      internalID: 631277447
+      spriteID: cabc53ce30debfa4c8eb38e7016a1875
+      internalID: -1968876509
       vertices: []
       indices: 
       edges: []
@@ -336,14 +252,14 @@ TextureImporter:
         width: 19
         height: 30
       alignment: 9
-      pivot: {x: 0.3, y: 0}
+      pivot: {x: 0.22, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 557491d3a0581d34086bdaeb2ce4c1f8
-      internalID: 52996817
+      spriteID: 221715404bfa938418ab85542e7462be
+      internalID: 1075578281
       vertices: []
       indices: 
       edges: []
@@ -357,581 +273,14 @@ TextureImporter:
         width: 21
         height: 29
       alignment: 9
-      pivot: {x: 0.31, y: 0}
+      pivot: {x: 0.295, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc7e192971e4f2340be46de7a0eb12ae
-      internalID: 2104028206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadRun7
-      rect:
-        serializedVersion: 2
-        x: 166
-        y: 158
-        width: 18
-        height: 29
-      alignment: 9
-      pivot: {x: 0.15, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 870f6da78762bc34d928d96aad0f8d13
-      internalID: -372933885
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadRun8
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 158
-        width: 18
-        height: 31
-      alignment: 9
-      pivot: {x: 0.22, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cd10e2287e200d4e98e51d829818a99
-      internalID: 1346073714
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadHit
-      rect:
-        serializedVersion: 2
-        x: 207
-        y: 157
-        width: 25
-        height: 29
-      alignment: 9
-      pivot: {x: 0.52, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f718af459285003468de390f68a14edc
-      internalID: 857873666
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadStandUp
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 158
-        width: 22
-        height: 23
-      alignment: 9
-      pivot: {x: 0.3181818, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4e40a268790a484282431fa65d89abf
-      internalID: -1225477917
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKnockdown1
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 93
-        width: 30
-        height: 30
-      alignment: 9
-      pivot: {x: 0.4333333, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 273c133f7485ab440a2987c611ab1670
-      internalID: 2144316132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKnockdown2
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 96
-        width: 32
-        height: 19
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce398481f5b92e34baf46722e8436a92
-      internalID: 1594979314
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKnockdown3
-      rect:
-        serializedVersion: 2
-        x: 152
-        y: 95
-        width: 32
-        height: 15
-      alignment: 9
-      pivot: {x: 0.5625, y: 0.06666667}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5917ddd5af52f8c4baf543ce960be0e5
-      internalID: 1203252637
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadLandPickup
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 225
-        width: 21
-        height: 19
-      alignment: 9
-      pivot: {x: 0.33, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e257412f4865f045b314f2267e65b17
-      internalID: 624567054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadJump
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 224
-        width: 24
-        height: 30
-      alignment: 9
-      pivot: {x: 0.43, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8e2acebbd814b843b58a16a275b830d
-      internalID: -1435450883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadDefend
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 225
-        width: 17
-        height: 27
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4be7606118eefd849b86f2dac118c397
-      internalID: -1890381980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadDefendHit
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 225
-        width: 17
-        height: 26
-      alignment: 9
-      pivot: {x: 0.48, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cae810a9c52a9d346bcdcbcf11f8e1cc
-      internalID: 1204801487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadDeath1
-      rect:
-        serializedVersion: 2
-        x: 334
-        y: 222
-        width: 15
-        height: 32
-      alignment: 9
-      pivot: {x: 0.55, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 83b516b4e7360354aa6589a691a1ee1b
-      internalID: 774209261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadDeath2
-      rect:
-        serializedVersion: 2
-        x: 356
-        y: 224
-        width: 27
-        height: 24
-      alignment: 9
-      pivot: {x: 0.6, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 438b82d26901851438dc3c0c9c3f777f
-      internalID: 1789240892
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadDeath3
-      rect:
-        serializedVersion: 2
-        x: 387
-        y: 221
-        width: 36
-        height: 14
-      alignment: 9
-      pivot: {x: 0.5625, y: 0.2}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09569f36a76b3a24691840abe550ddb7
-      internalID: -127567750
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick1-1
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 90
-        width: 16
-        height: 30
-      alignment: 9
-      pivot: {x: 0.7, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 05f7096e419a4a243929832872cbce87
-      internalID: 609512668
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick1-2
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 90
-        width: 26
-        height: 28
-      alignment: 9
-      pivot: {x: 0.36, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc0a4630ff154144fa400e431a5aace2
-      internalID: -1417332878
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick2-1
-      rect:
-        serializedVersion: 2
-        x: 262
-        y: 158
-        width: 20
-        height: 28
-      alignment: 9
-      pivot: {x: 0.385, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 37e9c10c06805fe459d86bfdd34a1746
-      internalID: -837868421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick2-2
-      rect:
-        serializedVersion: 2
-        x: 312
-        y: 158
-        width: 25
-        height: 29
-      alignment: 9
-      pivot: {x: 0.4, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 518f9525ff6087844987347a22ba8918
-      internalID: -1371693000
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadZynEat1
-      rect:
-        serializedVersion: 2
-        x: 259
-        y: 43
-        width: 17
-        height: 36
-      alignment: 9
-      pivot: {x: 0.8, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6100f79192f335d438c4564e6bdf52b9
-      internalID: 1026141598
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadZynEat2
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 43
-        width: 17
-        height: 36
-      alignment: 9
-      pivot: {x: 0.8, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f726c0fed281f3c4bbf4bbe0075b8c7c
-      internalID: -1916843991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadGrab1
-      rect:
-        serializedVersion: 2
-        x: 29
-        y: 59
-        width: 27
-        height: 27
-      alignment: 9
-      pivot: {x: 0.285, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbc59bfa70e140842858d11b96bdd348
-      internalID: -1204883107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadGrab2
-      rect:
-        serializedVersion: 2
-        x: 59
-        y: 59
-        width: 22
-        height: 27
-      alignment: 9
-      pivot: {x: 0.385, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2f01dc94d4565c43920610bc0a574fa
-      internalID: -187274130
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadThrow1
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 58
-        width: 20
-        height: 31
-      alignment: 9
-      pivot: {x: 0.655, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3612178f44df59449927860663cce4dd
-      internalID: 1587712208
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadThrow2
-      rect:
-        serializedVersion: 2
-        x: 105
-        y: 59
-        width: 28
-        height: 25
-      alignment: 9
-      pivot: {x: 0.285, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69f547b6342ce244db3628dbd55a24cd
-      internalID: 971938665
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick3-1
-      rect:
-        serializedVersion: 2
-        x: 167
-        y: 54
-        width: 18
-        height: 32
-      alignment: 9
-      pivot: {x: 0.335, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cd6ff84cf82ee14392a1ea41906a3d6
-      internalID: -1734246654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick3-2
-      rect:
-        serializedVersion: 2
-        x: 191
-        y: 55
-        width: 29
-        height: 29
-      alignment: 9
-      pivot: {x: 0.4, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9dbbd3b8e8947cf47a9cf89f11227b3f
-      internalID: 716406937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ChadKick3-3
-      rect:
-        serializedVersion: 2
-        x: 205
-        y: 19
-        width: 19
-        height: 29
-      alignment: 9
-      pivot: {x: 0.425, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4671e0553837b6341af6b08571d0d2d9
-      internalID: 511620885
+      spriteID: c83ae555c4debc245b7ed5e75b4e6fb3
+      internalID: -546767532
       vertices: []
       indices: 
       edges: []
@@ -951,8 +300,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d3b316438767bc40bdb5148ccbed794
-      internalID: -253470392
+      spriteID: 3f48c78e996e89d45bf4fe8f2f621294
+      internalID: -1515618795
       vertices: []
       indices: 
       edges: []
@@ -963,6 +312,510 @@ TextureImporter:
         serializedVersion: 2
         x: 119
         y: 192
+        width: 31
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c8e5f918fdc20499cc78c9c02fde18
+      internalID: -37235834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadRun7
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 158
+        width: 18
+        height: 29
+      alignment: 9
+      pivot: {x: 0.18, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc50cea228fc0044193b23b525be80d5
+      internalID: -1285160647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadRun8
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 158
+        width: 18
+        height: 31
+      alignment: 9
+      pivot: {x: 0.185, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4f128b3c843f74ea712bc0d3870086
+      internalID: -1741223004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadHit
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 157
+        width: 25
+        height: 29
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3113fd9bc23ff1c42b5cbbccfbd89d28
+      internalID: 1262357238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadStandUp
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 158
+        width: 22
+        height: 23
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba1a66fe9b5d9744b8706961fb7690f
+      internalID: 1499069751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKnockdown1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 93
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4333333, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e2789e6bf72d143941265fb9aeb129
+      internalID: 1751183376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKnockdown2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 96
+        width: 32
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4af8965a20c00499e8ccc13ee0fec9
+      internalID: -2136295448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKnockdown3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 95
+        width: 32
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.06666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2678a9f253066c41ab5b133e9e8380e
+      internalID: -1539266042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadLandPickup
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 225
+        width: 21
+        height: 19
+      alignment: 9
+      pivot: {x: 0.33, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e74906aa4653566428b2558bc907213b
+      internalID: 1661856036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadJump
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 224
+        width: 24
+        height: 30
+      alignment: 9
+      pivot: {x: 0.43, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac746256af45794479fa82ebb65f84b0
+      internalID: 558677608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadDefend
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 225
+        width: 17
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c28204eff9b7247ae560957b21efcc
+      internalID: -1424257080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadDefendHit
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 225
+        width: 17
+        height: 26
+      alignment: 9
+      pivot: {x: 0.48, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d044f448a65809646aece672a680f428
+      internalID: 2064065191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadDeath1
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 222
+        width: 15
+        height: 32
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3789140edd3654896d86e45929798f
+      internalID: 951855300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadDeath2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 224
+        width: 27
+        height: 24
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ead000fcdcd48e54fb8d97643ae285c8
+      internalID: -877057469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadDeath3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 221
+        width: 36
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80d6b3e61e51b941bc4068631fb7783
+      internalID: -1691173001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick2-1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 157
+        width: 20
+        height: 29
+      alignment: 9
+      pivot: {x: 0.385, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa666d8a63ffea4a815758718ae6224
+      internalID: 1096170816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick2-2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 158
+        width: 26
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd9f91fb822b122448a1899ed10c60a0
+      internalID: 1844022552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick1-1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 90
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4238dfc5efe74e449af2bcac0ffce3b2
+      internalID: 1007452799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick1-2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 90
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff057194bf91a9641bac7154be9dbe18
+      internalID: -1467801106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadGrab1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 59
+        width: 27
+        height: 27
+      alignment: 9
+      pivot: {x: 0.285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f519af1c0bdd1e840bcd9abf4f5e6e8c
+      internalID: 637167935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadGrab2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 59
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.385, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f27f5176fef534aacea038d50b3b4a
+      internalID: 1982504582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadThrow1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 58
+        width: 20
+        height: 31
+      alignment: 9
+      pivot: {x: 0.655, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3fdcb5bff10fac40a34173f09425a12
+      internalID: 940259120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadThrow2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 59
+        width: 28
+        height: 25
+      alignment: 9
+      pivot: {x: 0.285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad75609d195919846892cec00bb8d8d1
+      internalID: 1737990173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick3-1
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 54
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.335, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5264d57bf0b79d44185b003dd430b14d
+      internalID: 1566591462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick3-2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 55
         width: 30
         height: 29
       alignment: 9
@@ -972,8 +825,470 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96a8b5ad6a1807d45b092a187b40dfdc
-      internalID: -1146322483
+      spriteID: 6b0a74b980e624345afa005a8e176a54
+      internalID: -1357811657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadKick3-3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 19
+        width: 19
+        height: 29
+      alignment: 9
+      pivot: {x: 0.425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985303200583b4d448cc95adb7ce6e0f
+      internalID: -895220390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch3-1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 88
+        width: 24
+        height: 23
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19d22fdf4799e24aa7d89192a25a99c
+      internalID: -1076425039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch3-2
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 88
+        width: 19
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b074e03da739c664087c415509412cfb
+      internalID: -302232531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 43
+        width: 19
+        height: 32
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a907216bf27a684b840dabe2227f703
+      internalID: 451146736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat2
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 43
+        width: 17
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427a96fb4e1fb5a4daa69041af062f34
+      internalID: 267556163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat3
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 43
+        width: 17
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 066673a8536fbc14e89ad53cdc967b7b
+      internalID: 1652170014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat4
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 43
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90583495bafcbb140801bf1395f9326d
+      internalID: -2143404585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat5
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 43
+        width: 23
+        height: 28
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e71fbbd38102a4b9017cd35e1f8f08
+      internalID: -1896266983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat6
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 43
+        width: 23
+        height: 33
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ffb5faf4e7bee442ad8d11394e272f6
+      internalID: 968649901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat7
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 43
+        width: 24
+        height: 39
+      alignment: 9
+      pivot: {x: 0.54, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8167f29a0e8cbd4792ab9f8a64a43dd
+      internalID: 81213471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat8
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 43
+        width: 25
+        height: 39
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81474d3ef1fd6264ca81d068b4b00cca
+      internalID: -673747936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadZynEat9
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 43
+        width: 24
+        height: 40
+      alignment: 9
+      pivot: {x: 0.545, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb0cc2f9667d2a4a8206c9fb6e53235
+      internalID: 1618580043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch1-1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 225
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aec2a59096e23ca4e8e3bef1f47c8961
+      internalID: -716387902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch1-2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c55a895436f90e489a41a383a8dc760
+      internalID: -957158801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch1-3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3eef8ca4f0c34343a49c4e522eb85bb
+      internalID: 1384954398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch1-4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4105d3ab91003544c9fb544152524674
+      internalID: -14702204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch1-5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21be78cb4848d3428ddb60f72618927
+      internalID: 1474440146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch2-1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 125
+        width: 21
+        height: 30
+      alignment: 9
+      pivot: {x: 0.425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fa63be58219864c889089a26a80d3a
+      internalID: 1018319572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch2-2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88f6058b7797a34cbd2777aa9b94804
+      internalID: -472802613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch2-3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f14c186570936c4fb5a2baba75f8fba
+      internalID: -1587227077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch2-4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca845bb6e2ee1e342b58880dec50637a
+      internalID: -291809226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChadPunch2-5
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fccecb900f69454dade333aa8d44c9e
+      internalID: 1499272918
       vertices: []
       indices: 
       edges: []
@@ -989,48 +1304,63 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ChadAirAttack1: -253470392
-      ChadAirAttack2: -1146322483
-      ChadDeath1: 774209261
-      ChadDeath2: 1789240892
-      ChadDeath3: -127567750
-      ChadDefend: -1890381980
-      ChadDefendHit: 1204801487
-      ChadGrab1: -1204883107
-      ChadGrab2: -187274130
-      ChadHit: 857873666
-      ChadIdle1: 1805029406
-      ChadIdle2: 1365617054
-      ChadIdle3: -1654567472
-      ChadJump: -1435450883
-      ChadKick1-1: 609512668
-      ChadKick1-2: -1417332878
-      ChadKick2-1: -837868421
-      ChadKick2-2: -1371693000
-      ChadKick3-1: -1734246654
-      ChadKick3-2: 716406937
-      ChadKick3-3: 511620885
-      ChadKnockdown1: 2144316132
-      ChadKnockdown2: 1594979314
-      ChadKnockdown3: 1203252637
-      ChadLandPickup: 624567054
-      ChadPunch1-1: -1732945410
-      ChadPunch1-2: -930248142
-      ChadPunch1-3: 284173473
-      ChadPunch1-4: -1857071356
-      ChadRun1: -2143353321
-      ChadRun2: 2067864669
-      ChadRun3: 310206732
-      ChadRun4: 631277447
-      ChadRun5: 52996817
-      ChadRun6: 2104028206
-      ChadRun7: -372933885
-      ChadRun8: 1346073714
-      ChadStandUp: -1225477917
-      ChadThrow1: 1587712208
-      ChadThrow2: 971938665
-      ChadZynEat1: 1026141598
-      ChadZynEat2: -1916843991
+      ChadAirAttack1: -1515618795
+      ChadAirAttack2: -37235834
+      ChadDeath1: 951855300
+      ChadDeath2: -877057469
+      ChadDeath3: -1691173001
+      ChadDefend: -1424257080
+      ChadDefendHit: 2064065191
+      ChadGrab1: 637167935
+      ChadGrab2: 1982504582
+      ChadHit: 1262357238
+      ChadIdle1: 1204769697
+      ChadIdle2: -1641314639
+      ChadIdle3: 630404888
+      ChadJump: 558677608
+      ChadKick1-1: 1007452799
+      ChadKick1-2: -1467801106
+      ChadKick2-1: 1096170816
+      ChadKick2-2: 1844022552
+      ChadKick3-1: 1566591462
+      ChadKick3-2: -1357811657
+      ChadKick3-3: -895220390
+      ChadKnockdown1: 1751183376
+      ChadKnockdown2: -2136295448
+      ChadKnockdown3: -1539266042
+      ChadLandPickup: 1661856036
+      ChadPunch1-1: -716387902
+      ChadPunch1-2: -957158801
+      ChadPunch1-3: 1384954398
+      ChadPunch1-4: -14702204
+      ChadPunch1-5: 1474440146
+      ChadPunch2-1: 1018319572
+      ChadPunch2-2: -472802613
+      ChadPunch2-3: -1587227077
+      ChadPunch2-4: -291809226
+      ChadPunch2-5: 1499272918
+      ChadPunch3-1: -1076425039
+      ChadPunch3-2: -302232531
+      ChadRun1: -190237633
+      ChadRun2: -244964256
+      ChadRun3: 803090411
+      ChadRun4: -1968876509
+      ChadRun5: 1075578281
+      ChadRun6: -546767532
+      ChadRun7: -1285160647
+      ChadRun8: -1741223004
+      ChadStandUp: 1499069751
+      ChadThrow1: 940259120
+      ChadThrow2: 1737990173
+      ChadZynEat1: 451146736
+      ChadZynEat2: 267556163
+      ChadZynEat3: 1652170014
+      ChadZynEat4: -2143404585
+      ChadZynEat5: -1896266983
+      ChadZynEat6: 968649901
+      ChadZynEat7: 81213471
+      ChadZynEat8: -673747936
+      ChadZynEat9: 1618580043
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

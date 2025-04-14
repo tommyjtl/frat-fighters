@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections; 
+using System.Collections;
 
 namespace BeatEmUpTemplate2D
 {
@@ -8,7 +8,7 @@ namespace BeatEmUpTemplate2D
         public bool CanBePaused = true;
         private bool isPaused = false;
         private UIManager uiManager;
-        [SerializeField] private string pauseMenuSFX = "UIButtonClick"; 
+        [SerializeField] private string pauseMenuSFX = "UIButtonClick";
 
         void Start()
         {
@@ -39,8 +39,11 @@ namespace BeatEmUpTemplate2D
             // float delay = Mathf.Max(0.1f, BeatEmUpTemplate2D.AudioController.GetSFXDuration(pauseMenuSFX));
 
             StartCoroutine(DelayAudioPause(0f));
-            
+
             isPaused = true;
+
+            if (GlobalVariables.Instance != null)
+                GlobalVariables.Instance.isPauseMenuActive = true; // Set global variable
 
             if (uiManager != null)
                 uiManager.ShowMenu("PauseMenu"); // Show Pause Menu
@@ -48,9 +51,16 @@ namespace BeatEmUpTemplate2D
 
         public void ResumeGame()
         {
-            Time.timeScale = 1f; // Resume game
+            if (GlobalVariables.Instance != null)
+            {
+                if (!GlobalVariables.Instance.isPerkMenuActive)
+                    Time.timeScale = 1f; // Resume game only if Perk Menu is not active
+            }
+
             AudioListener.pause = false; // Resume audio
             isPaused = false;
+            if (GlobalVariables.Instance != null)
+                GlobalVariables.Instance.isPauseMenuActive = false; // Reset global variable
 
             if (uiManager != null)
             {
@@ -74,8 +84,8 @@ namespace BeatEmUpTemplate2D
 
         private IEnumerator DelayAudioPause(float delay)
         {
-            yield return new WaitForSecondsRealtime(delay); 
-            AudioListener.pause = true; 
+            yield return new WaitForSecondsRealtime(delay);
+            AudioListener.pause = true;
         }
     }
 }

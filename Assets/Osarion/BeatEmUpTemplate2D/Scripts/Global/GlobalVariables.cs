@@ -7,6 +7,9 @@ public class GlobalVariables : MonoBehaviour
 {
     public static GlobalVariables Instance { get; private set; }
 
+    public bool isPerkMenuActive = false;
+    public bool isPauseMenuActive = false;
+
     /*
  __  _____                _   ___ ___ 
  \ \/ / _ \  __ _ _ _  __| | / __| _ \
@@ -188,28 +191,13 @@ public class GlobalVariables : MonoBehaviour
                 bool,       // whether the perk is unlocked
                 string,     // perk name
                 string,     // perk description
-                int,        // perk cost
-                string,     // perk type
-                string,     // perk sub-type (we don't need this anymore, but I'll keep it for now)
-                int         // perk value to be added
-            )> perks = new List<(bool, string, string, int, string, string, int)> {
-            // Health Perks
-            (false, "Fortitude", "Increase max HP by 200", 3, "Health", "max", 200),
-
-            // Damage Perks
-            (false, "Universal Power I", "Increase all attack damage", 1, "Attack", "all", 2),
-            (false, "Universal Power II", "Increase (even more) all attack damage", 1, "Attack", "all", 4),
-
-            // Speed Perks
-            (false, "Swift Foot", "Increase ground move speed", 1, "Movement", "ground speed", 2),
-            (false, "Air Agility", "Increase air move speed", 1, "Movement", "air speed", 2),
-
-            // Jump Perks
-            (false, "High Jumper", "Increase jump height", 1, "Jump", "height", 2),
-            (false, "Gravity Defier", "Decrease jump gravity", 1, "Jump", "gravity", -2),
-
-            // Defense Perks
-            (false, "Safe Guard", "Enable rear defense", 1, "Defense", "rear", 0),
+                int         // perk cost
+            )> perks = new List<(bool, string, string, int)> {
+                // @TODO: costs need to be changed at the end
+                (false, "Lightweight", "Increases jump height, duration (and benefit of drugs?).", 1),
+                (false, "Chicken and Rice", "Double the attack damage and player size?", 1),
+                (false, "Hazing Specialist", "Lifesteal on kill.", 1),
+                (false, "Hoplite Training", "Initially only have two hit combos, allow three hit combos with extra damage.", 1),
         };
     private string _perkIdxSelected = "-1";
     public string perkIdxSelected

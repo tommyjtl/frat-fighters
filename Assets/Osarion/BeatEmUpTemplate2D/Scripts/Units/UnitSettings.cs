@@ -11,6 +11,7 @@ namespace BeatEmUpTemplate2D
     {
 
         public UNITTYPE unitType = UNITTYPE.PLAYER;
+        public bool debugHitbox = false; // Make hitbox visible
 
         //LINKED OBJECTS
         public GameObject shadowPrefab; //shadow prefab
@@ -141,8 +142,12 @@ namespace BeatEmUpTemplate2D
             if (!shadow && shadowPrefab) shadow = GameObject.Instantiate(shadowPrefab, transform.parent) as GameObject;
 
             //hide hitbox at start
-            if (hitBox) hitBox.color = Color.clear;
-            else Debug.LogError("Please assign a HitBox to GameObject " + gameObject.name + " in UnitSettings/Linked Components");
+            if (hitBox) {
+                if (!debugHitbox) hitBox.color = Color.clear;
+            }
+            else {
+                Debug.LogError("Please assign a HitBox to GameObject " + gameObject.name + " in UnitSettings/Linked Components");
+            }
 
             //check sprite renderer
             if (spriteRenderer == null) Debug.Log("Please assign a SpriteRenderer to GameObject " + gameObject.name + " in UnitSettings/Linked Components");

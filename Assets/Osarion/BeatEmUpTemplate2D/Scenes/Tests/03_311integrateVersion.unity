@@ -1496,11 +1496,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e6be278226ae461ca8f565cf9a0e5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minStageXP: 0
   maxStageXP: 200
   currentStageXP: 0
   currentOverallXP: 0
-  minSP: 0
   currentSP: 0
 --- !u!1 &250618396
 GameObject:
@@ -6634,6 +6632,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xpValue: {fileID: 0}
   spValue: {fileID: 356554364}
+  maxXpValue: {fileID: 0}
   xpBar: {fileID: 738337157}
 --- !u!225 &1671072498
 CanvasGroup:
@@ -7580,6 +7579,22 @@ PrefabInstance:
       propertyPath: comboData.Array.data[1].attackSequence.Array.data[1].animationState
       value: Kick3
       objectReference: {fileID: 0}
+    - target: {fileID: 6808783162317274075, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2456294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808783162317274075, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6581334
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808783162317274075, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.4037
+      objectReference: {fileID: 0}
+    - target: {fileID: 6808783162317274075, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5354
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7815,9 +7830,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c73062861a44f20a4641f74d06d787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPerkMenuActive: 0
+  isPauseMenuActive: 0
   globalStageXP: 0
   globalXP: 0
-  globalSP: 0
+  globalAttackDamageOverview: 
 --- !u!4 &1910599409
 Transform:
   m_ObjectHideFlags: 0

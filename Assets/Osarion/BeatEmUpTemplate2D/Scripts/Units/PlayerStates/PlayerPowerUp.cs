@@ -5,70 +5,81 @@ namespace BeatEmUpTemplate2D
 {
     public class PlayerPowerUp : State
     {
-        //private UnitActions unit;
+        public float buffDuration = 5f;
+        public float buffSpeedMultiplier = 2f;
+
         private Animator animator;
         private float originalFixedDeltaTime;
         private bool animationFinished = false;
         private bool slowMoInProgress = false;
 
-        // You can override this with actual buff duration logic later
         public float powerUpSlowMoTimeScale = 0.1f;
-        public float animationEndBuffer = 0.1f; // fallback in case animation event fails
+        public float animationEndBuffer = 0.1f;
 
-        private float originalCamSize;
         private float zoomedCamSize = 2.0f;
-        private float zoomDuration = 0.3f;
+        private float zoomDuration = 1.3f;
+        private float zoomHoldTime = 0f; // how long to stay zoomed in
 
         public override void Enter()
         {
             Debug.Log("[PowerUpState] Entering power-up state.");
 
-            //unit = GetComponent<UnitActions>();
+            InputManager.playerControlEnabled = false;
+
+            // Make player invulnerable + knockdown-immune
+            HealthSystem health = unit.GetComponent<HealthSystem>();
+            if (health != null)
+                health.invulnerable = true;
+
+            UnitSettings settings = unit.GetComponent<UnitSettings>();
+            if (settings != null)
+                settings.canBeKnockedDown = false;
+
+            InputManager.playerControlEnabled = false;
+
             animator = unit.animator;
 
-            // Save current fixedDeltaTime
             originalFixedDeltaTime = Time.fixedDeltaTime;
-
-            // Stop player movement
             unit.StopMoving();
 
-            // Slow down time for everything
+
+
+
+            // Apply slow-mo
             Time.timeScale = powerUpSlowMoTimeScale;
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
-
-            // Play animation in unscaled time
             animator.updateMode = AnimatorUpdateMode.UnscaledTime;
             animator.Play("Defend");
 
-
+            // Calculate zoom size based on player height
             SpriteRenderer sr = unit.GetComponent<SpriteRenderer>();
             if (sr != null)
             {
                 float playerHeight = sr.bounds.size.y;
-                float paddingFactor = 0.1f; // higher = more space above/below player
-                zoomedCamSize = playerHeight * paddingFactor * 0.5f;
+                float paddingFactor = 2.1f;
+                zoomedCamSize = playerHeight * paddingFactor * 1.2f;
             }
 
-
+            // Call zoom-in-out camera
             Camera camera = Camera.main;
             if (camera != null)
             {
-                Debug.Log("[PlayerPowerUp] Calling CameraZoom routine");
-                originalCamSize = camera.orthographicSize;
-                camera.GetComponent<CameraZoom>()?.ZoomTo(zoomedCamSize, zoomDuration);
+                Debug.Log("[PlayerPowerUp] Calling CameraZoom ZoomInOut");
+                camera.GetComponent<CameraZoom>()?.ZoomInOut(
+                    zoomedCamSize,
+                    zoomDuration,
+                    zoomHoldTime,
+                    unit.transform.position
+                );
             }
 
-
             // VFX + SFX
-            //unit.ShowEffect("ZynsChargeAura");
             unit.ShowEffect("FireHydrantWaterSplash");
-            //unit.PlaySFX("ZynsPowerUp");
             unit.StartCoroutine(PlayPowerUpSoundSequence());
             unit.CamShake();
 
-            // Fallback: Start coroutine in case animation event doesn't fire
             // float fallbackDuration = unit.GetAnimDuration("PowerUp") + animationEndBuffer;
-            float fallbackDuration = unit.GetAnimDuration("PowerUp") + animationEndBuffer;
+            float fallbackDuration = 3f;
             unit.StartCoroutine(FallbackExitRoutine(fallbackDuration));
         }
 
@@ -94,8 +105,7 @@ namespace BeatEmUpTemplate2D
 
         private void ApplyBuff()
         {
-            // This is where you apply the actual buff
-            unit.GetComponent<BuffSystem>()?.ApplyZynBuff(5f); // replace 5f with duration if needed
+            unit.GetComponent<BuffSystem>()?.ApplyZynBuff(buffDuration, buffSpeedMultiplier);
             unit.stateMachine.SetState(new PlayerIdle());
         }
 
@@ -104,18 +114,22 @@ namespace BeatEmUpTemplate2D
             if (slowMoInProgress) return;
             slowMoInProgress = true;
 
-            // Restore time scale instantly
             Time.timeScale = 1f;
             Time.fixedDeltaTime = originalFixedDeltaTime;
-
-            // Reset animator update mode
             animator.updateMode = AnimatorUpdateMode.Normal;
 
-            Camera camera = Camera.main;
-            if (camera != null)
-            {
-                camera.GetComponent<CameraZoom>()?.ZoomTo(originalCamSize, zoomDuration);
-            }
+            // No need to call ZoomTo() here — the camera will zoom back automatically
+
+            InputManager.playerControlEnabled = true;
+
+            // Restore normal vulnerability and knockdown
+            HealthSystem health = unit.GetComponent<HealthSystem>();
+            if (health != null)
+                health.invulnerable = false;
+
+            UnitSettings settings = unit.GetComponent<UnitSettings>();
+            if (settings != null)
+                settings.canBeKnockedDown = true;
         }
 
         private IEnumerator FallbackExitRoutine(float waitTime)

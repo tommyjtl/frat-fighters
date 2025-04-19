@@ -39,7 +39,9 @@ namespace BeatEmUpTemplate2D {
         private float camY;
         private PixelPerfectCamera pixelPerfectCamera;
 
-	    void Start(){
+        public static bool IsZooming = false;
+
+        void Start(){
 		    GetPlayerTargets();
             prevPos = transform.position;
             centerPos = GetCenterPosOfAllTargets();
@@ -48,6 +50,7 @@ namespace BeatEmUpTemplate2D {
 	    }
 
 	    void Update () {
+            if (IsZooming) return;
             if (targets.Length == 0) return;
 			
             //calculate x,y position

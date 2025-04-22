@@ -9,7 +9,7 @@ namespace BeatEmUpTemplate2D
     {
         // XP
         [HideInInspector]
-        public List<(bool, string, string, int, string, string, int)> perks;
+        public List<(bool, string, string, int)> perks;
 
         [HideInInspector]
         public string perkIdxSelected;
@@ -53,7 +53,7 @@ namespace BeatEmUpTemplate2D
         }
 
 
-        public (bool, string, string, int, string, string, int) getPerk(int index)
+        public (bool, string, string, int) getPerk(int index)
         {
             return perks[index];
         }
@@ -72,12 +72,6 @@ namespace BeatEmUpTemplate2D
                     return perks[index].Item3;
                 case "cost":
                     return perks[index].Item4;
-                case "type":
-                    return perks[index].Item5;
-                case "stat":
-                    return perks[index].Item6;
-                case "value":
-                    return perks[index].Item7;
                 default:
                     return null;
             }
@@ -91,48 +85,48 @@ namespace BeatEmUpTemplate2D
             {
                 // unlock the perk
                 string perk_name = (string)getPerkValue(index, "name");
-                int value_added = (int)getPerkValue(index, "value");
 
                 // See more in `Scripts/Global/GlobalVariables.cs`
+                // - GlobalVariables.Instance.globalMaxHP;
+                // - GlobalVariables.Instance.globalAttackDamageAddUp;
+                // - GlobalVariables.Instance.globalMoveSpeed;
+                // - GlobalVariables.Instance.globalMoveSpeedAir;
+                // - GlobalVariables.Instance.globalJumpHeight;
+                // - GlobalVariables.Instance.globalJumpGravity;
+                // - GlobalVariables.Instance.globalRearDefenseEnabled;
                 switch (perk_name)
                 {
-                    case "Fortitude":
-                        GlobalVariables.Instance.globalMaxHP += value_added;
+                    /*
+                        (false, "Lightweight", "Increases jump height, duration (and benefit of drugs?)", 1),
+                        (false, "Chicken and Rice", "Double the attack damage and player size?", 1),
+                        (false, "Hazing Specialist", "Lifesteal on kill", 1),
+                        (false, "Hoplite Training", "Initially only have two hit combos, allow three hit combos with extra damage", 1),
+                    */
+                    case "Lightweight":
+                        GlobalVariables.Instance.globalJumpHeight += 2; // higher jump
+                        GlobalVariables.Instance.globalJumpGravity += -2; // lower gravity
+                        // "benefit of drugs" left out for now
                         break;
-                    case "Universal Power I":
-                        // GlobalVariables.Instance.globalMoveSpeed += value_added;
-                        GlobalVariables.Instance.globalAttackDamageAddUp = value_added;
-                        // (false, "Universal Power I",
+                    case "Chicken and Rice":
+                        GlobalVariables.Instance.globalAttackDamageAddUp = 5;
+                        // player size is not implemented yet
+                        GameObject player = GameObject.FindWithTag("Player"); // Replace with your player reference
+                        if (player != null)
+                            player.transform.localScale *= 2; // Double the player's size
                         break;
-                    case "Universal Power II":
-                        GlobalVariables.Instance.globalAttackDamageAddUp = value_added;
-                        // (false, "Universal Power II",
+                    case "Hazing Specialist":
+                        // @TODO: implement lifesteal on kill
                         break;
-                    case "Swift Foot":
-                        GlobalVariables.Instance.globalMoveSpeed += 2;
-                        // (false, "Swift Foot", "Increase ground move speed", 1, "Movement", "ground speed", 2),
-                        break;
-                    case "Air Agility":
-                        GlobalVariables.Instance.globalMoveSpeedAir += 4;
-                        // (false, "Air Agility", "Increase air move speed", 1, "Movement", "air speed", 2),
-                        break;
-                    case "High Jumper":
-                        GlobalVariables.Instance.globalJumpHeight += 2;
-                        // (false, "High Jumper", "Increase jump height", 1, "Jump", "height", 2),
-                        break;
-                    case "Gravity Defier":
-                        GlobalVariables.Instance.globalJumpGravity += -2;
-                        // (false, "Gravity Defier", "Decrease jump gravity", 1, "Jump", "gravity", -2),
-                        break;
-                    case "Safe Guard":
-                        GlobalVariables.Instance.globalRearDefenseEnabled = true;
-                        // (false, "Safe Guard", "Enable rear defense", 1, "Defense", "rear", 0),
+                    case "Hoplite Training":
+                        // @TODO: implement two hit combos
+                        // public List<Combo> comboData = new List<Combo>();            in `UnitSettings.cs`
+                        // private Combo FindComBoMatch(List<ATTACKTYPE> attackList);   in `PlayerAttack.cs`
                         break;
                     default:
                         break;
                 }
 
-                perks[index] = (true, perks[index].Item2, perks[index].Item3, perks[index].Item4, perks[index].Item5, perks[index].Item6, perks[index].Item7);
+                perks[index] = (true, perks[index].Item2, perks[index].Item3, perks[index].Item4);
 
             }
             // Debug.Log("Perk unlocked: " + index);
@@ -144,7 +138,7 @@ namespace BeatEmUpTemplate2D
             if (perks[index].Item1)
             {
                 // lock the perk
-                perks[index] = (false, perks[index].Item2, perks[index].Item3, perks[index].Item4, perks[index].Item5, perks[index].Item6, perks[index].Item7);
+                perks[index] = (false, perks[index].Item2, perks[index].Item3, perks[index].Item4);
                 // Debug.Log("Perk locked: " + index);
             }
         }
@@ -159,7 +153,7 @@ namespace BeatEmUpTemplate2D
             int idx = 0;
             foreach (var perk in perks)
             {
-                currentPerks += $"{idx}\t{perk.Item1}, {perk.Item2}, {perk.Item4},\t\"{perk.Item5}\",\t\"{perk.Item6}\",\t{perk.Item7})\n";
+                currentPerks += $"{idx}\t{perk.Item1}, {perk.Item2}, {perk.Item4}\n";
                 idx++;
             }
 

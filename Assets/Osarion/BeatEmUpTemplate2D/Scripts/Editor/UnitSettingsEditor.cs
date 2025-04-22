@@ -96,6 +96,7 @@ namespace BeatEmUpTemplate2D
 
             //unit type
             DrawPropertyField("unitType");
+            DrawPropertyField("debugHitbox");
 
             //linked components
             EditorGUILayout.BeginHorizontal();

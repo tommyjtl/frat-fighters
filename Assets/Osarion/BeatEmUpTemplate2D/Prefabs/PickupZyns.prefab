@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c15d7478a49a565449438efa8196ad4d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8fb135ab1dcc24469ff6497c0f83800, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -108,5 +108,4 @@ MonoBehaviour:
   bounceHeight: 2
   bounceSpeed: 1
   playBounceAnimation: 0
-  buffDuration: 5
   showEffect: {fileID: 0}

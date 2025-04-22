@@ -13,6 +13,7 @@ namespace BeatEmUpTemplate2D
         [Header("MODERN INPUTMANAGER. v1.0")]
         [ReadOnlyProperty] public string controlsScheme;
         public PlayerControls playerInput;
+        public static bool playerControlEnabled = true;
         private InputAction move;
         private InputAction punch;
         private InputAction kick;
@@ -92,31 +93,31 @@ namespace BeatEmUpTemplate2D
         //get Punch button state
         public static bool PunchKeyDown()
         {
-            return Instance.punch.WasPressedThisFrame();
+            return playerControlEnabled && Instance.punch.WasPressedThisFrame();
         }
 
         //get Kick button state
         public static bool KickKeyDown()
         {
-            return Instance.kick.WasPressedThisFrame();
+            return playerControlEnabled && Instance.kick.WasPressedThisFrame();
         }
 
         //get Jump button state
         public static bool DefendKeyDown()
         {
-            return Instance.defend.IsPressed();
+            return playerControlEnabled && Instance.defend.IsPressed();
         }
 
         //get Grab button state
         public static bool GrabKeyDown()
         {
-            return Instance.grab.WasPressedThisFrame();
+            return playerControlEnabled && Instance.grab.WasPressedThisFrame();
         }
 
         //get Jump button state
         public static bool JumpKeyDown()
         {
-            return Instance.jump.WasPressedThisFrame();
+            return playerControlEnabled && Instance.jump.WasPressedThisFrame();
         }
 
         //get Pause button state
@@ -134,7 +135,7 @@ namespace BeatEmUpTemplate2D
         //returns the directional input as a vector2
         public static Vector2 GetInputVector()
         {
-            return Instance.move.ReadValue<Vector2>();
+            return playerControlEnabled ? Instance.move.ReadValue<Vector2>() : Vector2.zero;
         }
 
         //detect joypad direction input

@@ -27,6 +27,26 @@ namespace BeatEmUpTemplate2D {
             //open menu
             menuToOpen.menuGameObject.SetActive(true);
         }
+
+        /// <summary>
+        /// Shows a specific menu without hiding the others.
+        /// </summary>
+        public void ShowUIElement(string menuName)
+        {
+            foreach (UIMenu menu in menuList)
+                if (menu.menuName == menuName)
+                    menu.menuGameObject.SetActive(true);
+        }
+
+        /// <summary>
+        /// Hides a specific menu without affecting the others.
+        /// </summary>
+        public void HideUIElement(string menuName)
+        {
+            foreach (UIMenu menu in menuList)
+                if (menu.menuName == menuName)
+                    menu.menuGameObject.SetActive(false);
+        }
     }
 
     [System.Serializable] 

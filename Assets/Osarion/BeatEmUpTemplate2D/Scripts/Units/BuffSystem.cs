@@ -12,6 +12,7 @@ namespace BeatEmUpTemplate2D
 
         private float originalGlobalSpeed;
         private Coroutine zynBuffRoutine;
+        private Coroutine auraFlashRoutine;
         private float buffTimeRemaining = 0f;
         private float speedMultiplier = 0f;
         private bool isZynBuffActive = false;
@@ -29,6 +30,8 @@ namespace BeatEmUpTemplate2D
             {
                 auraRenderer.sprite = playerRenderer.sprite;
                 auraRenderer.flipX = playerRenderer.flipX;
+
+                auraRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
             }
         }
 
@@ -58,11 +61,25 @@ namespace BeatEmUpTemplate2D
             GlobalVariables.Instance.globalMoveSpeed = originalGlobalSpeed * speedMultiplier;
             auraObject.SetActive(true);
 
+            bool flashStarted = false;
+
             while (buffTimeRemaining > 0f)
             {
                 buffTimeRemaining -= Time.deltaTime;
+
+                // Start flashing when 2 seconds are left
+                if (!flashStarted && buffTimeRemaining <= 3f)
+                {
+                    flashStarted = true;
+                    auraFlashRoutine = StartCoroutine(FlashAura());
+                }
+
                 yield return null;
             }
+
+            // Stop flashing
+            if (auraFlashRoutine != null)
+                StopCoroutine(auraFlashRoutine);
 
             // Reset to original values
             GlobalVariables.Instance.globalMoveSpeed = originalGlobalSpeed;
@@ -70,6 +87,18 @@ namespace BeatEmUpTemplate2D
             isZynBuffActive = false;
 
             Debug.Log("[BuffSystem] Zyn buff ended.");
+        }
+
+        private IEnumerator FlashAura()
+        {
+            SpriteRenderer aura = auraObject.GetComponent<SpriteRenderer>();
+            float flashInterval = 0.2f;
+
+            while (true) // we'll stop it externally
+            {
+                aura.enabled = !aura.enabled;
+                yield return new WaitForSeconds(flashInterval);
+            }
         }
     }
 }

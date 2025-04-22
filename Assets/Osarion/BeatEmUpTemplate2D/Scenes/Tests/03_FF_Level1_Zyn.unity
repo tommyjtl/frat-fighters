@@ -2598,7 +2598,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b250a3654969f874984df87787bb6816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zynSpeedMultiplier: 5.5
   auraObject: {fileID: 10770612}
 --- !u!1 &250618396
 GameObject:

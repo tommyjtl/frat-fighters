@@ -42,7 +42,6 @@ namespace BeatEmUpTemplate2D {
         [Header ("Lock Vertical")]
         [SerializeField] private bool lockVertical; //locks camera so it can't move vertically
 
-	    void Start(){
         public static bool IsZooming = false;
 
         void Start(){

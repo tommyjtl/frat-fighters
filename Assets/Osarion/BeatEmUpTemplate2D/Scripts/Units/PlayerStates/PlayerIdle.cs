@@ -23,10 +23,10 @@
             if(unit.weapon && InputManager.PunchKeyDown()){ unit.stateMachine.SetState(new PlayerWeaponAttack()); return; }
 
             //check for nearby enemy to ground Punch
-            if(InputManager.PunchKeyDown() && unit.NearbyEnemyDown()){ unit.stateMachine.SetState(new PlayerGroundPunch()); return; }
+            //if(InputManager.PunchKeyDown() && unit.NearbyEnemyDown()){ unit.stateMachine.SetState(new PlayerGroundPunch()); return; }
 
             //check for nearby enemy to ground kick
-            if(InputManager.KickKeyDown() && unit.NearbyEnemyDown()){ unit.stateMachine.SetState(new PlayerGroundKick()); return; }
+            //if(InputManager.KickKeyDown() && unit.NearbyEnemyDown()){ unit.stateMachine.SetState(new PlayerGroundKick()); return; }
 
             //punch Key pressed
             if(InputManager.PunchKeyDown()){ unit.stateMachine.SetState(new PlayerAttack(ATTACKTYPE.PUNCH)); return; }

@@ -96,26 +96,24 @@ namespace BeatEmUpTemplate2D
                 // - GlobalVariables.Instance.globalRearDefenseEnabled;
                 switch (perk_name)
                 {
-                    /*
-                        (false, "Lightweight", "Increases jump height, duration (and benefit of drugs?)", 1),
-                        (false, "Chicken and Rice", "Double the attack damage and player size?", 1),
-                        (false, "Hazing Specialist", "Lifesteal on kill", 1),
-                        (false, "Hoplite Training", "Initially only have two hit combos, allow three hit combos with extra damage", 1),
-                    */
+                    // Goto `Scripts/Global/GlobalVariables.cs`
                     case "Lightweight":
                         GlobalVariables.Instance.globalJumpHeight += 2; // higher jump
                         GlobalVariables.Instance.globalJumpGravity += -2; // lower gravity
-                        // "benefit of drugs" left out for now
+                        // @TODO: "better benefit of drugs" left out for now
                         break;
                     case "Chicken and Rice":
                         GlobalVariables.Instance.globalAttackDamageAddUp = 5;
-                        // player size is not implemented yet
-                        GameObject player = GameObject.FindWithTag("Player"); // Replace with your player reference
+                        GameObject player = GameObject.FindWithTag("Player");
                         if (player != null)
-                            player.transform.localScale *= 2; // Double the player's size
+                        {
+                            // Double the player's size
+                            player.transform.localScale *= 2;
+                        }
                         break;
                     case "Hazing Specialist":
                         // @TODO: implement lifesteal on kill
+                        GlobalVariables.Instance.globalStealOnEnemyKill = true;
                         break;
                     case "Hoplite Training":
                         // @TODO: implement two hit combos

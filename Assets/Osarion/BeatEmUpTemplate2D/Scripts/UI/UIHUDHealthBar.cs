@@ -164,6 +164,9 @@ namespace BeatEmUpTemplate2D
                 float percent = (float)currentHealthSystem.currentHp / (float)currentHealthSystem.maxHp;
                 healthBar.fillAmount = percent;
                 currentHp.text = currentHealthSystem.currentHp.ToString();
+
+                if (GlobalVariables.Instance != null)
+                    GlobalVariables.Instance.globalRecalculateHP = false;
             }
         }
     }

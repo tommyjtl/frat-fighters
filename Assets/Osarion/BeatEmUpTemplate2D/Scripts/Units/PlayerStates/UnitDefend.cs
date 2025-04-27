@@ -37,7 +37,7 @@ namespace BeatEmUpTemplate2D {
         public void Hit(){
            
             //show defend effect
-            unit.ShowEffect("DefendEffect"); 
+            unit.ShowEffect("DefendEffect");
 
             //play sfx
             BeatEmUpTemplate2D.AudioController.PlaySFX(defendHitSFX, unit.transform.position);

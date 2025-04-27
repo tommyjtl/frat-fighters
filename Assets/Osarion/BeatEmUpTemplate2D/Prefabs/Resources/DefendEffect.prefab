@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170919598269764670}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &5313887098393373870
 ParticleSystem:
@@ -1546,10 +1546,10 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 165217735, guid: 4d01695c9335abb4c8b4e19b13b25ef6, type: 3}
-    - sprite: {fileID: 305812614, guid: 4d01695c9335abb4c8b4e19b13b25ef6, type: 3}
-    - sprite: {fileID: 2042697848, guid: 4d01695c9335abb4c8b4e19b13b25ef6, type: 3}
-    - sprite: {fileID: 1433044467, guid: 4d01695c9335abb4c8b4e19b13b25ef6, type: 3}
+    - sprite: {fileID: 384734910, guid: f48bbfe35397d9541b7ddd6cee83a0bc, type: 3}
+    - sprite: {fileID: 1485301927, guid: f48bbfe35397d9541b7ddd6cee83a0bc, type: 3}
+    - sprite: {fileID: -1945983502, guid: f48bbfe35397d9541b7ddd6cee83a0bc, type: 3}
+    - sprite: {fileID: -1042170634, guid: f48bbfe35397d9541b7ddd6cee83a0bc, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4874,13 +4874,15 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
+  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
+  m_UseCustomTrailVertexStreams: 0
+  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

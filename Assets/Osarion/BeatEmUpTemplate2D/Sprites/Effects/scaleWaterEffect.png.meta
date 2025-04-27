@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WaterEffect_0
+      name: scaleWaterEffect_0
       rect:
         serializedVersion: 2
         x: 3
@@ -105,7 +105,7 @@ TextureImporter:
         width: 15
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterEffect_1
+      name: scaleWaterEffect_1
       rect:
         serializedVersion: 2
         x: 26
@@ -126,7 +126,7 @@ TextureImporter:
         width: 28
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterEffect_2
+      name: scaleWaterEffect_2
       rect:
         serializedVersion: 2
         x: 62
@@ -147,7 +147,7 @@ TextureImporter:
         width: 30
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WaterEffect_3
+      name: scaleWaterEffect_3
       rect:
         serializedVersion: 2
         x: 99
@@ -168,7 +168,7 @@ TextureImporter:
         width: 26
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      WaterEffect_0: -1641107459
-      WaterEffect_1: 100934327
-      WaterEffect_2: -1884750434
-      WaterEffect_3: 669948357
+      scaleWaterEffect_0: -1641107459
+      scaleWaterEffect_1: 100934327
+      scaleWaterEffect_2: -1884750434
+      scaleWaterEffect_3: 669948357
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

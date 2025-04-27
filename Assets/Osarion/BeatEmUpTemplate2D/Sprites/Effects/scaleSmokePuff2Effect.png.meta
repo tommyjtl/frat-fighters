@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmokePuff2Effect_0
+      name: scaleSmokePuff2Effect_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff2Effect_1
+      name: scaleSmokePuff2Effect_1
       rect:
         serializedVersion: 2
         x: 16
@@ -126,7 +126,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff2Effect_2
+      name: scaleSmokePuff2Effect_2
       rect:
         serializedVersion: 2
         x: 0
@@ -147,7 +147,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff2Effect_3
+      name: scaleSmokePuff2Effect_3
       rect:
         serializedVersion: 2
         x: 16
@@ -168,7 +168,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SmokePuff2Effect_0: -924666992
-      SmokePuff2Effect_1: 460661148
-      SmokePuff2Effect_2: 1988066952
-      SmokePuff2Effect_3: 574351395
+      scaleSmokePuff2Effect_0: -924666992
+      scaleSmokePuff2Effect_1: 460661148
+      scaleSmokePuff2Effect_2: 1988066952
+      scaleSmokePuff2Effect_3: 574351395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

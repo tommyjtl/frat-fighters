@@ -14804,6 +14804,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c73062861a44f20a4641f74d06d787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPerkMenuActive: 0
+  isPauseMenuActive: 0
   globalStageXP: 0
   globalXP: 0
   globalAttackDamageOverview: 

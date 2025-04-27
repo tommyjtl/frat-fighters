@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DummyHitParticles_0
+      name: scaleDummyHitParticles_0
       rect:
         serializedVersion: 2
         x: 2
@@ -105,7 +105,7 @@ TextureImporter:
         width: 3
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DummyHitParticles_1
+      name: scaleDummyHitParticles_1
       rect:
         serializedVersion: 2
         x: 10
@@ -126,7 +126,7 @@ TextureImporter:
         width: 3
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DummyHitParticles_2
+      name: scaleDummyHitParticles_2
       rect:
         serializedVersion: 2
         x: 2
@@ -147,7 +147,7 @@ TextureImporter:
         width: 4
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: DummyHitParticles_3
+      name: scaleDummyHitParticles_3
       rect:
         serializedVersion: 2
         x: 10
@@ -168,7 +168,7 @@ TextureImporter:
         width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      DummyHitParticles_0: -936458323
-      DummyHitParticles_1: -1089686838
-      DummyHitParticles_2: -844954080
-      DummyHitParticles_3: -262245158
+      scaleDummyHitParticles_0: -936458323
+      scaleDummyHitParticles_1: -1089686838
+      scaleDummyHitParticles_2: -844954080
+      scaleDummyHitParticles_3: -262245158
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

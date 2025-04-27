@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmokePuff1Effect_0
+      name: scaleSmokePuff1Effect_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +118,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_1
+      name: scaleSmokePuff1Effect_1
       rect:
         serializedVersion: 2
         x: 16
@@ -126,7 +126,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_2
+      name: scaleSmokePuff1Effect_2
       rect:
         serializedVersion: 2
         x: 32
@@ -147,7 +147,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_3
+      name: scaleSmokePuff1Effect_3
       rect:
         serializedVersion: 2
         x: 48
@@ -168,7 +168,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,7 +181,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_4
+      name: scaleSmokePuff1Effect_4
       rect:
         serializedVersion: 2
         x: 0
@@ -189,7 +189,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_5
+      name: scaleSmokePuff1Effect_5
       rect:
         serializedVersion: 2
         x: 16
@@ -210,7 +210,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_6
+      name: scaleSmokePuff1Effect_6
       rect:
         serializedVersion: 2
         x: 32
@@ -231,7 +231,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokePuff1Effect_7
+      name: scaleSmokePuff1Effect_7
       rect:
         serializedVersion: 2
         x: 48
@@ -252,7 +252,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,14 +275,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SmokePuff1Effect_0: 439531490
-      SmokePuff1Effect_1: -504911160
-      SmokePuff1Effect_2: -1674162980
-      SmokePuff1Effect_3: 842898005
-      SmokePuff1Effect_4: 2031303326
-      SmokePuff1Effect_5: 593553050
-      SmokePuff1Effect_6: 2085348817
-      SmokePuff1Effect_7: 646004576
+      scaleSmokePuff1Effect_0: 439531490
+      scaleSmokePuff1Effect_1: -504911160
+      scaleSmokePuff1Effect_2: -1674162980
+      scaleSmokePuff1Effect_3: 842898005
+      scaleSmokePuff1Effect_4: 2031303326
+      scaleSmokePuff1Effect_5: 593553050
+      scaleSmokePuff1Effect_6: 2085348817
+      scaleSmokePuff1Effect_7: 646004576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -112,7 +112,6 @@ namespace BeatEmUpTemplate2D
                         }
                         break;
                     case "Hazing Specialist":
-                        // @TODO: implement lifesteal on kill
                         GlobalVariables.Instance.globalStealOnEnemyKill = true;
                         break;
                     case "Hoplite Training":

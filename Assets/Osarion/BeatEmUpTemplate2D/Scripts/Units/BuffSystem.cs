@@ -1,54 +1,104 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace BeatEmUpTemplate2D
 {
     public class BuffSystem : MonoBehaviour
     {
+
+        public GameObject auraObject; // Assign the AuraLayer GameObject in Inspector
+        private SpriteRenderer auraRenderer;
+        private SpriteRenderer playerRenderer;
+
+        private float originalGlobalSpeed;
         private Coroutine zynBuffRoutine;
+        private Coroutine auraFlashRoutine;
+        private float buffTimeRemaining = 0f;
+        private float speedMultiplier = 0f;
         private bool isZynBuffActive = false;
 
-        [Tooltip("Speed multiplier during Zyn buff")]
-        public float zynSpeedMultiplier = 5.5f;
-
-        public void ApplyZynBuff(float duration)
+        void Start()
         {
-            if (isZynBuffActive)
-            {
-                StopCoroutine(zynBuffRoutine);
-            }
-            zynBuffRoutine = StartCoroutine(ZynBuffRoutine(duration));
+            playerRenderer = GetComponent<SpriteRenderer>();
+            auraRenderer = auraObject.GetComponent<SpriteRenderer>();
+            auraObject.SetActive(false);
         }
 
-        private IEnumerator ZynBuffRoutine(float duration)
+        void LateUpdate()
         {
-            Debug.Log("[BuffSystem] Zyn buff activated for " + duration + " seconds.");
+            if (auraObject.activeSelf)
+            {
+                auraRenderer.sprite = playerRenderer.sprite;
+                auraRenderer.flipX = playerRenderer.flipX;
 
+                auraRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
+            }
+        }
+
+        public void ApplyZynBuff(float duration, float multiplier)
+        {
+            // Extend or restart duration
+            buffTimeRemaining = duration;
+            speedMultiplier = multiplier;
+
+            if (!isZynBuffActive)
+            {
+                zynBuffRoutine = StartCoroutine(ZynBuffRoutine());
+            }
+            else
+            {
+                Debug.Log("[BuffSystem] Zyn buff refreshed with new duration.");
+            }
+        }
+
+        private IEnumerator ZynBuffRoutine()
+        {
+            Debug.Log("[BuffSystem] Zyn buff activated.");
             isZynBuffActive = true;
 
-            // Apply speed buff
-            UnitActions unit = GetComponent<UnitActions>();
-            float originalSpeed = unit.settings.moveSpeed;
-            unit.settings.moveSpeed *= zynSpeedMultiplier;
+            // Cache and apply multiplier once
+            originalGlobalSpeed = GlobalVariables.Instance.globalMoveSpeed;
+            GlobalVariables.Instance.globalMoveSpeed = originalGlobalSpeed * speedMultiplier;
+            auraObject.SetActive(true);
 
-            // TODO: Send UI signal to show timer here
+            bool flashStarted = false;
 
-            float timeRemaining = duration;
-            while (timeRemaining > 0f)
+            while (buffTimeRemaining > 0f)
             {
-                timeRemaining -= Time.deltaTime;
-                // TODO: Send UI update to reflect remaining time
+                buffTimeRemaining -= Time.deltaTime;
+
+                // Start flashing when 2 seconds are left
+                if (!flashStarted && buffTimeRemaining <= 3f)
+                {
+                    flashStarted = true;
+                    auraFlashRoutine = StartCoroutine(FlashAura());
+                }
+
                 yield return null;
             }
 
-            // Revert speed buff
-            unit.settings.moveSpeed = originalSpeed;
+            // Stop flashing
+            if (auraFlashRoutine != null)
+                StopCoroutine(auraFlashRoutine);
+
+            // Reset to original values
+            GlobalVariables.Instance.globalMoveSpeed = originalGlobalSpeed;
+            auraObject.SetActive(false);
             isZynBuffActive = false;
 
-            // TODO: Send UI signal to hide timer here
             Debug.Log("[BuffSystem] Zyn buff ended.");
+        }
+
+        private IEnumerator FlashAura()
+        {
+            SpriteRenderer aura = auraObject.GetComponent<SpriteRenderer>();
+            float flashInterval = 0.2f;
+
+            while (true) // we'll stop it externally
+            {
+                aura.enabled = !aura.enabled;
+                yield return new WaitForSeconds(flashInterval);
+            }
         }
     }
 }
-

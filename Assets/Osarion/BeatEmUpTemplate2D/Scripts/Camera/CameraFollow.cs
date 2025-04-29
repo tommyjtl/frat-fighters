@@ -42,7 +42,9 @@ namespace BeatEmUpTemplate2D {
         [Header ("Lock Vertical")]
         [SerializeField] private bool lockVertical; //locks camera so it can't move vertically
 
-	    void Start(){
+        public static bool IsZooming = false;
+
+        void Start(){
 		    GetPlayerTargets();
             prevPos = transform.position;
             centerPos = GetCenterPosOfAllTargets();
@@ -55,6 +57,7 @@ namespace BeatEmUpTemplate2D {
 	    }
 
 	    void Update () {
+            if (IsZooming) return;
             if (targets.Length == 0) return;
 			
             //calculate x,y position

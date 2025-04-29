@@ -4,6 +4,9 @@ namespace BeatEmUpTemplate2D
 {
     public class ZynsPickup : Item
     {
+        [Header("Zyn Buff Settings")]
+        public float zynBuffDuration = 5f;
+        public float zynSpeedMultiplier = 5.5f;
         public GameObject showEffect;
         public override void OnPickUpItem(GameObject target)
         {
@@ -12,7 +15,12 @@ namespace BeatEmUpTemplate2D
             StateMachine sm = target?.GetComponent<StateMachine>();
             if (sm != null)
             {
-                sm.SetState(new PlayerPowerUp());
+                PlayerPowerUp powerUpState = new PlayerPowerUp
+                {
+                    buffDuration = zynBuffDuration,
+                    buffSpeedMultiplier = zynSpeedMultiplier
+                };
+                sm.SetState(powerUpState);
             }
 
             // Show pickup effect + sound

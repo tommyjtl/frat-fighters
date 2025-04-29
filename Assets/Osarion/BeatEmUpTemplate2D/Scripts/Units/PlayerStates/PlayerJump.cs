@@ -21,10 +21,15 @@ namespace BeatEmUpTemplate2D {
         public override void Update(){
 
             //perform jump punch attack
-            if(InputManager.PunchKeyDown()){ unit.stateMachine.SetState(new PlayerJumpAttack(unit.settings.jumpPunch)); return; }
+            // if(InputManager.PunchKeyDown()){ unit.stateMachine.SetState(new PlayerJumpAttack(unit.settings.jumpPunch)); return; }
+            
+            // Just only aerial kick
+            if(InputManager.PunchKeyDown()){ unit.stateMachine.SetState(new PlayerJumpAttack(unit.settings.jumpKick)); return; }
+
+
 
             //perform jump kick attack
-            if(InputManager.KickKeyDown()){ unit.stateMachine.SetState(new PlayerJumpAttack(unit.settings.jumpKick)); return; }
+            if (InputManager.KickKeyDown()){ unit.stateMachine.SetState(new PlayerJumpAttack(unit.settings.jumpKick)); return; }
 
             //go to landed state
             if(hasLanded) unit.stateMachine.SetState(new PlayerLand());

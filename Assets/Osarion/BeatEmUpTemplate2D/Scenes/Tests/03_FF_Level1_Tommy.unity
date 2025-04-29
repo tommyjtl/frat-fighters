@@ -14242,11 +14242,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1171887891395948153, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: maxHp
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1171887891395948153, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: currentHp
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1171887891395948153, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: showSmallHealthBar
@@ -14813,6 +14813,7 @@ MonoBehaviour:
   globalStageXP: 0
   globalXP: 0
   globalAttackDamageOverview: 
+  globalStealOnEnemyKill: 0
 --- !u!4 &1910599409
 Transform:
   m_ObjectHideFlags: 0

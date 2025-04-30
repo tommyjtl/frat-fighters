@@ -26,14 +26,20 @@ namespace BeatEmUpTemplate2D {
 
             //punch button was pressed during grab
             if(InputManager.PunchKeyDown()){
-                unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabPunch));
+                //unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabPunch));
+                
+                // Only throw while grabbing.
+                unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
                 enemy = null;
                 return;
             }
 
             //kick button was pressed during grab
             if(InputManager.KickKeyDown()){
-                unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabKick));
+                //unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabKick));
+                
+                // Only throw while grabbing.
+                unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
                 enemy = null;
                 return;
             }

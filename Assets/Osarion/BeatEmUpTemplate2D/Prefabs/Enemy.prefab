@@ -227,8 +227,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2026213997, guid: f60d6a887f9283a42ab1385b4ff77afe, type: 3}
-  m_Color: {r: 1, g: 0.15566039, b: 0.15566039, a: 1}
+  m_Sprite: {fileID: 1507667284, guid: 3b5f9ed63af24c64a8bafe173fd38c02, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -248,7 +248,7 @@ Animator:
   m_GameObject: {fileID: 4955587178937794416}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eab1845651ae5304f8655495509ad439, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f10f60a46a98c643a723304d5501227, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -328,6 +328,7 @@ MonoBehaviour:
   decisionInterval: 1
   randomizeAmount: 1
   targetSpotted: 0
+  enableRevengeMode: 0
 --- !u!114 &4718332081022883108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitType: 10
+  debugHitbox: 0
   shadowPrefab: {fileID: 7064653722739863417, guid: d464de87f8d55fd49bde925ac20a3c56, type: 3}
   shadow: {fileID: 0}
   weaponBone: {fileID: 0}
@@ -455,6 +457,7 @@ MonoBehaviour:
     knockdown: 0
     foldout: 0
     inflictor: {fileID: 0}
+  attackDamageAddUp: 0
   canBeKnockedDown: 1
   knockDownHeight: 3
   knockDownDistance: 3

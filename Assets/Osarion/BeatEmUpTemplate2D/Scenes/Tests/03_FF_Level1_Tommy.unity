@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b250a3654969f874984df87787bb6816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zynSpeedMultiplier: 5.5
+  auraObject: {fileID: 0}
 --- !u!1 &250618396
 GameObject:
   m_ObjectHideFlags: 0
@@ -7691,7 +7691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &983510443
 MonoBehaviour:
   m_ObjectHideFlags: 0

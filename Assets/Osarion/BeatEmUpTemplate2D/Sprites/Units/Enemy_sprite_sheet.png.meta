@@ -1,0 +1,1170 @@
+fileFormatVersion: 2
+guid: 3b5f9ed63af24c64a8bafe173fd38c02
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EnemyIdle1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 225
+        width: 20
+        height: 30
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbd230995bd0c540bb82caa4a60356e
+      internalID: 1507667284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch1-1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 225
+        width: 19
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1027957077dc9f647ad9fdf491d5e294
+      internalID: 1727308168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch1-2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3361a343e4832494c87e98aa6b490fbb
+      internalID: -488377149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch1-3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f057e35e90507b4bb0204866499861f
+      internalID: 1157572531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch1-4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e731b719c132cd4090bfb102eb48b57
+      internalID: 1532625306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch1-5
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 225
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.26, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee8a0cdae04dfe540a764a87b7425cae
+      internalID: 1626948803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyIdle2
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 192
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3809524, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6898498924a1c93419ab4397120edf27
+      internalID: -733422712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyIdle3
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 192
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3809524, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9adf70e1d997d4c83be70afa8ed031
+      internalID: 1238278818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAirAttack1
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 192
+        width: 17
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4afc85cfd7957f341b0e9fe1f7b58f83
+      internalID: -1558742613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyAirAttack2
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 192
+        width: 32
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a334c19669230c846a371d23c86aecbd
+      internalID: 1475974278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyLandPickup
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 225
+        width: 19
+        height: 20
+      alignment: 9
+      pivot: {x: 0.33, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8264193d5cb3645a709dddaff36afd
+      internalID: -1663639769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyJump
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 224
+        width: 24
+        height: 31
+      alignment: 9
+      pivot: {x: 0.43, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeea238fb4594a548a9ee109a05f0c9b
+      internalID: -749346089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyDefend
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 225
+        width: 17
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ea3262f1e379843bc2b1f887b5f2ab
+      internalID: -498831961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyDefendHit
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 225
+        width: 17
+        height: 26
+      alignment: 9
+      pivot: {x: 0.48, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e2bcef8b541969499a04656e6eabed9
+      internalID: 484848166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyDeath1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 222
+        width: 16
+        height: 34
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674a289ff92b21f46905b591b4b38791
+      internalID: 1951076468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyDeath2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 224
+        width: 26
+        height: 26
+      alignment: 9
+      pivot: {x: 0.6, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51ff0fe7ac3e22140aa78ff5f97a41da
+      internalID: -596974420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyDeath3
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 223
+        width: 36
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ba01ce44bede14dbda35ff28175ed8
+      internalID: -1990148337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 157
+        width: 21
+        height: 31
+      alignment: 9
+      pivot: {x: 0.34, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1868bf6dc44fc04cb15695abe8efd95
+      internalID: -228589816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 158
+        width: 21
+        height: 30
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7979faceb579b47892492e99378465
+      internalID: -261260505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun3
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 157
+        width: 18
+        height: 30
+      alignment: 9
+      pivot: {x: 0.23, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c1945194da0d00468350a0f6f834bc0
+      internalID: -1922979476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun4
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 157
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.185, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54523fc28b4be7409cffd97887b65e8
+      internalID: -974171002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun5
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 158
+        width: 19
+        height: 31
+      alignment: 9
+      pivot: {x: 0.22, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11fb3c7db0f81f5478aff6211ee3836c
+      internalID: 250941284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 158
+        width: 20
+        height: 30
+      alignment: 9
+      pivot: {x: 0.295, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c252a872321c51d4cb2cd2755d8cab5e
+      internalID: 205919670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun7
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 158
+        width: 16
+        height: 30
+      alignment: 9
+      pivot: {x: 0.18, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176163fa14abf77478113bd5eae24224
+      internalID: -1562647967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyRun8
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 158
+        width: 18
+        height: 32
+      alignment: 9
+      pivot: {x: 0.185, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53c07848aaf275e458eba9199c1c14f3
+      internalID: -205408037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyHit
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 157
+        width: 25
+        height: 32
+      alignment: 9
+      pivot: {x: 0.52, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a42c2bad14a85b741bce50e99add1f3f
+      internalID: 696960055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyStandUp
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 158
+        width: 22
+        height: 25
+      alignment: 9
+      pivot: {x: 0.3181818, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56cb1558ac1bf24e8e68d3c0aa9893b
+      internalID: -715689262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick2-1
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 157
+        width: 21
+        height: 32
+      alignment: 9
+      pivot: {x: 0.385, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f1514844542ed48a6a7f960f18087a
+      internalID: 1546573763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick2-2
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 158
+        width: 29
+        height: 29
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2127826f5fc1624e91881f014d642f5
+      internalID: 1435532378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch2-1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 125
+        width: 21
+        height: 31
+      alignment: 9
+      pivot: {x: 0.425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cf6efe289e6a24dbd134958c28f5d8
+      internalID: -323681001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch2-2
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa207ba68e2f8494ca332e17d0318c4e
+      internalID: -605589605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch2-3
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4d8e26ad51bf64b985a6cc240eeabe
+      internalID: 1601172275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch2-4
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8778aee56321a4147b9ed95c740fc30c
+      internalID: -1266361430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch2-5
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 125
+        width: 28
+        height: 28
+      alignment: 9
+      pivot: {x: 0.3, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b619d54befcdd44a592eacb1a48f88
+      internalID: 1144454927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick1-1
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 90
+        width: 17
+        height: 31
+      alignment: 9
+      pivot: {x: 0.7, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc58e77600736a84880dd46ce8eb9533
+      internalID: -1592260262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick1-2
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 90
+        width: 28
+        height: 29
+      alignment: 9
+      pivot: {x: 0.36, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ca49d253502ef478a35fffdc32fd19
+      internalID: 2102046885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnockdown1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 93
+        width: 31
+        height: 23
+      alignment: 9
+      pivot: {x: 0.4333333, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c369a1df9879fff429c147145c299311
+      internalID: 864434162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnockdown2
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 94
+        width: 32
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c674e40a64f83747a1ba62f899c3627
+      internalID: 2131231577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKnockdown3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 94
+        width: 32
+        height: 14
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.06666667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aecb91a740e3e49b8648c544846342
+      internalID: -826662245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGrab1
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 59
+        width: 27
+        height: 29
+      alignment: 9
+      pivot: {x: 0.285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ac59a3bbc852f4cba98b1a8b53c594
+      internalID: 459089383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyGrab2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 59
+        width: 22
+        height: 28
+      alignment: 9
+      pivot: {x: 0.385, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24497f22d73b1d048a4668a9d5fb5eca
+      internalID: 181540714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyThrow1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 58
+        width: 19
+        height: 33
+      alignment: 9
+      pivot: {x: 0.655, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319a07a3e7691064d989e026bcdd5b58
+      internalID: 1000872835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyThrow2
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 59
+        width: 28
+        height: 26
+      alignment: 9
+      pivot: {x: 0.285, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79001560b120bb443a79941687727a7c
+      internalID: -247091377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch3-1
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 88
+        width: 24
+        height: 24
+      alignment: 9
+      pivot: {x: 0.35, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169155132b8c06140848be3c14931bf8
+      internalID: -436830730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyPunch3-2
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 88
+        width: 20
+        height: 33
+      alignment: 9
+      pivot: {x: 0.525, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd989fbc2b528b439eb0d6761213ada
+      internalID: -1789804629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick3-1
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 54
+        width: 20
+        height: 34
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc78a2418af88054890c00d4d52376cc
+      internalID: -2049507046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick3-2
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 55
+        width: 33
+        height: 30
+      alignment: 9
+      pivot: {x: 0.48, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46a91f5d8f6b434b9bad0bd53a55013
+      internalID: 591902177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyKick3-3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 19
+        width: 19
+        height: 31
+      alignment: 9
+      pivot: {x: 0.425, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a57c12fe9990a44da5521879d8f7e3d
+      internalID: 413634475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      EnemyAirAttack1: -1558742613
+      EnemyAirAttack2: 1475974278
+      EnemyDeath1: 1951076468
+      EnemyDeath2: -596974420
+      EnemyDeath3: -1990148337
+      EnemyDefend: -498831961
+      EnemyDefendHit: 484848166
+      EnemyGrab1: 459089383
+      EnemyGrab2: 181540714
+      EnemyHit: 696960055
+      EnemyIdle1: 1507667284
+      EnemyIdle2: -733422712
+      EnemyIdle3: 1238278818
+      EnemyJump: -749346089
+      EnemyKick1-1: -1592260262
+      EnemyKick1-2: 2102046885
+      EnemyKick2-1: 1546573763
+      EnemyKick2-2: 1435532378
+      EnemyKick3-1: -2049507046
+      EnemyKick3-2: 591902177
+      EnemyKick3-3: 413634475
+      EnemyKnockdown1: 864434162
+      EnemyKnockdown2: 2131231577
+      EnemyKnockdown3: -826662245
+      EnemyLandPickup: -1663639769
+      EnemyPunch1-1: 1727308168
+      EnemyPunch1-2: -488377149
+      EnemyPunch1-3: 1157572531
+      EnemyPunch1-4: 1532625306
+      EnemyPunch1-5: 1626948803
+      EnemyPunch2-1: -323681001
+      EnemyPunch2-2: -605589605
+      EnemyPunch2-3: 1601172275
+      EnemyPunch2-4: -1266361430
+      EnemyPunch2-5: 1144454927
+      EnemyPunch3-1: -436830730
+      EnemyPunch3-2: -1789804629
+      EnemyRun1: -228589816
+      EnemyRun2: -261260505
+      EnemyRun3: -1922979476
+      EnemyRun4: -974171002
+      EnemyRun5: 250941284
+      EnemyRun6: 205919670
+      EnemyRun7: -1562647967
+      EnemyRun8: -205408037
+      EnemyStandUp: -715689262
+      EnemyThrow1: 1000872835
+      EnemyThrow2: -247091377
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

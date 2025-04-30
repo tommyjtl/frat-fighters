@@ -79,11 +79,13 @@ namespace BeatEmUpTemplate2D
                                 int enemyMaxHp = healthSystem.maxHp;
                                 // Debug.Log("Enemy max HP: " + enemyMaxHp);
 
-                                // GlobalVariables.Instance.globalCurrentHP += enemyMaxHp;
+                                // Apply lifesteal to the player
                                 playerHPSystem.currentHp = Mathf.Clamp(playerHPSystem.currentHp + enemyMaxHp, 0, playerHPSystem.maxHp);
 
+                                // Recalculate the player's HP bar
                                 GlobalVariables.Instance.globalRecalculateHP = true;
-                                Debug.Log("Player current HP after lifesteal: " + playerHPSystem.currentHp);
+
+                                // Debug.Log("Player current HP after lifesteal: " + playerHPSystem.currentHp);
                             }
                         }
                         else

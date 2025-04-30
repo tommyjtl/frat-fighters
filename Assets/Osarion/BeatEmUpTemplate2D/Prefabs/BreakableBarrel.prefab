@@ -27,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8459750788267401225}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.66, y: -0.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3977448400068360562
 SpriteRenderer:
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 37
-  m_Sprite: {fileID: 21300000, guid: 95cd22015b4368b46a5603c6d1c9cd6d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 61250b26d7a432a43be5cc770db2ec75, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,9 +102,9 @@ MonoBehaviour:
   maxHp: 2
   currentHp: 2
   invulnerable: 0
-  unitPortrait: {fileID: 0}
   showSmallHealthBar: 0
   smallHealthBarOffset: {x: 0, y: 0}
+  showLargeHealthBar: 0
   playSFXOnHit: DrumBarrelHit
   playSFXOnDestroy: DrumBarrelBreak
   showHitFlash: 1

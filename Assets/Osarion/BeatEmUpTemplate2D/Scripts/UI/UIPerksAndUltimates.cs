@@ -100,6 +100,17 @@ namespace BeatEmUpTemplate2D
                 perkIdxSelected.text = pauSystem.getPerkIdxSelected();
 
                 playerAttributes.text = GlobalVariables.Instance.gatherPlayerAttributes();
+
+                // for (int i = 0; i < pauSystem.perks.Count; i++)
+                // {
+                //     // Debug.Log("Perk " + pauSystem.perks[i].Item2 + " is locked");
+                //     int index = i;
+
+                //     GameObject perkToggle = GameObject.Find("PerkToggle" + (index + 1).ToString());
+                //     GameObject background = perkToggle.transform.Find("Background").gameObject;
+                //     Image backgroundImage = background.GetComponent<Image>();
+                //     backgroundImage.sprite = Resources.Load<Sprite>("PerkItems/perk" + (index + 1) + "");
+                // }
             }
 
             // Set the initialized flag to true
@@ -235,24 +246,29 @@ namespace BeatEmUpTemplate2D
         private void PauseGame()
         {
             Time.timeScale = 0f; // Pause game physics & movement
-            PlayMenuToggleSFX();
             StartCoroutine(DelayAudioPause(0f));
 
+            PlayMenuToggleSFX();
             isPaused = true;
             if (GlobalVariables.Instance != null)
-                GlobalVariables.Instance.isPerkMenuActive = true; // Set global variable
+                GlobalVariables.Instance.isPerkMenuActive = true; // Set perk menu active
         }
 
         private void ResumeGame()
         {
+            if (GlobalVariables.Instance != null)
+            {
+                if (!GlobalVariables.Instance.isPauseMenuActive)
+                {
+                    Time.timeScale = 1f;
+                    AudioListener.pause = false;
+                }
+            }
 
-            Time.timeScale = 1f; // Resume game
-            AudioListener.pause = false; // Resume audio
             PlayMenuToggleSFX();
-
             isPaused = false;
             if (GlobalVariables.Instance != null)
-                GlobalVariables.Instance.isPerkMenuActive = false; // Reset global variable
+                GlobalVariables.Instance.isPerkMenuActive = false; // Set perk menu inactive
         }
 
         private void PlayMenuToggleSFX()

@@ -66,6 +66,21 @@ public class GlobalVariables : MonoBehaviour
     }
     public static event System.Action<int> OnMaxHPChanged;
 
+    private bool _globalRecalculateHP;
+    public bool globalRecalculateHP
+    {
+        get { return _globalRecalculateHP; }
+        set
+        {
+            if (_globalRecalculateHP != value)
+            {
+                _globalRecalculateHP = value;
+                OnRecalculateHPChanged?.Invoke(_globalRecalculateHP);
+            }
+        }
+    }
+    public static event System.Action<bool> OnRecalculateHPChanged;
+
     // `Scripts/Units/UnitSettings.cs`
     private float _globalMoveSpeed;
     public float globalMoveSpeed
@@ -180,6 +195,23 @@ public class GlobalVariables : MonoBehaviour
     - ...
     */
 
+    public bool globalStealOnEnemyKill = false;
+
+    // private bool _globalStealOnEnemyKill;
+    // public bool globalStealOnEnemyKill
+    // {
+    //     get { return _globalStealOnEnemyKill; }
+    //     set
+    //     {
+    //         if (_globalStealOnEnemyKill != value)
+    //         {
+    //             _globalStealOnEnemyKill = value;
+    //             OnStealOnEnemyKillChanged?.Invoke(_globalStealOnEnemyKill);
+    //         }
+    //     }
+    // }
+    // public static event System.Action<bool> OnStealOnEnemyKillChanged;
+
     /*
   ___         _       
  | _ \___ _ _| |__ ___
@@ -193,11 +225,32 @@ public class GlobalVariables : MonoBehaviour
                 string,     // perk description
                 int         // perk cost
             )> perks = new List<(bool, string, string, int)> {
-                // @TODO: costs need to be changed at the end
-                (false, "Lightweight", "Increases jump height, duration (and benefit of drugs?).", 1),
-                (false, "Chicken and Rice", "Double the attack damage and player size?", 1),
-                (false, "Hazing Specialist", "Lifesteal on kill.", 1),
-                (false, "Hoplite Training", "Initially only have two hit combos, allow three hit combos with extra damage.", 1),
+                // Goto `Scripts/Units/PerksAndUltimates.cs` for detailed attributes manipulation
+                (
+                    false,
+                    "Lightweight",
+                    "Increases jump height and duration.",
+                    1 // skill points required
+                ),
+                (
+                    // [Fully implemented]
+                    false,
+                    "Chicken and Rice",
+                    "Double the attack damage and player size.",
+                    1 // skill points required
+                ),
+                (
+                    false,
+                    "Hazing Specialist",
+                    "Lifesteal on kill.",
+                    1 // skill points required
+                ),
+                (
+                    false,
+                    "Getting Dizzy",
+                    "Max health increased 100.",
+                    1 // skill points required
+                ),
         };
     private string _perkIdxSelected = "-1";
     public string perkIdxSelected
@@ -221,7 +274,7 @@ public class GlobalVariables : MonoBehaviour
   \___/|_|\__|_|_|_|_\__,_|\__\___||_||_| \___\___|
                                                    
     */
-    // to be wrote
+    // Abandonded feature ☠️
 
     public string gatherPlayerAttributes()
     {

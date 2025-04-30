@@ -1,4 +1,6 @@
 ﻿using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace BeatEmUpTemplate2D
 {
@@ -9,17 +11,39 @@ namespace BeatEmUpTemplate2D
         private string animationName = "Death";
         private bool showDeathAnimation;
         private XPSystem playerXPSystem;
+        private HealthSystem playerHPSystem;
 
         public UnitDeath(bool showDeathAnim)
         {
             this.showDeathAnimation = showDeathAnim;
         }
 
+        // //
+        // void OnEnable()
+        // {
+        //     GlobalVariables.OnSPChanged += UpdateCurrentSPText;
+        // }
+
+        // void OnDisable()
+        // {
+        //     GlobalVariables.OnSPChanged -= UpdateCurrentSPText;
+        // }
+
+        // void UpdateCurrentSPText(int sp)
+        // {
+        //     currentSP.text = sp.ToString();
+        //     PerkStatusCheck();
+        // }
+
         public override void Enter()
         {
             // Find the player object in the scene and get its XPSystem component
             GameObject player = GameObject.FindWithTag("Player");
-            if (player != null) playerXPSystem = player.GetComponent<XPSystem>();
+            if (player != null)
+            {
+                playerXPSystem = player.GetComponent<XPSystem>();
+                playerHPSystem = player.GetComponent<HealthSystem>();
+            }
 
             //play death animation
             if (showDeathAnimation) unit.animator.Play(animationName);
@@ -36,34 +60,50 @@ namespace BeatEmUpTemplate2D
             if (unit.isPlayer) EnemyManager.DisableAllEnemyAI();
 
             //flicker and remove enemy units from the field
-            if (unit.isEnemy && !unit.isBoss)
+            if (unit.isEnemy)
             {
+
                 SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
                 flicker.startDelay = 1f;
-
-                // Debug.Log("Enemy " + unit.gameObject.name + " has been defeated!");
 
                 // Add XP points to the player
                 if (playerXPSystem != null)
                 {
-                    playerXPSystem.AddXP(120);
-                    // @TODO: depending on which enemy is defeated, add different XP points
+                    if (GlobalVariables.Instance != null)
+                    {
+                        if (GlobalVariables.Instance.globalStealOnEnemyKill)
+                        {
+                            var healthSystem = unit.GetComponent<HealthSystem>();
+                            if (healthSystem != null)
+                            {
+                                int enemyMaxHp = healthSystem.maxHp;
+                                // Debug.Log("Enemy max HP: " + enemyMaxHp);
+
+                                // Apply lifesteal to the player
+                                playerHPSystem.currentHp = Mathf.Clamp(playerHPSystem.currentHp + enemyMaxHp, 0, playerHPSystem.maxHp);
+
+                                // Recalculate the player's HP bar
+                                GlobalVariables.Instance.globalRecalculateHP = true;
+
+                                // Debug.Log("Player current HP after lifesteal: " + playerHPSystem.currentHp);
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("Life steal on enemy kill is disabled.");
+                        }
+                    }
+
                     // Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
-                }
-            }
 
-            if (unit.isEnemy && unit.isBoss)
-            {
-                SpriteFlickerAndDestroy flicker = unit.gameObject.AddComponent<SpriteFlickerAndDestroy>();
-                flicker.startDelay = 1f;
-
-                // Debug.Log("Boss " + unit.gameObject.name + " has been defeated!");
-
-                // Add XP points to the player
-                if (playerXPSystem != null)
-                {
-                    playerXPSystem.AddXP(220);
-                    // Debug.Log("Player XP: " + playerXPSystem.currentOverallXP);
+                    if (!unit.isBoss)
+                    {
+                        playerXPSystem.AddXP(120);
+                    }
+                    else
+                    {
+                        playerXPSystem.AddXP(220);
+                    }
                 }
             }
 

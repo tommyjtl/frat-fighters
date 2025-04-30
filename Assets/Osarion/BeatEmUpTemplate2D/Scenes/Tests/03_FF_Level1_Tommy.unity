@@ -1444,7 +1444,7 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2029394128365333507, guid: 517f341eecf1a5e408de490f92bd9f5a, type: 3}
-      insertIndex: 1
+      insertIndex: 0
       addedObject: {fileID: 531809192}
     - targetCorrespondingSourceObject: {fileID: 2029394128365333507, guid: 517f341eecf1a5e408de490f92bd9f5a, type: 3}
       insertIndex: 2
@@ -2238,7 +2238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 539bec228678a456ea9b29367e8e5dc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 105bff7dcc7a04a24bc83fb44b81a08d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2543,7 +2543,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b250a3654969f874984df87787bb6816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zynSpeedMultiplier: 5.5
+  auraObject: {fileID: 0}
 --- !u!1 &250618396
 GameObject:
   m_ObjectHideFlags: 0
@@ -3854,7 +3854,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 539bec228678a456ea9b29367e8e5dc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a20567096875442c98c2374aa3f1987, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4990,7 +4990,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 539bec228678a456ea9b29367e8e5dc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6be47ed0c5c18437b9b5186343b9fcfd, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8064,7 +8064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &983510443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12886,14 +12886,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 539bec228678a456ea9b29367e8e5dc4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e1a557363a2db4559a3ebcbb4af7f40a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14242,11 +14242,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1171887891395948153, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: maxHp
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1171887891395948153, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: currentHp
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1171887891395948153, guid: c0f71cab69f3c07448c3e170932688eb, type: 3}
       propertyPath: showSmallHealthBar
@@ -14813,6 +14813,7 @@ MonoBehaviour:
   globalStageXP: 0
   globalXP: 0
   globalAttackDamageOverview: 
+  globalStealOnEnemyKill: 0
 --- !u!4 &1910599409
 Transform:
   m_ObjectHideFlags: 0

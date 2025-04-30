@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace BeatEmUpTemplate2D
 {
@@ -19,7 +20,11 @@ namespace BeatEmUpTemplate2D
         public delegate void OnPAUChange(PAUSystem paus); // Renamed the delegate
         public static event OnPAUChange onPAUChange;
 
-        void OnEnable() { }
+        void OnEnable()
+        {
+            // find the perk toggle in the scene and make the background to be unlocked
+
+        }
 
         void OnDisable() { }
 
@@ -85,39 +90,24 @@ namespace BeatEmUpTemplate2D
             {
                 // unlock the perk
                 string perk_name = (string)getPerkValue(index, "name");
-
-                // See more in `Scripts/Global/GlobalVariables.cs`
-                // - GlobalVariables.Instance.globalMaxHP;
-                // - GlobalVariables.Instance.globalAttackDamageAddUp;
-                // - GlobalVariables.Instance.globalMoveSpeed;
-                // - GlobalVariables.Instance.globalMoveSpeedAir;
-                // - GlobalVariables.Instance.globalJumpHeight;
-                // - GlobalVariables.Instance.globalJumpGravity;
-                // - GlobalVariables.Instance.globalRearDefenseEnabled;
                 switch (perk_name)
                 {
-                    // Goto `Scripts/Global/GlobalVariables.cs`
+                    // Goto `Scripts/Global/GlobalVariables.cs` for perk description
                     case "Lightweight":
                         GlobalVariables.Instance.globalJumpHeight += 2; // higher jump
-                        GlobalVariables.Instance.globalJumpGravity += -2; // lower gravity
-                        // @TODO: "better benefit of drugs" left out for now
+                        GlobalVariables.Instance.globalJumpGravity -= 2; // lower gravity
                         break;
                     case "Chicken and Rice":
-                        GlobalVariables.Instance.globalAttackDamageAddUp = 5;
+                        GlobalVariables.Instance.globalAttackDamageAddUp = 5; // higher attack damage
                         GameObject player = GameObject.FindWithTag("Player");
                         if (player != null)
-                        {
-                            // Double the player's size
-                            player.transform.localScale *= 2;
-                        }
+                            player.transform.localScale *= 2; // double size of player
                         break;
                     case "Hazing Specialist":
-                        GlobalVariables.Instance.globalStealOnEnemyKill = true;
+                        GlobalVariables.Instance.globalStealOnEnemyKill = true; // enable steal HP on kill
                         break;
-                    case "Hoplite Training":
-                        // @TODO: implement two hit combos
-                        // public List<Combo> comboData = new List<Combo>();            in `UnitSettings.cs`
-                        // private Combo FindComBoMatch(List<ATTACKTYPE> attackList);   in `PlayerAttack.cs`
+                    case "Getting Dizzy":
+                        GlobalVariables.Instance.globalMaxHP += 100; // higher max HP
                         break;
                     default:
                         break;
@@ -125,8 +115,12 @@ namespace BeatEmUpTemplate2D
 
                 perks[index] = (true, perks[index].Item2, perks[index].Item3, perks[index].Item4);
 
+                // find the perk toggle in the scene and make the background to be unlocked
+                GameObject perkToggle = GameObject.Find("PerkToggle" + (index + 1).ToString());
+                GameObject background = perkToggle.transform.Find("Background").gameObject;
+                Image backgroundImage = background.GetComponent<Image>();
+                backgroundImage.sprite = Resources.Load<Sprite>("PerkItems/perk" + (index + 1) + "_unlocked");
             }
-            // Debug.Log("Perk unlocked: " + index);
         }
 
         public void lockPerk(int index)

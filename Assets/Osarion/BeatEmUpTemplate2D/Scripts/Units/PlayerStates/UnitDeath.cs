@@ -90,7 +90,7 @@ namespace BeatEmUpTemplate2D
                         }
                         else
                         {
-                            Debug.Log("Life steal on enemy kill is disabled.");
+                            // Debug.Log("Life steal on enemy kill is disabled.");
                         }
                     }
 

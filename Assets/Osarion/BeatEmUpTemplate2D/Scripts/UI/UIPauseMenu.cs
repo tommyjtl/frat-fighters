@@ -35,18 +35,16 @@ namespace BeatEmUpTemplate2D
         public void PauseGame()
         {
             Time.timeScale = 0f; // Pause game physics & movement
-            PlayPauseMenuSFX();
-            // float delay = Mathf.Max(0.1f, BeatEmUpTemplate2D.AudioController.GetSFXDuration(pauseMenuSFX));
-
             StartCoroutine(DelayAudioPause(0f));
 
-            isPaused = true;
-
-            if (GlobalVariables.Instance != null)
-                GlobalVariables.Instance.isPauseMenuActive = true; // Set global variable
+            PlayPauseMenuSFX();
 
             if (uiManager != null)
                 uiManager.ShowMenu("PauseMenu"); // Show Pause Menu
+
+            isPaused = true;
+            if (GlobalVariables.Instance != null)
+                GlobalVariables.Instance.isPauseMenuActive = true; // Set pause menu active
         }
 
         public void ResumeGame()
@@ -54,17 +52,14 @@ namespace BeatEmUpTemplate2D
             if (GlobalVariables.Instance != null)
             {
                 if (!GlobalVariables.Instance.isPerkMenuActive)
-                    Time.timeScale = 1f; // Resume game only if Perk Menu is not active
+                {
+                    Time.timeScale = 1f;
+                    AudioListener.pause = false;
+                }
             }
 
-            AudioListener.pause = false; // Resume audio
-            isPaused = false;
-            if (GlobalVariables.Instance != null)
-                GlobalVariables.Instance.isPauseMenuActive = false; // Reset global variable
-
             if (uiManager != null)
-            {
-                // Find the Pause Menu in UIManager and deactivate it
+            { // Find the Pause Menu in UIManager and deactivate it
                 foreach (UIMenu menu in uiManager.menuList)
                 {
                     if (menu.menuName == "PauseMenu")
@@ -75,6 +70,10 @@ namespace BeatEmUpTemplate2D
                     }
                 }
             }
+
+            isPaused = false;
+            if (GlobalVariables.Instance != null)
+                GlobalVariables.Instance.isPauseMenuActive = false; // Set pause menu inactive
         }
 
         private void PlayPauseMenuSFX()

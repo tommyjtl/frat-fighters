@@ -229,14 +229,14 @@ public class GlobalVariables : MonoBehaviour
                 (
                     false,
                     "Lightweight",
-                    "Increases jump height, duration, and better benefit of drugs.",
+                    "Increases jump height and duration.",
                     1 // skill points required
                 ),
                 (
                     // [Fully implemented]
                     false,
                     "Chicken and Rice",
-                    "Double the attack damage and player size?",
+                    "Double the attack damage and player size.",
                     1 // skill points required
                 ),
                 (
@@ -247,8 +247,8 @@ public class GlobalVariables : MonoBehaviour
                 ),
                 (
                     false,
-                    "Hoplite Training",
-                    "Initially only have two hit combos, allow three hit combos with extra damage.",
+                    "Getting Dizzy",
+                    "Max health increased 100.",
                     1 // skill points required
                 ),
         };

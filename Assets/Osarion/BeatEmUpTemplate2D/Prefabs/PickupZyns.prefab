@@ -108,6 +108,6 @@ MonoBehaviour:
   bounceHeight: 2
   bounceSpeed: 1
   playBounceAnimation: 0
-  zynBuffDuration: 10
-  zynSpeedMultiplier: 1.2
+  zynBuffDuration: 8
+  zynSpeedMultiplier: 1.6
   showEffect: {fileID: 0}

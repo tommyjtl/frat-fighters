@@ -25,6 +25,7 @@ namespace BeatEmUpTemplate2D {
         }
 
         public virtual void OnPickUpItem(GameObject target){}
+        public virtual void OnStandUp(GameObject target){}
 
         public void ShowBounceAnimation(){
             if(!bounceInProgress) StartCoroutine(ItemBounceRoutine());

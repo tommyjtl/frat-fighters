@@ -19,7 +19,12 @@ namespace BeatEmUpTemplate2D {
         }
 
         public override void Update(){
-            if((Time.time - stateStartTime) > animDuration) unit.stateMachine.SetState(new PlayerIdle()); //return to idle when animation is finished
+            if((Time.time - stateStartTime) > animDuration) {
+                if(item.GetComponent<Item>() is ZynsPickup) 
+                    item.GetComponent<Item>()?.OnStandUp(unit.gameObject); //send standup event
+                else 
+                    unit.stateMachine.SetState(new PlayerIdle()); //return to idle when animation is finished
+            }
         }
     }
 }

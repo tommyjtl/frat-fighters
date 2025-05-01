@@ -147,7 +147,7 @@ Material:
     - _BlurSpacing: 1
     - _Boolean: 0
     - _Float: 0.11111111
-    - _Frequency: 2.5
+    - _Frequency: 3.14
     - _NoiseScale: 10
     - _NoiseSpeed: 0.1
     - _OutlineBlurSpacing: 0.426
@@ -198,7 +198,7 @@ Material:
     - _Speed: -3.5
     - _SpriteScale: 10
     - _Sprite_PixelsPerUnit: 100
-    - _Strength: 1
+    - _Strength: 0
     - _Takeover: 1
     - _TakeoverSpriteColor: 0
     - _TilingSpeed: 0.94
@@ -232,15 +232,15 @@ Material:
     - _Y_Axis: 1
     - _Y_axis_Wave: 1
     m_Colors:
-    - _0X_1: {r: 0, g: -1, b: 0, a: 0}
-    - _0X_1Y: {r: 0, g: 1, b: 0, a: 0}
+    - _0X_1: {r: 1, g: 1.7, b: 0, a: 0}
+    - _0X_1Y: {r: 0.8, g: 1.5, b: 0, a: 0}
     - _0X_1Y_1: {r: 1, g: 0, b: 0, a: 0}
-    - _1X_0Y: {r: -1, g: 0, b: 0, a: 0}
-    - _1X_1: {r: 1, g: 1, b: 0, a: 0}
-    - _1X_1Y: {r: -1, g: 1, b: 0, a: 0}
-    - _1X_2: {r: 1, g: 0, b: 0, a: 0}
-    - _1X_3: {r: -1, g: -1, b: 0, a: 0}
-    - _1X_4: {r: 1, g: -1, b: 0, a: 0}
+    - _1X_0Y: {r: 0.8, g: 1.4, b: 0, a: 0}
+    - _1X_1: {r: 0.7, g: 1.6, b: 0, a: 0}
+    - _1X_1Y: {r: 0.6, g: 1.8, b: 0, a: 0}
+    - _1X_2: {r: 1, g: 1.5, b: 0, a: 0}
+    - _1X_3: {r: 0.9, g: 1.6, b: 0, a: 0}
+    - _1X_4: {r: 1, g: 1.8, b: 0, a: 0}
     - _Animation_SofteningScale: {r: 1, g: 1, b: 0, a: 0}
     - _BlurScale: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 11.984315, g: 11.984315, b: 11.984315, a: 1}

@@ -12,18 +12,21 @@ EditorBuildSettings:
     path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/00_FF_MainMenu.unity
     guid: 92f4ca6927530447c8c40d4941c78760
   - enabled: 1
-    path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/01_FF_LevelSelection.unity
-    guid: 042e1e800de864be5a9efbfc8140ac15
-  - enabled: 1
-    path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/02_FF_TrainingHall.unity
-    guid: ea0ff803a00e04b1eb259460644a5501
+    path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/01_FF_CutScene.unity
+    guid: 2e78e73870f084ddcaac6022f667ef45
   - enabled: 1
     path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/03_FF_Level1.unity
     guid: 478931802c33a414d8639521e23e31c4
-  - enabled: 1
+  - enabled: 0
+    path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/01_FF_LevelSelection.unity
+    guid: 042e1e800de864be5a9efbfc8140ac15
+  - enabled: 0
+    path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/02_FF_TrainingHall.unity
+    guid: ea0ff803a00e04b1eb259460644a5501
+  - enabled: 0
     path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/04_FF_Level2.unity
     guid: 25d359bb1b68549af840d09f21d30abe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Osarion/BeatEmUpTemplate2D/Scenes/05_FF_Level3.unity
-    guid: 7fb9d8ab735d042e78e1facbd0d6fc13
+    guid: 2b78ef83354f64cf78c89076a979b964
   m_configObjects: {}

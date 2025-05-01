@@ -10,7 +10,8 @@ TrueTypeFontImporter:
   includeFontData: 1
   fontNames:
   - TinyPixie2
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e61b9e3fae2243040899f54b157ee7d7, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1

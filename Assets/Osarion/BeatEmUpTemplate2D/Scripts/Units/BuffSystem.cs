@@ -19,6 +19,12 @@ namespace BeatEmUpTemplate2D
 
         void Start()
         {
+            if (auraObject == null)
+            {
+                Debug.Log("[BuffSystem] Aura object is not assigned.");
+                return;
+            }
+
             playerRenderer = GetComponent<SpriteRenderer>();
             auraRenderer = auraObject.GetComponent<SpriteRenderer>();
             auraObject.SetActive(false);
@@ -26,6 +32,9 @@ namespace BeatEmUpTemplate2D
 
         void LateUpdate()
         {
+            if (auraObject == null || playerRenderer == null)
+                return;
+
             if (auraObject.activeSelf)
             {
                 //auraRenderer.sprite = playerRenderer.sprite;

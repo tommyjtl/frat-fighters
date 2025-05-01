@@ -37,10 +37,10 @@ namespace BeatEmUpTemplate2D
 
             if (auraObject.activeSelf)
             {
-                auraRenderer.sprite = playerRenderer.sprite;
+                //auraRenderer.sprite = playerRenderer.sprite;
                 auraRenderer.flipX = playerRenderer.flipX;
 
-                auraRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
+                auraRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
         }
 

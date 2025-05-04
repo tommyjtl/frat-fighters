@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace BeatEmUpTemplate2D
 {
@@ -16,6 +17,9 @@ namespace BeatEmUpTemplate2D
         public Image portrait;
         public Image healthBar;
         private bool initialized;
+        public float PlayerBarDivisions = 26;
+        public float EnemyBarDivisions = 26;
+        public float BossBarDivisions = 184;
 
         private HealthSystem currentHealthSystem;
 
@@ -50,7 +54,9 @@ namespace BeatEmUpTemplate2D
 
                 currentHealthSystem = hs; // Store reference here
 
-                healthBar.fillAmount = hs.healthPercentage;
+                double step = 1.0/PlayerBarDivisions;
+                float fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
+                healthBar.fillAmount = fill;
 
                 currentHp.text = hs.currentHp.ToString();
                 maxHp.text = hs.maxHp.ToString();
@@ -83,7 +89,17 @@ namespace BeatEmUpTemplate2D
                     ShowHealthBar(true);
                     SetUnitPortrait(hs);
                     healthBar.gameObject.SetActive(true);
-                    healthBar.fillAmount = hs.healthPercentage;
+                    float fill;
+                    if (healthBarType == HEALTHBARTYPE.BossHealthBar) {
+                        double step = 1.0/EnemyBarDivisions;
+                        fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
+                    } else if (healthBarType == HEALTHBARTYPE.EnemyHealthBar) {
+                        double step = 1.0/BossBarDivisions;
+                        fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
+                    } else {
+                        fill = hs.healthPercentage;
+                    }
+                    healthBar.fillAmount = fill;
                     nameField.text = hs.GetComponent<UnitSettings>().unitName; //get enemy name from unit settings
                     if (hs.GetComponent<UnitSettings>().showNameInAllCaps) nameField.text = nameField.text.ToUpper(); //show in capital letters
                     if (hs.currentHp == 0) ShowHealthBar(false); //hide enemy healthbar when hp = 0

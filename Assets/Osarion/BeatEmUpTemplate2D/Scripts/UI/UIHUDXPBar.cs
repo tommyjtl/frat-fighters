@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace BeatEmUpTemplate2D
 {
@@ -15,6 +16,7 @@ namespace BeatEmUpTemplate2D
 
         private bool initialized; // is the xpbar initialized?
         private XPSystem xpSystem;
+        public float BarDivisions = 15;
 
         void OnEnable()
         {
@@ -70,7 +72,9 @@ namespace BeatEmUpTemplate2D
             if (xpBar == null) return;
             if (!initialized) InitializeXpBar(); //this is only done once at the start of the level
 
-            xpBar.fillAmount = xs.stageXpPercentage;
+            double step = 1.0/BarDivisions;
+            float fill = (float)(Math.Floor(xs.stageXpPercentage / step) * step);
+            xpBar.fillAmount = fill;
             spValue.text = xs.currentSP.ToString();
             xpValue.text = xs.currentStageXP.ToString();
             maxXpValue.text = xs.maxStageXP.ToString();

@@ -180,7 +180,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -499
   m_Sprite: {fileID: 21300000, guid: a04551fa92919d34991460352d5171da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 1
+  m_SpriteSortPoint: 0
 --- !u!4 &3751576
 Transform:
   m_ObjectHideFlags: 0
@@ -2746,21 +2746,45 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
+      propertyPath: AudioList.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
       propertyPath: AudioList.Array.data[21].name
       value: LevelMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
+      propertyPath: AudioList.Array.data[22].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
+      propertyPath: AudioList.Array.data[22].name
+      value: ZYNConsumption
       objectReference: {fileID: 0}
     - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
       propertyPath: AudioList.Array.data[21].volume
       value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
+      propertyPath: AudioList.Array.data[22].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
       propertyPath: AudioList.Array.data[21].randomPitch
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
+      propertyPath: AudioList.Array.data[22].clip.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
       propertyPath: AudioList.Array.data[21].clip.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 0f75b8e5b554b964884ead5849182605, type: 3}
+    - target: {fileID: 1836433159549800790, guid: 706bd526720cb29409477dd68e816564, type: 3}
+      propertyPath: AudioList.Array.data[22].clip.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2444a80b99b51d44b997c660b18a0829, type: 3}
     - target: {fileID: 2628452026796374182, guid: 706bd526720cb29409477dd68e816564, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

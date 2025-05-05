@@ -236,7 +236,7 @@ public class GlobalVariables : MonoBehaviour
                 (
                     false,
                     "Spartan Resolve",
-                    "Max health increased 100.",
+                    "Max health increased by 100.",
                     1 // skill points required
                 ),
                 (

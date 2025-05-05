@@ -54,7 +54,7 @@ namespace BeatEmUpTemplate2D
             {
 
                 xpBar.fillAmount = xpSystem.stageXpPercentage; // (float)GlobalVariables.Instance.globalStageXP / (float)xpSystem.maxStageXP;
-                spValue.text = xpSystem.currentSP.ToString();
+                spValue.text = xpSystem.currentSP.ToString() + " SP";
                 xpValue.text = xpSystem.currentStageXP.ToString();
                 maxXpValue.text = xpSystem.maxStageXP.ToString();
 
@@ -75,7 +75,7 @@ namespace BeatEmUpTemplate2D
             double step = 1.0/BarDivisions;
             float fill = (float)(Math.Floor(xs.stageXpPercentage / step) * step);
             xpBar.fillAmount = fill;
-            spValue.text = xs.currentSP.ToString();
+            spValue.text = xs.currentSP.ToString() + " SP";
             xpValue.text = xs.currentStageXP.ToString();
             maxXpValue.text = xs.maxStageXP.ToString();
 
@@ -90,7 +90,7 @@ namespace BeatEmUpTemplate2D
         void UpdateCurrentSPText(int sp)
         {
             // currentSP.text = sp.ToString();
-            spValue.text = sp.ToString() + " POINTS"; // update SP value in the UI
+            spValue.text = sp.ToString() + " SP"; // update SP value in the UI
             xpSystem.currentSP = sp; // update local SP value
             GlobalVariables.Instance.globalSP = sp;
         }

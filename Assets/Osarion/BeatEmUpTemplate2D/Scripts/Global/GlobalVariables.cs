@@ -227,16 +227,16 @@ public class GlobalVariables : MonoBehaviour
             )> perks = new List<(bool, string, string, int)> {
                 // Goto `Scripts/Units/PerksAndUltimates.cs` for detailed attributes manipulation
                 (
-                    false,
-                    "Lightweight",
-                    "Increases jump height and duration.",
-                    1 // skill points required
-                ),
-                (
                     // [Fully implemented]
                     false,
                     "Chicken and Rice",
-                    "Double the attack damage and player size.",
+                    "Double damage and player size.",
+                    1 // skill points required
+                ),
+                (
+                    false,
+                    "Spartan Resolve",
+                    "Max health increased 100.",
                     1 // skill points required
                 ),
                 (
@@ -247,10 +247,10 @@ public class GlobalVariables : MonoBehaviour
                 ),
                 (
                     false,
-                    "Getting Dizzy",
-                    "Max health increased 100.",
+                    "Light- weight",
+                    "Increases jump height and duration.",
                     1 // skill points required
-                ),
+                )
         };
     private string _perkIdxSelected = "-1";
     public string perkIdxSelected

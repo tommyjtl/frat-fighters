@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: e61b9e3fae2243040899f54b157ee7d7
+guid: cfaa863251c0ed345928b92192ee501c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 500
-  forceTextureCase: -2
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - TinyPixie2
+  - Laconia
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 2

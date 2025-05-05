@@ -90,8 +90,9 @@ namespace BeatEmUpTemplate2D
         void UpdateCurrentSPText(int sp)
         {
             // currentSP.text = sp.ToString();
-            spValue.text = sp.ToString(); // update SP value in the UI
+            spValue.text = sp.ToString() + " POINTS"; // update SP value in the UI
             xpSystem.currentSP = sp; // update local SP value
+            GlobalVariables.Instance.globalSP = sp;
         }
 
     }

@@ -93,7 +93,7 @@ namespace BeatEmUpTemplate2D
                 switch (perk_name)
                 {
                     // Goto `Scripts/Global/GlobalVariables.cs` for perk description
-                    case "Lightweight":
+                    case "Light- weight":
                         GlobalVariables.Instance.globalJumpHeight += 2; // higher jump
                         GlobalVariables.Instance.globalJumpGravity -= 2; // lower gravity
                         break;
@@ -106,7 +106,7 @@ namespace BeatEmUpTemplate2D
                     case "Hazing Specialist":
                         GlobalVariables.Instance.globalStealOnEnemyKill = true; // enable steal HP on kill
                         break;
-                    case "Getting Dizzy":
+                    case "Spartan Resolve":
                         GlobalVariables.Instance.globalMaxHP += 100; // higher max HP
                         break;
                     default:

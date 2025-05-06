@@ -905,8 +905,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: rearDefenseEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyPauseBeforeAttack
-      value: 0.3
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.size
@@ -926,23 +930,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[0].damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[1].damage
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[2].damage
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[3].damage
-      value: 5
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[4].damage
-      value: 3
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[0].foldout
@@ -7820,10 +7824,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1106391106}
   - {fileID: 1763702718}
   - {fileID: 1874601452}
   - {fileID: 1127615803}
-  - {fileID: 1106391106}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1775531348

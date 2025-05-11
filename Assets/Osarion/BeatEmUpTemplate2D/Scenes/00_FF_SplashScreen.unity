@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50241c7b1092fb84c86229f53464fcec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptGroup: {fileID: 0}
+  promptGroup: {fileID: 1304589204}
   fadeOverlay: {fileID: 991871619}
   splashMusic: {fileID: 1895961491}
   fadeInDuration: 1

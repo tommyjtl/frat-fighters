@@ -193,6 +193,7 @@ namespace BeatEmUpTemplate2D {
             yield return new WaitForSeconds(delay); //wait a moment
             SceneManager.LoadScene(sceneName); //load scene
             LoadSceneInProgress = false;
+            AudioListener.pause = false;
         }
 
         public void ShowCredits()

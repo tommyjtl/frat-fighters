@@ -257,6 +257,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""47605c69-d3af-4006-b75b-2d60d577c911"",
+                    ""path"": ""<DualSenseGamepadHID>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Joystick"",
+                    ""action"": ""Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5b81124f-0c09-4f81-abfb-82612f8a2c48"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",

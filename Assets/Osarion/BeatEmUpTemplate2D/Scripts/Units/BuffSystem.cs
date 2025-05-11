@@ -19,6 +19,12 @@ namespace BeatEmUpTemplate2D
 
         void Start()
         {
+            if (auraObject == null)
+            {
+                Debug.Log("[BuffSystem] Aura object is not assigned.");
+                return;
+            }
+
             playerRenderer = GetComponent<SpriteRenderer>();
             auraRenderer = auraObject.GetComponent<SpriteRenderer>();
             auraObject.SetActive(false);
@@ -26,12 +32,15 @@ namespace BeatEmUpTemplate2D
 
         void LateUpdate()
         {
+            if (auraObject == null || playerRenderer == null)
+                return;
+
             if (auraObject.activeSelf)
             {
-                auraRenderer.sprite = playerRenderer.sprite;
+                //auraRenderer.sprite = playerRenderer.sprite;
                 auraRenderer.flipX = playerRenderer.flipX;
 
-                auraRenderer.sortingOrder = playerRenderer.sortingOrder + 1;
+                auraRenderer.sortingOrder = playerRenderer.sortingOrder - 1;
             }
         }
 

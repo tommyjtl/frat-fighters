@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 namespace BeatEmUpTemplate2D
 {
@@ -16,12 +17,16 @@ namespace BeatEmUpTemplate2D
         public Image portrait;
         public Image healthBar;
         private bool initialized;
+        public float PlayerBarDivisions = 26;
+        public float EnemyBarDivisions = 26;
+        public float BossBarDivisions = 184;
 
         private HealthSystem currentHealthSystem;
 
         void OnEnable()
         {
             GlobalVariables.OnMaxHPChanged += UpdateCurrentMaxHPText;
+            GlobalVariables.OnRecalculateHPChanged += UpdateShouldRecalculateHPText;
 
             HealthSystem.onHealthChange += UpdateHealth; //subscribe to health update events
             if (healthBarType == HEALTHBARTYPE.EnemyHealthBar) ShowHealthBar(false); //hide enemy healthbar by default
@@ -33,11 +38,12 @@ namespace BeatEmUpTemplate2D
         void OnDisable()
         {
             GlobalVariables.OnMaxHPChanged -= UpdateCurrentMaxHPText;
+            GlobalVariables.OnRecalculateHPChanged -= UpdateShouldRecalculateHPText;
 
             HealthSystem.onHealthChange -= UpdateHealth; //unsubscribe to health update events
         }
 
-        void UpdateHealth(HealthSystem hs)
+        public void UpdateHealth(HealthSystem hs)
         {
             if (healthBar == null) return;
 
@@ -48,7 +54,9 @@ namespace BeatEmUpTemplate2D
 
                 currentHealthSystem = hs; // Store reference here
 
-                healthBar.fillAmount = hs.healthPercentage;
+                double step = 1.0/PlayerBarDivisions;
+                float fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
+                healthBar.fillAmount = fill;
 
                 currentHp.text = hs.currentHp.ToString();
                 maxHp.text = hs.maxHp.ToString();
@@ -56,9 +64,15 @@ namespace BeatEmUpTemplate2D
                 if (GlobalVariables.Instance != null)
                 {
                     if (GlobalVariables.Instance.globalMaxHP == 0)
+                    {
                         GlobalVariables.Instance.globalMaxHP = hs.maxHp;
+                        // GlobalVariables.Instance.globalCurrentHP = hs.currentHp;
+                    }
                     else
+                    {
                         hs.maxHp = GlobalVariables.Instance.globalMaxHP;
+                        // hs.currentHp = GlobalVariables.Instance.globalCurrentHP;
+                    }
                 }
             }
 
@@ -75,7 +89,17 @@ namespace BeatEmUpTemplate2D
                     ShowHealthBar(true);
                     SetUnitPortrait(hs);
                     healthBar.gameObject.SetActive(true);
-                    healthBar.fillAmount = hs.healthPercentage;
+                    float fill;
+                    if (healthBarType == HEALTHBARTYPE.BossHealthBar) {
+                        double step = 1.0/EnemyBarDivisions;
+                        fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
+                    } else if (healthBarType == HEALTHBARTYPE.EnemyHealthBar) {
+                        double step = 1.0/BossBarDivisions;
+                        fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
+                    } else {
+                        fill = hs.healthPercentage;
+                    }
+                    healthBar.fillAmount = fill;
                     nameField.text = hs.GetComponent<UnitSettings>().unitName; //get enemy name from unit settings
                     if (hs.GetComponent<UnitSettings>().showNameInAllCaps) nameField.text = nameField.text.ToUpper(); //show in capital letters
                     if (hs.currentHp == 0) ShowHealthBar(false); //hide enemy healthbar when hp = 0
@@ -108,9 +132,15 @@ namespace BeatEmUpTemplate2D
             {
                 // GlobalVariables.Instance.globalMaxHP = hs.maxHp;
                 if (GlobalVariables.Instance.globalMaxHP == 0)
+                {
                     GlobalVariables.Instance.globalMaxHP = hs.maxHp;
+                    // GlobalVariables.Instance.globalCurrentHP = hs.currentHp;
+                }
                 else
+                {
                     hs.maxHp = GlobalVariables.Instance.globalMaxHP;
+                    // hs.currentHp = GlobalVariables.Instance.globalCurrentHP;
+                }
 
                 // Debug.Log($"[UIHUDHealthBar] GlobalVariables.Instance.globalMaxHP: {GlobalVariables.Instance.globalMaxHP}");
             }
@@ -131,7 +161,7 @@ namespace BeatEmUpTemplate2D
             if (currentHealthSystem != null)
             {
                 currentHealthSystem.maxHp = hp;
-                currentHealthSystem.currentHp = hp;
+                // currentHealthSystem.currentHp = hp;
 
                 // Recalculate fill amount using updated values
                 float percent = (float)currentHealthSystem.currentHp / (float)currentHealthSystem.maxHp;
@@ -140,6 +170,20 @@ namespace BeatEmUpTemplate2D
             }
 
             if (maxHp != null) maxHp.text = hp.ToString();
+        }
+
+        void UpdateShouldRecalculateHPText(bool state)
+        {
+            if (currentHealthSystem != null)
+            {
+                // Recalculate fill amount using updated values
+                float percent = (float)currentHealthSystem.currentHp / (float)currentHealthSystem.maxHp;
+                healthBar.fillAmount = percent;
+                currentHp.text = currentHealthSystem.currentHp.ToString();
+
+                if (GlobalVariables.Instance != null)
+                    GlobalVariables.Instance.globalRecalculateHP = false;
+            }
         }
     }
 }

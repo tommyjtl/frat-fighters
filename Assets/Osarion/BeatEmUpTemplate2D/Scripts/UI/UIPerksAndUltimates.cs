@@ -22,6 +22,11 @@ namespace BeatEmUpTemplate2D
         public Button unlockButton;
 
         public Text message;
+        public GameObject perkPrompt;
+        public GameObject selectPerkDetail;
+        public GameObject alreadyUnlockedObj;
+        public GameObject insufficentObj;
+        public GameObject unlockObj;
 
         private bool initialized = false;
 
@@ -31,6 +36,7 @@ namespace BeatEmUpTemplate2D
         public GameObject pauPanel;
 
         private bool isPaused = false;
+        private int currentSPInt = 0;
         [SerializeField] private string menuToggleSFX = "UIButtonClick";
 
         //
@@ -68,6 +74,13 @@ namespace BeatEmUpTemplate2D
 
             if (unlockButton != null)
                 unlockButton.interactable = false; // disable the button by default
+
+            pauPanel.SetActive(false);
+            perkPrompt.SetActive(true);
+            selectPerkDetail.SetActive(false);
+            alreadyUnlockedObj.SetActive(false);
+            unlockObj.SetActive(false);
+            insufficentObj.SetActive(true);
         }
 
         void UpdatePAU(PAUSystem paus)
@@ -100,6 +113,17 @@ namespace BeatEmUpTemplate2D
                 perkIdxSelected.text = pauSystem.getPerkIdxSelected();
 
                 playerAttributes.text = GlobalVariables.Instance.gatherPlayerAttributes();
+
+                // for (int i = 0; i < pauSystem.perks.Count; i++)
+                // {
+                //     // Debug.Log("Perk " + pauSystem.perks[i].Item2 + " is locked");
+                //     int index = i;
+
+                //     GameObject perkToggle = GameObject.Find("PerkToggle" + (index + 1).ToString());
+                //     GameObject background = perkToggle.transform.Find("Background").gameObject;
+                //     Image backgroundImage = background.GetComponent<Image>();
+                //     backgroundImage.sprite = Resources.Load<Sprite>("PerkItems/perk" + (index + 1) + "");
+                // }
             }
 
             // Set the initialized flag to true
@@ -130,7 +154,7 @@ namespace BeatEmUpTemplate2D
 
                     // check if the cost is greater than the current SP
                     int cost = (int)pauSystem.getPerkValue(perkIdxSelectedInt, "cost");
-                    int currentSPInt = int.Parse(currentSP.text);
+                    currentSPInt = GlobalVariables.Instance.globalSP;
                     if (cost > currentSPInt)
                     {
                         Debug.Log("Insufficient SP");
@@ -142,7 +166,10 @@ namespace BeatEmUpTemplate2D
 
                     // deduct the cost from the current SP
                     currentSPInt -= cost;
-                    currentSP.text = currentSPInt.ToString();
+                    if (currentSPInt == 1) 
+                        currentSP.text = currentSPInt.ToString() + " POINT";
+                    else 
+                        currentSP.text = currentSPInt.ToString() + " POINTS";
 
                     // Update the global SP
                     if (GlobalVariables.Instance != null)
@@ -188,10 +215,13 @@ namespace BeatEmUpTemplate2D
                     pauSystem.DeactivatePerk(perkIdxSelectedInt);
 
                     // deduct the cost from the current SP
-                    int currentSPInt = int.Parse(currentSP.text);
+                    int currentSPInt = GlobalVariables.Instance.globalSP;
                     int cost = (int)pauSystem.getPerkValue(perkIdxSelectedInt, "cost");
                     currentSPInt += cost;
-                    currentSP.text = currentSPInt.ToString();
+                    if (currentSPInt == 1) 
+                        currentSP.text = currentSPInt.ToString() + " POINT";
+                    else 
+                        currentSP.text = currentSPInt.ToString() + " POINTS";
 
                     // Update the global SP
                     if (GlobalVariables.Instance != null)
@@ -220,6 +250,8 @@ namespace BeatEmUpTemplate2D
             {
                 bool isActive = pauPanel.activeSelf;
                 pauPanel.SetActive(!isActive); // Toggle visibility
+                //perkPrompt.SetActive(!isActive);
+                //selectPerkDetail.SetActive(isActive);
 
                 if (!isActive)
                 {
@@ -235,24 +267,29 @@ namespace BeatEmUpTemplate2D
         private void PauseGame()
         {
             Time.timeScale = 0f; // Pause game physics & movement
-            PlayMenuToggleSFX();
             StartCoroutine(DelayAudioPause(0f));
 
+            PlayMenuToggleSFX();
             isPaused = true;
             if (GlobalVariables.Instance != null)
-                GlobalVariables.Instance.isPerkMenuActive = true; // Set global variable
+                GlobalVariables.Instance.isPerkMenuActive = true; // Set perk menu active
         }
 
         private void ResumeGame()
         {
+            if (GlobalVariables.Instance != null)
+            {
+                if (!GlobalVariables.Instance.isPauseMenuActive)
+                {
+                    Time.timeScale = 1f;
+                    AudioListener.pause = false;
+                }
+            }
 
-            Time.timeScale = 1f; // Resume game
-            AudioListener.pause = false; // Resume audio
             PlayMenuToggleSFX();
-
             isPaused = false;
             if (GlobalVariables.Instance != null)
-                GlobalVariables.Instance.isPerkMenuActive = false; // Reset global variable
+                GlobalVariables.Instance.isPerkMenuActive = false; // Set perk menu inactive
         }
 
         private void PlayMenuToggleSFX()
@@ -268,7 +305,11 @@ namespace BeatEmUpTemplate2D
 
         void UpdateCurrentSPText(int sp)
         {
-            currentSP.text = sp.ToString();
+            if (sp == 1) 
+                currentSP.text = sp.ToString() + " POINT";
+            else 
+                currentSP.text = sp.ToString() + " POINTS";
+            GlobalVariables.Instance.globalSP = sp;
             PerkStatusCheck();
         }
 
@@ -276,6 +317,8 @@ namespace BeatEmUpTemplate2D
         {
             if (perkIdxSelected != null)
             {
+                selectPerkDetail.SetActive(true);
+                perkPrompt.SetActive(false);
                 perkIdxSelected.text = perkIdx;
                 pauSystem.perkIdxSelected = perkIdx;
 
@@ -300,25 +343,30 @@ namespace BeatEmUpTemplate2D
 
                     if (selectedPerkCost != null)
                     {
-                        selectedPerkCost.text = ((int)pauSystem.getPerkValue(perkIdxSelectedInt, "cost")).ToString() + " SP";
+                        selectedPerkCost.text = "COST: " + ((int)pauSystem.getPerkValue(perkIdxSelectedInt, "cost")).ToString() + " SP";
 
                         PerkStatusCheck();
                     }
                 }
                 else
                 {
-                    if (selectedPerkName != null)
-                        selectedPerkName.text = "Select a perk";
+                    //if (selectedPerkName != null)
+                    //    selectedPerkName.text = "Select a perk";
 
-                    if (selectedPerkDescription != null)
-                        selectedPerkDescription.text = "Select a perk to see its description";
+                    //if (selectedPerkDescription != null)
+                    //    selectedPerkDescription.text = "Select a perk to see its description";
 
-                    if (selectedPerkCost != null)
-                        selectedPerkCost.text = "?";
+                    //if (selectedPerkCost != null)
+                    //    selectedPerkCost.text = "?";
+                    selectPerkDetail.SetActive(false);
+                    perkPrompt.SetActive(true);
                 }
 
                 // if (GlobalVariables.Instance != null)
                 //     GlobalVariables.Instance.perkIdxSelected = pauSystem.getPerkIdxSelected();
+            } else {
+                selectPerkDetail.SetActive(false);
+                perkPrompt.SetActive(true);
             }
         }
 
@@ -349,31 +397,47 @@ namespace BeatEmUpTemplate2D
                 if (perkIdxSelected.text == "-1")
                 {
                     unlockButton.interactable = false; // disable the button
-                    selectedPerkCost.text = "?";
+                    selectedPerkCost.text = "Something broke";
                     return;
                 }
 
                 int perkIdxSelectedInt = int.Parse(GlobalVariables.Instance.perkIdxSelected);
                 bool unlocked = (bool)pauSystem.getPerkValue(perkIdxSelectedInt, "unlocked");
                 int cost = (int)pauSystem.getPerkValue(perkIdxSelectedInt, "cost");
-                int currentSPInt = int.Parse(currentSP.text);
+                int currentSPInt = GlobalVariables.Instance.globalSP;
 
                 if (unlocked)
                 {
                     unlockButton.interactable = false; // disable the button
-                    selectedPerkCost.text = cost.ToString();
+                    selectedPerkCost.text = "COST: " + cost.ToString() + " SP";
+
+                    // Activate already unlocked display
+                    alreadyUnlockedObj.SetActive(true);
+                    unlockObj.SetActive(false);
+                    insufficentObj.SetActive(false);
 
                 }
-                else
-                {
+                else if (cost > currentSPInt) {
+                    unlockButton.interactable = false; // disable the button
+                    selectedPerkCost.text = "COST: " + cost.ToString() + " SP";
+
+                    // Activate insufficient points display
+                    alreadyUnlockedObj.SetActive(false);
+                    unlockObj.SetActive(false);
+                    insufficentObj.SetActive(true);
+
+                } else {
                     unlockButton.interactable = true; // enable the button
+                    selectedPerkCost.text = "COST: " + cost.ToString() + " SP";
 
-                    if (cost > currentSPInt)
-                        unlockButton.interactable = false; // disable the button
-
-                    selectedPerkCost.text = cost.ToString();
+                    // Activate button
+                    alreadyUnlockedObj.SetActive(false);
+                    unlockObj.SetActive(true);
+                    insufficentObj.SetActive(false);
 
                 }
+
+                
             }
         }
 

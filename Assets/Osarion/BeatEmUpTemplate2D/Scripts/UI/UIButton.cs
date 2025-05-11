@@ -35,6 +35,7 @@ namespace BeatEmUpTemplate2D {
 
         private bool isHovered = false;
 
+
         void OnEnable(){
              timeAlive = Time.time;
         }
@@ -192,6 +193,21 @@ namespace BeatEmUpTemplate2D {
             yield return new WaitForSeconds(delay); //wait a moment
             SceneManager.LoadScene(sceneName); //load scene
             LoadSceneInProgress = false;
+            AudioListener.pause = false;
         }
+
+        public void ShowCredits()
+        {
+            UIMainMenu mainMenu = FindObjectOfType<UIMainMenu>();
+            if (mainMenu != null)
+            {
+                mainMenu.ShowCredits();
+            }
+            else
+            {
+                Debug.LogWarning("UIMainMenu not found in the scene.");
+            }
+        }
+
     }
 }

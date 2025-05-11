@@ -451,6 +451,11 @@ namespace BeatEmUpTemplate2D
             AudioController.PlaySFX("FootstepDefault", transform.position);
         }
 
+        public void ChaddeusYell()
+        {
+            AudioController.PlaySFX("ZYNConsumption");
+        }
+
         //displays an effect loaded from the resources folder
         public void ShowEffect(string effectName)
         {

@@ -39,6 +39,30 @@ public class PerkToggleController : MonoBehaviour
                 //     else
                 //         SetToggleInteractable(perkToggles.IndexOf(toggle), true);
                 // }
+
+                // // get the background object under the toggle
+                // GameObject background = toggle.transform.Find("Background").gameObject;
+                // // print if the background object is null
+                // if (background == null)
+                // {
+                //     Debug.LogWarning("Background object is null for toggle: " + toggle.name);
+                // }
+                // else
+                // {
+                //     Debug.Log("Background object found for toggle: " + toggle.name);
+                //     // set the color of the background object
+                //     Image backgroundImage = background.GetComponent<Image>();
+                //     if (backgroundImage != null)
+                //     {
+                //         ColorBlock cb = toggle.colors;
+                //         backgroundImage.color = cb.normalColor;
+                //     }
+                //     else
+                //     {
+                //         Debug.LogWarning("Background image component is null for toggle: " + toggle.name);
+                //     }
+                // }
+
             }
         }
 

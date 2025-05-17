@@ -227,6 +227,11 @@ namespace BeatEmUpTemplate2D
         //show menu when player is dead
         void OnPlayerDeath()
         {
+            var pauseMenu = FindObjectOfType<UIPauseMenu>();
+            if (pauseMenu != null)
+            {
+                pauseMenu.CanBePaused = false;
+            }
             UIManager UI = GameObject.FindObjectOfType<UIManager>();
             if (UI != null) UI.ShowMenu(menuToOpenOnPlayerDeath);
         }

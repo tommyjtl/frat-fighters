@@ -13,7 +13,7 @@ namespace BeatEmUpTemplate2D
         private Animator animator;
         private float originalFixedDeltaTime;
 
-        public float powerUpSlowMoTimeScale = 0.05f;
+        public float powerUpSlowMoTimeScale = 0.001f;
         private string animationName = "PowerUp";
         private float animDuration => (unit.GetAnimDuration(animationName) * powerUpSlowMoTimeScale);
 
@@ -78,7 +78,7 @@ namespace BeatEmUpTemplate2D
             // VFX + SFX
             //unit.ShowEffect("FireHydrantWaterSplash");
             //unit.StartCoroutine(PlayPowerUpSoundSequence());
-            unit.CamShake();
+            //unit.CamShake();
         }
 
 

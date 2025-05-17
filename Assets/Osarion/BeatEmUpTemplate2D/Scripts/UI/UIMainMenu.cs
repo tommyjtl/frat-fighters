@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 
 namespace BeatEmUpTemplate2D
@@ -12,6 +13,24 @@ namespace BeatEmUpTemplate2D
 
         private bool creditsVisible = false;
         private float creditsPopupCooldown = 0f;
+        public AudioSource mainMenuMusic;
+        public float audioFadeIn = 3f;
+
+        void Start()
+        {
+            StartCoroutine(FadeInMusic());
+        }
+
+        private IEnumerator FadeInMusic()
+        {
+            float t = 0f;
+            while (t < audioFadeIn)
+            {
+                t += Time.deltaTime;
+                mainMenuMusic.volume = Mathf.Lerp(0, .3f, t / audioFadeIn);
+                yield return null;
+            }
+        }
 
         void Update()
         {

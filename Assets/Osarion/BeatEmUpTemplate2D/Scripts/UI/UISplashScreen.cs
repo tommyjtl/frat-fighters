@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.InputSystem;
+using System;
 
 namespace BeatEmUpTemplate2D
 {
@@ -43,7 +44,7 @@ namespace BeatEmUpTemplate2D
         {
             if (promptVisible && promptGroup != null)
             {
-                float alpha = (Mathf.Sin(Time.time * flashSpeed) + 1f) / 2f;
+                float alpha = Mathf.Round((Mathf.Sin((Time.time-promptDelay-fadeInDuration)* flashSpeed) + 1f) / 2f);
                 promptGroup.alpha = alpha;
             }
 

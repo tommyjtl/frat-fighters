@@ -964,10 +964,10 @@ MonoBehaviour:
   promptGroup: {fileID: 1304589204}
   fadeOverlay: {fileID: 991871619}
   splashMusic: {fileID: 1895961491}
-  fadeInDuration: 1
-  promptDelay: 1
-  fadeOutDuration: 1
-  flashSpeed: 2
+  fadeInDuration: 2
+  promptDelay: 4
+  fadeOutDuration: 2
+  flashSpeed: 4
   mainMenuSceneName: 00_FF_MainMenu
 --- !u!1001 &9078727486542200719
 PrefabInstance:

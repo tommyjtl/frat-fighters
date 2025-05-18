@@ -396,8 +396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f839f31971028ba44b8a1f976fc33de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 200
-  currentHp: 200
+  maxHp: 100
+  currentHp: 100
   invulnerable: 0
   showSmallHealthBar: 0
   smallHealthBarOffset: {x: 0, y: 0}
@@ -536,9 +536,9 @@ MonoBehaviour:
   jumpPunch:
     name: 
     damage: 1
-    animationState: JumpKick
+    animationState: JumpPunch
     sfx: HitSfx
-    attackType: 2
+    attackType: 1
     knockdown: 1
     foldout: 1
     inflictor: {fileID: 0}
@@ -554,18 +554,18 @@ MonoBehaviour:
   grabPunch:
     name: 
     damage: 1
-    animationState: GrabThrow
+    animationState: GrabPunch
     sfx: HitSfx
-    attackType: 7
+    attackType: 5
     knockdown: 1
     foldout: 1
     inflictor: {fileID: 0}
   grabKick:
     name: 
     damage: 1
-    animationState: GrabThrow
+    animationState: GrabKick
     sfx: HitSfx
-    attackType: 7
+    attackType: 6
     knockdown: 1
     foldout: 1
     inflictor: {fileID: 0}
@@ -583,7 +583,7 @@ MonoBehaviour:
     damage: 2
     animationState: GroundPunch
     sfx: HitSfx
-    attackType: 0
+    attackType: 3
     knockdown: 1
     foldout: 1
     inflictor: {fileID: 0}
@@ -592,9 +592,9 @@ MonoBehaviour:
     damage: 2
     animationState: GroundKick
     sfx: HitSfx
-    attackType: 0
+    attackType: 3
     knockdown: 1
-    foldout: 1
+    foldout: 0
     inflictor: {fileID: 0}
   enemyAttackList: []
   attackDamageAddUp: 0
@@ -602,7 +602,7 @@ MonoBehaviour:
   knockDownHeight: 3
   knockDownDistance: 3
   knockDownSpeed: 3
-  knockDownFloorTime: 1
+  knockDownFloorTime: 0.3
   hitOtherEnemiesWhenFalling: 0
   throwHeight: 3
   throwDistance: 5
@@ -610,7 +610,7 @@ MonoBehaviour:
   defendChance: 0
   defendDuration: 0
   canChangeDirWhileDefending: 0
-  rearDefenseEnabled: 1
+  rearDefenseEnabled: 0
   canBeGrabbed: 1
   grabAnimation: Grab
   grabPosition: {x: 0.93, y: 0.1}

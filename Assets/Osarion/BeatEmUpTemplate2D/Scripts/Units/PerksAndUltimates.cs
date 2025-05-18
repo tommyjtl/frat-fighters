@@ -95,7 +95,7 @@ namespace BeatEmUpTemplate2D
                     // Goto `Scripts/Global/GlobalVariables.cs` for perk description
                     case "Light- weight":
                         GlobalVariables.Instance.globalJumpHeight += 2; // higher jump
-                        GlobalVariables.Instance.globalJumpGravity -= 2; // lower gravity
+                        //GlobalVariables.Instance.globalJumpGravity -= 2; // lower gravity
                         break;
                     case "Chicken and Rice":
                         GlobalVariables.Instance.globalAttackDamageAddUp = 5; // higher attack damage

@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: defendChance
-      value: 40
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: moveSpeedAir
@@ -82,27 +82,47 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: defendDuration
-      value: 1
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: knockDownSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: startDirection
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: knockDownHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: useAcceleration
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: knockDownDistance
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: knockDownFloorTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: rearDefenseEnabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyPauseBeforeAttack
-      value: 0.05
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.size
-      value: 5
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: hitOtherEnemiesWhenFalling
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[4].sfx
@@ -126,11 +146,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[2].damage
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[3].damage
-      value: 16
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4718332081022883108, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: enemyAttackList.Array.data[4].damage
@@ -204,17 +224,37 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: bb78d734aab8d154083d31fe3f69cdcf, type: 2}
+    - target: {fileID: 6004775595121963008, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: randomizeAmount
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6004775595121963008, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: decisionInterval
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: maxHp
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: currentHp
-      value: 100
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: shakeSpeed
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: shakeDuration
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: showHealthBar
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
+      propertyPath: shakeIntensity
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 6831651101224142191, guid: 9b3c06f11fa3aa0438a864ecb939b5ca, type: 3}
       propertyPath: showLargeHealthBar

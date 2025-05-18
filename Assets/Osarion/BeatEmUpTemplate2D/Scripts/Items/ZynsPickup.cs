@@ -7,6 +7,7 @@ namespace BeatEmUpTemplate2D
         [Header("Zyn Buff Settings")]
         public float zynBuffDuration = 5f;
         public float zynSpeedMultiplier = 5.5f;
+        public int healthRecover = 40;
         public GameObject showEffect;
 
         public override void OnStandUp(GameObject target)
@@ -22,6 +23,9 @@ namespace BeatEmUpTemplate2D
                 };
                 sm.SetState(powerUpState);
             }
+
+            // Add health
+            target?.GetComponent<HealthSystem>()?.AddHealth(healthRecover);
 
             // Show pickup effect + sound
             if (showEffect) Instantiate(showEffect, transform.position, Quaternion.identity);

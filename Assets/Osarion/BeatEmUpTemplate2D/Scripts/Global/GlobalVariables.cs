@@ -231,19 +231,19 @@ public class GlobalVariables : MonoBehaviour
                     false,
                     "Chicken and Rice",
                     "Double damage and player size.",
-                    1 // skill points required
+                    6 // skill points required
                 ),
                 (
                     false,
                     "Spartan Resolve",
                     "Max health increased by 100.",
-                    1 // skill points required
+                    5 // skill points required
                 ),
                 (
                     false,
                     "Hazing Specialist",
                     "Lifesteal on kill.",
-                    1 // skill points required
+                    5 // skill points required
                 ),
                 (
                     false,

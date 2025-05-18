@@ -53,10 +53,15 @@ namespace BeatEmUpTemplate2D
         {
             if (creditsPanel != null)
             {
-                creditsPanel.SetActive(true);
-                creditsVisible = true;
-                creditsPopupCooldown = 0.15f; // Wait ~150ms before allowing close
-                Debug.Log("Showing Credits");
+                if (!creditsVisible) {
+                    creditsPanel.SetActive(true);
+                    creditsVisible = true;
+                    creditsPopupCooldown = 0.15f; // Wait ~150ms before allowing close
+                    Debug.Log("Showing Credits");
+                } else {
+                    HideCredits();
+                    creditsPopupCooldown = 0.15f; // Wait ~150ms before allowing close
+                }
 
                 // Clear selection to avoid highlighting stuff behind
                 EventSystem.current.SetSelectedGameObject(null);

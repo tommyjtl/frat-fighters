@@ -95,6 +95,11 @@ namespace BeatEmUpTemplate2D
             auraObject.SetActive(false);
             isZynBuffActive = false;
 
+            // Reset sprite renderer to active on component
+            // Even though whole component is not active
+            SpriteRenderer aura = auraObject.GetComponent<SpriteRenderer>();
+            aura.enabled = true;
+
             Debug.Log("[BuffSystem] Zyn buff ended.");
         }
 

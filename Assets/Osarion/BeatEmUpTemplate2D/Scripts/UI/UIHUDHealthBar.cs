@@ -91,10 +91,10 @@ namespace BeatEmUpTemplate2D
                     healthBar.gameObject.SetActive(true);
                     float fill;
                     if (healthBarType == HEALTHBARTYPE.BossHealthBar) {
-                        double step = 1.0/EnemyBarDivisions;
+                        double step = 1.0/BossBarDivisions;
                         fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
                     } else if (healthBarType == HEALTHBARTYPE.EnemyHealthBar) {
-                        double step = 1.0/BossBarDivisions;
+                        double step = 1.0/EnemyBarDivisions;
                         fill = (float)(Math.Ceiling(hs.healthPercentage / step) * step);
                     } else {
                         fill = hs.healthPercentage;

@@ -18,6 +18,7 @@ namespace BeatEmUpTemplate2D
 
         void Start()
         {
+            AudioController.StopAllSound();
             StartCoroutine(FadeInMusic());
         }
 

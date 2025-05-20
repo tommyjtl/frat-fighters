@@ -62,6 +62,7 @@ namespace BeatEmUpTemplate2D
             // Hide panel at the start
             // if (pauPanel != null)
             //     pauPanel.SetActive(false);
+            initialized = false;
 
             // Find the player object and get the XPSystem component
             GameObject player = GameObject.FindWithTag("Player");
@@ -89,7 +90,7 @@ namespace BeatEmUpTemplate2D
 
             if (GlobalVariables.Instance != null)
             {
-                paus.perks = GlobalVariables.Instance.perks;
+                paus.perks = new System.Collections.Generic.List<(bool, string, string, int)> (GlobalVariables.Instance.perks);
                 paus.perkIdxSelected = GlobalVariables.Instance.perkIdxSelected;
 
                 currentPerks.text = paus.getCurrentPerksInString();
@@ -106,9 +107,10 @@ namespace BeatEmUpTemplate2D
         {
             if (GlobalVariables.Instance != null && pauSystem != null)
             {
-                pauSystem.perks = GlobalVariables.Instance.perks;
+                pauSystem.perks = new System.Collections.Generic.List<(bool, string, string, int)>(GlobalVariables.Instance.perks);
                 currentPerks.text = pauSystem.getCurrentPerksInString();
 
+                GlobalVariables.Instance.perkIdxSelected = "-1";
                 pauSystem.perkIdxSelected = GlobalVariables.Instance.perkIdxSelected;
                 perkIdxSelected.text = pauSystem.getPerkIdxSelected();
 

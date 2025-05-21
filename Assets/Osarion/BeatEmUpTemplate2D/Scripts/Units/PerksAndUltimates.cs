@@ -32,8 +32,11 @@ namespace BeatEmUpTemplate2D
         {
             //initialize
             if (onPAUChange != null) onPAUChange(this);
-
-            // Debug.Log("PAU System initialized");
+            //for (int i = 0; i < perks.Count; i++)
+            //{
+            //    var perk = perks[i];
+            //    perks[i] = (false, perk.Item2, perk.Item3, perk.Item4);
+            //}
         }
 
         // Activate perk

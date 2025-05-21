@@ -237,13 +237,13 @@ public class GlobalVariables : MonoBehaviour
                     false,
                     "Spartan Resolve",
                     "Max health increased by 100.",
-                    5 // skill points required
+                    4 // skill points required
                 ),
                 (
                     false,
                     "Hazing Specialist",
                     "Lifesteal on kill.",
-                    5 // skill points required
+                    3 // skill points required
                 ),
                 (
                     false,

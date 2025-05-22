@@ -29,6 +29,8 @@ namespace BeatEmUpTemplate2D
             //InputManager.playerControlEnabled = false;
 
             // Make player invulnerable + knockdown-immune
+            AudioController.PlaySFX("ZYNConsumption");
+
             HealthSystem health = unit.GetComponent<HealthSystem>();
             if (health != null)
                 health.invulnerable = true;

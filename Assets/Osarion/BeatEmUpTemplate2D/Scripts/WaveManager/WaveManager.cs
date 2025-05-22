@@ -232,6 +232,9 @@ namespace BeatEmUpTemplate2D
             {
                 pauseMenu.CanBePaused = false;
             }
+            AudioController.StopAllSound();
+            AudioController.PlaySFX("Wind");
+            AudioController.PlaySFX("ChaddeusDeathRattle");
             UIManager UI = GameObject.FindObjectOfType<UIManager>();
             if (UI != null) UI.ShowMenu(menuToOpenOnPlayerDeath);
         }

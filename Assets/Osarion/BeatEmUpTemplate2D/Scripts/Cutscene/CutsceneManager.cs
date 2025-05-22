@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using BeatEmUpTemplate2D;
 
 public class CutsceneManager : MonoBehaviour
 {
@@ -109,6 +110,8 @@ public class CutsceneManager : MonoBehaviour
         {
             group[i].SetActive(true);
         }
+
+        AudioController.PlaySFX("CutsceneNoise");
     }
 
     void DisableAllPanels()

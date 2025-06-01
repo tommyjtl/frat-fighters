@@ -9,6 +9,7 @@ namespace BeatEmUpTemplate2D {
 	    [Header ("Player Targets")]
 	    [SerializeField] private GameObject[] targets; //target(s) to follow
         [SerializeField] private bool restrictTargetsToCamView = true;
+        [SerializeField] private float RTTCVVerticalAdjust = 0.0f;
         [SerializeField] private float borderMargin = 0.05f;
 
 	    [Header ("Follow Settings")]
@@ -125,7 +126,7 @@ namespace BeatEmUpTemplate2D {
                 //calculate target screen bounds
                 Vector3 viewportPosition = Camera.main.WorldToViewportPoint(target.transform.position);
                 viewportPosition.x = Mathf.Clamp(viewportPosition.x, borderMargin, 1f - borderMargin);
-                viewportPosition.y = Mathf.Clamp(viewportPosition.y, borderMargin, 1f - borderMargin);
+                viewportPosition.y = Mathf.Clamp(viewportPosition.y, borderMargin - RTTCVVerticalAdjust, 1f - borderMargin);
 
                 //convert viewport coordinates to world coordinates
                 Vector3 clampedWorldPosition = Camera.main.ViewportToWorldPoint(viewportPosition);

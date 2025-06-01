@@ -102,7 +102,8 @@ namespace BeatEmUpTemplate2D {
                     //set audio source settings
                     int rand = Random.Range(0, audioItem.clip.Length);
                     audiosource.clip = audioItem.clip[rand];
-                    audiosource.spatialBlend = 1.0f;
+                    audiosource.spatialBlend = 0.0f;
+                    audiosource.panStereo = 0.0f;
                     audiosource.pitch = 1f + Random.Range(-audioItem.randomPitch, audioItem.randomPitch);
                     audiosource.volume = audioItem.volume * sfxVolume + Random.Range(-audioItem.randomVolume, audioItem.randomVolume);
                     audiosource.outputAudioMixerGroup = source.outputAudioMixerGroup;

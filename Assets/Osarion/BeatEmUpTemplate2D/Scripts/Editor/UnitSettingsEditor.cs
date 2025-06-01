@@ -34,7 +34,7 @@ namespace BeatEmUpTemplate2D
         private HashSet<string> movementFields = new HashSet<string> { "startDirection", "moveSpeed", "moveSpeedAir", "useAcceleration" };
         private HashSet<string> accelerationFields = new HashSet<string> { "moveAcceleration", "moveDeceleration" };
         private HashSet<string> jumpFields = new HashSet<string> { "jumpHeight", "jumpSpeed", "jumpGravity" };
-        private HashSet<string> attackDataFields = new HashSet<string> { "jumpPunch", "jumpKick", "grabPunch", "grabKick", "grabThrow", "groundPunch", "groundKick" };
+        private HashSet<string> attackDataFields = new HashSet<string> { "jumpPunch", "jumpKick", "grabPunch", "grabKick", "grabThrow", "groundPunch", "groundKick", "zynExplosion"};
         private HashSet<string> comboDataFields = new HashSet<string> { "comboResetTime", "continueComboOnHit" };
         private HashSet<string> knockdownFields = new HashSet<string> { "knockDownHeight", "knockDownDistance", "knockDownSpeed", "knockDownFloorTime", "hitOtherEnemiesDuringFall", "hitOtherEnemiesWhenFalling" };
         private HashSet<string> throwFields = new HashSet<string> { "throwHeight", "throwDistance", "hitOtherEnemiesWhenThrown" };

@@ -105,7 +105,7 @@ namespace BeatEmUpTemplate2D
         }
 
         //check if a enemy was hit by this unit's hitbox
-        public bool CheckForHit(AttackData attackData)
+        public bool CheckForHit(AttackData attackData, int damageMultiplier = 1, bool ignorez = false)
         {
             bool damageDealt = false;
             if (attackData.inflictor == null) attackData.inflictor = gameObject; //pass this gameobject as the inflictor
@@ -113,7 +113,7 @@ namespace BeatEmUpTemplate2D
             {
 
                 //apply damage to objects that are hit
-                foreach (GameObject obj in GetObjectsHit(attackData))
+                foreach (GameObject obj in GetObjectsHit(attackData, ignorez))
                 {
 
                     //check if the target unit is able to defend against attacks coming from this direction
@@ -132,7 +132,7 @@ namespace BeatEmUpTemplate2D
 
                     //substract health
                     HealthSystem targetHealthSystem = obj.GetComponent<HealthSystem>();
-                    if (attackData != null) targetHealthSystem?.SubstractHealth(attackData.damage);
+                    if (attackData != null) targetHealthSystem?.SubstractHealth(attackData.damage * damageMultiplier);
 
                     //play hit sfx (if any)
                     if (attackData.sfx.Length > 0) AudioController.PlaySFX(attackData.sfx);
@@ -185,7 +185,7 @@ namespace BeatEmUpTemplate2D
         }
 
         //returns a list of gameObjects that we've hit
-        public List<GameObject> GetObjectsHit(AttackData attackData)
+        public List<GameObject> GetObjectsHit(AttackData attackData, bool ignorez = false)
         {
             List<GameObject> hitableObjects = new List<GameObject>(); //list of possible objects to check
             List<GameObject> ObjectsHit = new List<GameObject>(); //list of objects that are hit
@@ -245,7 +245,12 @@ namespace BeatEmUpTemplate2D
             foreach (GameObject obj in hitableObjects)
             {
                 SpriteRenderer sr = obj.GetComponent<SpriteRenderer>();
-                if (sr != null && settings.hitBox.bounds.Intersects(sr.bounds) && targetInZRange(obj.gameObject, .5f)) ObjectsHit.Add(sr.gameObject);
+                bool intersection = settings.hitBox.bounds.Intersects(sr.bounds);
+                bool inzrange = targetInZRange(obj.gameObject, .5f);
+                if (sr != null && intersection && (ignorez || inzrange))
+                {
+                    ObjectsHit.Add(sr.gameObject);
+                } 
             }
 
             //return objects that are hit

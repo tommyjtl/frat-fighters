@@ -157,20 +157,20 @@ public class GlobalVariables : MonoBehaviour
 
     // `Scripts/Units/UnitSettings.cs`
     // `Scripts/Units/AttackData.cs`
-    private int _globalAttackDamageAddUp;
-    public int globalAttackDamageAddUp
+    private int _globalAttackDamageMultiplier;
+    public int globalAttackDamageMultiplier
     {
-        get { return _globalAttackDamageAddUp; }
+        get { return _globalAttackDamageMultiplier; }
         set
         {
-            if (_globalAttackDamageAddUp != value)
+            if (_globalAttackDamageMultiplier != value)
             {
-                _globalAttackDamageAddUp = value;
-                OnAttackDamageAddUpChanged?.Invoke(_globalAttackDamageAddUp);
+                _globalAttackDamageMultiplier = value;
+                OnAttackDamageMultiplierChanged?.Invoke(_globalAttackDamageMultiplier);
             }
         }
     }
-    public static event System.Action<int> OnAttackDamageAddUpChanged;
+    public static event System.Action<int> OnAttackDamageMultiplierChanged;
     public string globalAttackDamageOverview;
 
     // `Scripts/Units/UnitSettings.cs`
@@ -285,7 +285,7 @@ public class GlobalVariables : MonoBehaviour
         playerAttributes += "[Jump Height] " + globalJumpHeight + "\n";
         playerAttributes += "[Jump Speed] " + globalJumpSpeed + "\n";
         playerAttributes += "[Jump Gravity] " + globalJumpGravity + "\n";
-        playerAttributes += "[Attack Damage Add Up] " + globalAttackDamageAddUp + "\n";
+        playerAttributes += "[Attack Damage Add Up] " + globalAttackDamageMultiplier + "\n";
         playerAttributes += "[Rear Defense] " + globalRearDefenseEnabled + "\n";
         return playerAttributes;
     }

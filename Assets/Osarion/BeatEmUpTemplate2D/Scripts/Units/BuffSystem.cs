@@ -11,6 +11,7 @@ namespace BeatEmUpTemplate2D
         private SpriteRenderer playerRenderer;
 
         private float originalGlobalSpeed;
+        private int originalAttackDamageMultiplier;
         private Coroutine zynBuffRoutine;
         private Coroutine auraFlashRoutine;
         private float buffTimeRemaining = 0f;
@@ -68,6 +69,8 @@ namespace BeatEmUpTemplate2D
             // Cache and apply multiplier once
             originalGlobalSpeed = GlobalVariables.Instance.globalMoveSpeed;
             GlobalVariables.Instance.globalMoveSpeed = originalGlobalSpeed * speedMultiplier;
+            originalAttackDamageMultiplier = GlobalVariables.Instance.globalAttackDamageMultiplier;
+            GlobalVariables.Instance.globalAttackDamageMultiplier = originalAttackDamageMultiplier * 2;
             auraObject.SetActive(true);
 
             bool flashStarted = false;
@@ -92,6 +95,7 @@ namespace BeatEmUpTemplate2D
 
             // Reset to original values
             GlobalVariables.Instance.globalMoveSpeed = originalGlobalSpeed;
+            GlobalVariables.Instance.globalAttackDamageMultiplier = GlobalVariables.Instance.globalAttackDamageMultiplier/2;
             auraObject.SetActive(false);
             isZynBuffActive = false;
 

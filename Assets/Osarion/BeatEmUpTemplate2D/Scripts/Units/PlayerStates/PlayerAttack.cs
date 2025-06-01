@@ -61,7 +61,7 @@ namespace BeatEmUpTemplate2D {
             else if(InputManager.KickKeyDown()) attackKeyPressed = ATTACKTYPE.KICK;
 
             //check for hit until damage was dealt
-            if(!damageDealt) damageDealt = unit.CheckForHit(attackData);
+            if(!damageDealt) damageDealt = unit.CheckForHit(attackData, GlobalVariables.Instance.globalAttackDamageMultiplier);
 
             //stop doing a follow up attack if this is the last attack in the combo
             bool isLastAttack = (currentCombo.attackSequence.Count-1 == comboProgress);

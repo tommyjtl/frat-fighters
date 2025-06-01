@@ -14,8 +14,11 @@ namespace BeatEmUpTemplate2D
         private float originalFixedDeltaTime;
 
         public float powerUpSlowMoTimeScale = 0.001f;
+        private AttackData attackData => unit.settings.zynExplosion; //information about the current attack
         private string animationName = "PowerUp";
         private float animDuration => (unit.GetAnimDuration(animationName) * powerUpSlowMoTimeScale);
+        private bool damageDealt; //true if the attack has hit something
+        private SpriteRenderer hitBoxSR;
 
         //private float zoomedCamSize = 2.0f;
         //private float zoomDuration = 1.3f;
@@ -54,6 +57,10 @@ namespace BeatEmUpTemplate2D
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
             animator.updateMode = AnimatorUpdateMode.UnscaledTime;
             animator.Play("PowerUp");
+
+            // Make hitbox visible
+            hitBoxSR = unit.transform.Find("HitBox").gameObject.GetComponentInChildren<SpriteRenderer>();
+            hitBoxSR.color = new Color(0.678f, 0.847f, 0.902f, 0.5f);
 
             //// Calculate zoom size based on player height
             //SpriteRenderer sr = unit.GetComponent<SpriteRenderer>();
@@ -116,6 +123,8 @@ namespace BeatEmUpTemplate2D
             UnitSettings settings = unit.GetComponent<UnitSettings>();
             if (settings != null)
                 settings.canBeKnockedDown = true;
+
+            hitBoxSR.color = Color.clear;
         }
 
         public override void Update(){
@@ -124,6 +133,7 @@ namespace BeatEmUpTemplate2D
                 unit.GetComponent<BuffSystem>()?.ApplyZynBuff(buffDuration, buffSpeedMultiplier);
                 unit.stateMachine.SetState(new PlayerIdle()); //go to idle state
             }
+            if(!damageDealt) damageDealt = unit.CheckForHit(attackData, 0, true);
         }
     }
 }

@@ -101,7 +101,7 @@ namespace BeatEmUpTemplate2D
                         //GlobalVariables.Instance.globalJumpGravity -= 2; // lower gravity
                         break;
                     case "Chicken and Rice":
-                        GlobalVariables.Instance.globalAttackDamageAddUp = 5; // higher attack damage
+                        GlobalVariables.Instance.globalAttackDamageMultiplier = 2; // higher attack damage
                         GameObject player = GameObject.FindWithTag("Player");
                         if (player != null)
                             player.transform.localScale *= 2; // double size of player

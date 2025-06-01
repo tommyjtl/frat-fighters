@@ -52,12 +52,13 @@ namespace BeatEmUpTemplate2D
         [Space(10)]
         public AttackData groundPunch;
         public AttackData groundKick;
+        public AttackData zynExplosion;
 
         //ENEMY ATTACK DATA
         public List<AttackData> enemyAttackList = new List<AttackData>(); //list of enemy attacks
 
         [HideInInspector]
-        public int attackDamageAddUp;
+        public int attackDamageMultiplier = 1;
 
         //KNOCKDOWN SETTINGS
         public bool canBeKnockedDown = true; //if this unit can be knocked down
@@ -118,7 +119,7 @@ namespace BeatEmUpTemplate2D
 
             GlobalVariables.OnRearDefenseEnabledChanged += UpdateRearDefenseEnabled;
 
-            GlobalVariables.OnAttackDamageAddUpChanged += UpdateAttackDamageAddUp;
+            GlobalVariables.OnAttackDamageMultiplierChanged += UpdateAttackDamageMultiplier;
         }
 
         void OnDisable()
@@ -132,7 +133,7 @@ namespace BeatEmUpTemplate2D
 
             GlobalVariables.OnRearDefenseEnabledChanged -= UpdateRearDefenseEnabled;
 
-            GlobalVariables.OnAttackDamageAddUpChanged -= UpdateAttackDamageAddUp;
+            GlobalVariables.OnAttackDamageMultiplierChanged -= UpdateAttackDamageMultiplier;
         }
 
         void Start()
@@ -165,7 +166,7 @@ namespace BeatEmUpTemplate2D
                     || GlobalVariables.Instance.globalJumpSpeed == 0
                     || GlobalVariables.Instance.globalJumpGravity == 0
                     || GlobalVariables.Instance.globalRearDefenseEnabled == false
-                // || GlobalVariables.Instance.globalAttackDamageAddUp == 0
+                // || GlobalVariables.Instance.globalAttackDamageMultiplier == 0
                 )
                 {
                     // only update the move speed for player, not for enemies
@@ -180,7 +181,7 @@ namespace BeatEmUpTemplate2D
 
                         GlobalVariables.Instance.globalRearDefenseEnabled = rearDefenseEnabled;
 
-                        GlobalVariables.Instance.globalAttackDamageAddUp = attackDamageAddUp;
+                        GlobalVariables.Instance.globalAttackDamageMultiplier = attackDamageMultiplier;
                     }
                 }
                 else
@@ -197,7 +198,7 @@ namespace BeatEmUpTemplate2D
 
                         rearDefenseEnabled = GlobalVariables.Instance.globalRearDefenseEnabled;
 
-                        attackDamageAddUp = GlobalVariables.Instance.globalAttackDamageAddUp;
+                        attackDamageMultiplier = GlobalVariables.Instance.globalAttackDamageMultiplier;
                     }
                 }
             }
@@ -236,7 +237,7 @@ namespace BeatEmUpTemplate2D
 
                         GlobalVariables.Instance.globalRearDefenseEnabled = rearDefenseEnabled;
 
-                        GlobalVariables.Instance.globalAttackDamageAddUp = attackDamageAddUp;
+                        GlobalVariables.Instance.globalAttackDamageMultiplier = attackDamageMultiplier;
                     }
                 }
                 else
@@ -253,7 +254,7 @@ namespace BeatEmUpTemplate2D
 
                         rearDefenseEnabled = GlobalVariables.Instance.globalRearDefenseEnabled;
 
-                        attackDamageAddUp = GlobalVariables.Instance.globalAttackDamageAddUp;
+                        attackDamageMultiplier = GlobalVariables.Instance.globalAttackDamageMultiplier;
                     }
                 }
             }
@@ -350,18 +351,20 @@ namespace BeatEmUpTemplate2D
         }
 
         // update the attack damage of this unit
-        private void UpdateAttackDamageAddUp(int newAttackDamageAddUp)
+        private void UpdateAttackDamageMultiplier(int newAttackDamageMultiplier)
         {
             if (unitType == UNITTYPE.PLAYER)
             {
-                Debug.Log($"[UnitSettings] Attack Damage Add Up: {newAttackDamageAddUp}");
+                Debug.Log($"[UnitSettings] Attack Damage Add Up: {newAttackDamageMultiplier}");
+                if (unitType == UNITTYPE.PLAYER)
+                    attackDamageMultiplier = newAttackDamageMultiplier;
 
-                jumpPunch.damage += newAttackDamageAddUp;
-                jumpKick.damage += newAttackDamageAddUp;
-                grabPunch.damage += newAttackDamageAddUp;
-                grabKick.damage += newAttackDamageAddUp;
-                groundPunch.damage += newAttackDamageAddUp;
-                groundKick.damage += newAttackDamageAddUp;
+                //jumpPunch.damage += newAttackDamageMultiplier;
+                //jumpKick.damage += newAttackDamageMultiplier;
+                //grabPunch.damage += newAttackDamageMultiplier;
+                //grabKick.damage += newAttackDamageMultiplier;
+                //groundPunch.damage += newAttackDamageMultiplier;
+                //groundKick.damage += newAttackDamageMultiplier;
             }
         }
 

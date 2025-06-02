@@ -34,6 +34,13 @@ namespace BeatEmUpTemplate2D
 
         public void PauseGame()
         {
+
+            if (GlobalVariables.Instance != null && GlobalVariables.Instance.isPauEscButtonPressed)
+            {
+                GlobalVariables.Instance.isPauEscButtonPressed = false;
+                return;
+            }
+
             Time.timeScale = 0f; // Pause game physics & movement
             StartCoroutine(DelayAudioPause(0f));
 

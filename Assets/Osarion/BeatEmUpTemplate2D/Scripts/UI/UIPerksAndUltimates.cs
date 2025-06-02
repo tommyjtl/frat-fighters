@@ -443,12 +443,27 @@ namespace BeatEmUpTemplate2D
             }
         }
 
+        void OnPauEscButtonClick()
+        {
+            if (pauPanel.activeSelf)
+            {
+                GlobalVariables.Instance.isPauEscButtonPressed = true;
+                OnMenuToggleButtonClick();
+            }
+        }
+
         void Update()
         {
             // Only allow keyboard toggle if game isn't paused by another menu
             if (InputManager.PerkMenuDown() && (Time.timeScale != 0f || isPaused))
             {
                 OnMenuToggleButtonClick();
+            }
+
+            // Press 'Esc' button to exit Perk Menu
+            if (InputManager.PauseMenuDown() && (Time.timeScale != 0f || isPaused))
+            {
+                OnPauEscButtonClick();
             }
         }
     }

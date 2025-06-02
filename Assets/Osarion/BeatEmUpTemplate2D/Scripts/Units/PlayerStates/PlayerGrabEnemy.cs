@@ -24,38 +24,45 @@ namespace BeatEmUpTemplate2D {
         public override void Update(){
              unit.groundPos = unit.transform.position.y;
 
-            //punch button was pressed during grab
-            if(InputManager.PunchKeyDown()){
-                //unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabPunch));
+            // Automatically throw the enemy after grab state
+            unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
+            enemy = null;
+            return;
+
+            /* The following code is obsolete given the new requirement: throw instantly after grab animation */ 
+
+            // //punch button was pressed during grab
+            // if(InputManager.PunchKeyDown()){
+            //     //unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabPunch));
                 
-                // Only throw while grabbing.
-                unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
-                enemy = null;
-                return;
-            }
+            //     // Only throw while grabbing.
+            //     unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
+            //     enemy = null;
+            //     return;
+            // }
 
-            //kick button was pressed during grab
-            if(InputManager.KickKeyDown()){
-                //unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabKick));
+            // //kick button was pressed during grab
+            // if(InputManager.KickKeyDown()){
+            //     //unit.stateMachine.SetState(new PlayerGrabAttack(unit.settings.grabKick));
                 
-                // Only throw while grabbing.
-                unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
-                enemy = null;
-                return;
-            }
+            //     // Only throw while grabbing.
+            //     unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
+            //     enemy = null;
+            //     return;
+            // }
 
-            //throw button was pressed during grab
-            if(InputManager.GrabKeyDown()){
-                unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
-                enemy = null;
-                return;
-            }
+            // //throw button was pressed during grab
+            // if(InputManager.GrabKeyDown()){
+            //     unit.stateMachine.SetState(new PlayerThrowEnemy(enemy));
+            //     enemy = null;
+            //     return;
+            // }
 
-            //release grab when time expires
-            if(Time.time - stateStartTime > unit.settings.grabDuration){
-                unit.stateMachine.SetState(new PlayerIdle()); //player return to Idle
-                enemy = null;
-            }
+            // //release grab when time expires
+            // if(Time.time - stateStartTime > unit.settings.grabDuration){
+            //     unit.stateMachine.SetState(new PlayerIdle()); //player return to Idle
+            //     enemy = null;
+            // }
         }
 
         public override void Exit(){

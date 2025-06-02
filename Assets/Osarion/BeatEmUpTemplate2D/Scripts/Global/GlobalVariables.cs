@@ -9,6 +9,7 @@ public class GlobalVariables : MonoBehaviour
 
     public bool isPerkMenuActive = false;
     public bool isPauseMenuActive = false;
+    public bool isPauEscButtonPressed = false;
 
     /*
  __  _____                _   ___ ___ 

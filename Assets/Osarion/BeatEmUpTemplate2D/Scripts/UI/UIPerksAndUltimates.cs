@@ -86,11 +86,14 @@ namespace BeatEmUpTemplate2D
 
         void UpdatePAU(PAUSystem paus)
         {
-            if (!initialized) InitializePauBar(); //this is only done once at the start of the level
+            if (!initialized)
+            {
+                InitializePauBar(); //this is only done once at the start of the level
+                paus.perks = new System.Collections.Generic.List<(bool, string, string, int)> (GlobalVariables.Instance.perks);
+            }
 
             if (GlobalVariables.Instance != null)
             {
-                paus.perks = new System.Collections.Generic.List<(bool, string, string, int)> (GlobalVariables.Instance.perks);
                 paus.perkIdxSelected = GlobalVariables.Instance.perkIdxSelected;
 
                 currentPerks.text = paus.getCurrentPerksInString();
